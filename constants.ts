@@ -5,6 +5,7 @@ export const NAV_LINKS: NavLinkInfo[] = [
   { path: '/', key: 'home' },
   { path: '/date-converter', key: 'dateConverter' },
   { path: '/invoice-generator', key: 'invoiceGenerator' },
+  { path: '/contract-clause', key: 'contractClause' },
   { path: '/glossary', key: 'glossary' },
   { path: '/articles', key: 'articles' },
   { path: '/about', key: 'about' },

@@ -11,6 +11,7 @@ import ArticleDetailPage from './pages/ArticleDetailPage';
 import DateConverterPage from './pages/DateConverterPage';
 import GlossaryPage from './pages/GlossaryPage';
 import InvoiceGeneratorPage from './pages/InvoiceGeneratorPage';
+import ContractClausePage from './pages/ContractClausePage';
 import { I18nProvider } from './context/I18nContext';
 import { ThemeProvider } from './context/ThemeContext';
 
@@ -25,6 +26,7 @@ const App: React.FC = () => {
               <Route path="/date-converter" element={<DateConverterPage />} />
               <Route path="/glossary" element={<GlossaryPage />} />
               <Route path="/invoice-generator" element={<InvoiceGeneratorPage />} />
+              <Route path="/contract-clause" element={<ContractClausePage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
