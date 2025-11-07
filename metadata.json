@@ -1,0 +1,5 @@
+{
+  "name": "Financial Formula",
+  "description": "An interactive web tool that converts numbers (including decimals) into written Arabic and English text, according to the formats approved in financial documents, checks, and official contracts. The tool is fast, accurate, reliable, and works entirely on the user's device without the need for a server or database connection.",
+  "requestFramePermissions": []
+}

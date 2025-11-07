@@ -1,0 +1,118 @@
+{
+  "header": {
+    "title": "Financial Formula",
+    "openMenu": "Open main menu",
+    "nav": {
+      "home": "Home",
+      "articles": "Articles",
+      "about": "About Us",
+      "contact": "Contact Us"
+    }
+  },
+  "footer": {
+    "copyright": "Financial Formula. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "converter": {
+    "enterNumber": "Enter Number",
+    "placeholder": "Example: 1250.75",
+    "selectCurrency": "Select Currency",
+    "result": "Result",
+    "outputPlaceholder": "The financial text will appear here...",
+    "copy": "Copy Text",
+    "copySuccess": "Copied successfully!",
+    "copyFail": "Copy failed."
+  },
+  "home": {
+    "mainTitle": "Financial Number to Text Converter",
+    "subtitle": "An accurate and reliable tool to convert numerical amounts into proper written text, ideal for checks, contracts, and official documents.",
+    "whyUse": {
+      "title": "Why Use Financial Formula?",
+      "p1": "In the world of financial and legal transactions, accuracy is everything. A small mistake in writing a number can lead to significant complications. 'Financial Formula' is designed to be your digital assistant that ensures you write financial amounts in words 100% correctly, giving you confidence and security in all your documents.",
+      "p2": "The tool runs entirely on your device, which means your data never leaves your browser. We adhere to the highest privacy standards; no numbers you enter are collected or stored. This makes it the perfect choice for accountants, lawyers, contract managers, and anyone dealing with sensitive financial documents.",
+      "beneficiariesTitle": "Who benefits from this tool?",
+      "b1_strong": "Accountants and Financial Managers:",
+      "b1_text": "To ensure the accuracy of checks, invoices, and financial reports.",
+      "b2_strong": "Lawyers and Contract Advisors:",
+      "b2_text": "To write amounts in contracts and agreements in an unambiguous way.",
+      "b3_strong": "Entrepreneurs and Business Owners:",
+      "b3_text": "To issue commercial documents and deals with confidence and professionalism.",
+      "b4_strong": "Individuals:",
+      "b4_text": "When writing personal checks or signing lease or sale contracts.",
+      "p3": "With support for various major currencies, 'Financial Formula' provides a comprehensive and reliable solution that goes beyond mere conversion to become an integral part of your daily financial routine."
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "p1": "Welcome to 'Financial Formula'. We are a team of developers and financial experts who noticed the need for a simple and reliable tool to convert numbers into words for financial and legal purposes.",
+    "p2": "Our goal is to provide a free, easy-to-use, and completely secure tool that helps professionals and individuals alike avoid common mistakes in writing amounts, which can have serious consequences.",
+    "p3": "We believe that accuracy and clarity are the foundation of any successful transaction. Therefore, we have developed our conversion algorithm with great care to ensure it meets the linguistic and accounting standards adopted in official documents.",
+    "p4": "Our main distinguishing feature is our commitment to privacy. 'Financial Formula' is a tool that operates entirely on the client-side, meaning that any data you enter is not sent to or stored on any servers. Your financial security and privacy are our top priority.",
+    "p5": "We hope you find this tool useful in your work and daily life."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "p1": "We are always happy to hear your opinions and suggestions. If you have any questions, encounter any problems while using the tool, or have an idea for its development, please do not hesitate to contact us.",
+    "p2": "You can email us directly at the following address:",
+    "p3": "We strive to respond to all inquiries as soon as possible. Thank you for your interest in 'Financial Formula'."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "effectiveDate": "Effective Date: January 1, 2024",
+    "intro": "At 'Financial Formula', your privacy is our top priority. We are committed to protecting your data and providing a completely secure experience. This Privacy Policy explains how we do not collect or use any personal information from you.",
+    "section1": {
+      "title": "1. No Data Collection",
+      "content": "We unequivocally state that the 'Financial Formula' tool does not collect, store, or share any personal or financial data you enter. All number-to-text conversion processes are performed entirely within your web browser on your local device (Client-Side). None of your information is sent to our servers or any third party."
+    },
+    "section2": {
+      "title": "2. Cookies",
+      "content": "We may use essential cookies to improve the user experience on the site, such as remembering your preferences. These cookies do not contain any personally identifiable information."
+    },
+    "section3": {
+      "title": "3. Third-Party Services",
+      "content": "Our site may display ads from third-party ad networks such as Google AdSense. These companies may use information (not including your name, address, email address, or phone number) about your visits to this and other websites in order to provide advertisements about goods and services of interest to you."
+    },
+    "section4": {
+      "title": "4. Changes to This Privacy Policy",
+      "content": "We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page."
+    },
+    "contact": "If you have any questions about this Privacy Policy, please contact us."
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "intro": "Welcome to 'Financial Formula'. By using our website, you agree to comply with and be bound by the following terms and conditions of use. Please review them carefully.",
+    "section1": {
+      "title": "1. Use of the Tool",
+      "content": "The number-to-text converter tool is provided 'as is' for personal and commercial use. You must use the tool responsibly and in accordance with all applicable laws and regulations."
+    },
+    "section2": {
+      "title": "2. Accuracy of Information",
+      "content": "We have made every effort to ensure the accuracy of the algorithm used for conversion. However, we do not guarantee that the results will be 100% error-free. It is the user's responsibility to verify the correctness of the resulting text before using it in any official, legal, or financial documents."
+    },
+    "section3": {
+      "title": "3. Disclaimer of Liability",
+      "content": "'Financial Formula' and its team are not liable for any direct or indirect damages, financial losses, or legal issues that may arise from the use (or inability to use) this tool. Your use of the tool is entirely at your own risk."
+    },
+    "section4": {
+      "title": "4. Intellectual Property",
+      "content": "All content on this site, including text, graphics, logos, and the tool itself, is the property of 'Financial Formula' and is protected by copyright laws."
+    },
+    "section5": {
+      "title": "5. Modification of Terms",
+      "content": "We reserve the right to modify these terms at any time. Your continued use of the site after any such changes constitutes your acceptance of the new terms."
+    }
+  },
+  "articles": {
+    "title": "Specialized Articles",
+    "subtitle": "Articles to increase your knowledge of the importance of accuracy in financial and legal documents.",
+    "readMore": "Read More"
+  },
+  "articleDetail": {
+    "backLink": "Back to Articles List",
+    "notFound": {
+      "title": "Article Not Found",
+      "message": "Sorry, we couldn't find the article you are looking for."
+    }
+  }
+}
