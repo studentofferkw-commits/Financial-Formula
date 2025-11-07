@@ -17,6 +17,9 @@ const translations = {
       title: 'صيغة مالية',
       nav: {
         home: 'الرئيسية',
+        dateConverter: 'تحويل التاريخ',
+        invoiceGenerator: 'مولد الفواتير',
+        glossary: 'مسرد المصطلحات',
         articles: 'مقالات',
         about: 'عن الموقع',
         contact: 'اتصل بنا',
@@ -37,6 +40,51 @@ const translations = {
         copySuccess: 'تم النسخ!',
         copyFail: 'فشل النسخ',
         outputPlaceholder: 'النتيجة ستظهر هنا...',
+    },
+    dateConverterPage: {
+        mainTitle: 'تحويل التاريخ إلى نص',
+        subtitle: 'أداة لتحويل التواريخ من صيغة رقمية إلى نص مكتوب بالكامل، مثالية للمستندات الرسمية والعقود.',
+    },
+    dateConverter: {
+        selectDate: 'اختر التاريخ',
+        result: 'التاريخ نصًا',
+        outputPlaceholder: 'النتيجة ستظهر هنا...',
+    },
+    invoiceGeneratorPage: {
+      mainTitle: 'مولد الفواتير السريع',
+      subtitle: 'أنشئ فواتير احترافية بسهولة وحملها بصيغة PDF. مثالي للمستقلين والشركات الصغيرة.',
+    },
+    invoiceGenerator: {
+      invoice: 'فاتورة',
+      from: 'من',
+      billTo: 'فاتورة إلى',
+      yourName: 'اسمك / اسم شركتك',
+      yourAddress: 'عنوانك',
+      clientName: 'اسم العميل / الشركة',
+      clientAddress: 'عنوان العميل',
+      invoiceNumber: 'رقم الفاتورة',
+      date: 'التاريخ',
+      item: 'البند',
+      quantity: 'الكمية',
+      rate: 'السعر',
+      amount: 'المبلغ',
+      subtotal: 'المجموع الفرعي',
+      total: 'المجموع الإجمالي',
+      amountInWords: 'المبلغ كتابةً',
+      addItem: 'إضافة بند',
+      downloadPdf: 'تحميل PDF',
+      notes: 'ملاحظات',
+      notesPlaceholder: 'اكتب ملاحظاتك هنا (اختياري)',
+      uploadLogo: 'رفع الشعار',
+      removeLogo: 'إزالة الشعار',
+    },
+    glossaryPage: {
+      mainTitle: 'مسرد المصطلحات المالية',
+      subtitle: 'دليلك لفهم أهم المصطلحات المالية والمحاسبية المستخدمة في عالم الأعمال.',
+    },
+    glossary: {
+      searchPlaceholder: 'ابحث عن مصطلح...',
+      noResults: 'لم يتم العثور على نتائج.',
     },
     home: {
         mainTitle: 'تحويل الأرقام إلى كلمات بسهولة',
@@ -128,6 +176,48 @@ const translations = {
             message: 'عذراً، لم نتمكن من العثور على المقالة التي تبحث عنها.',
         },
         backLink: 'العودة إلى المقالات',
+    },
+    meta: {
+      home: {
+        title: "صيغة مالية | محول الأرقام إلى نصوص مالية",
+        description: "أداة دقيقة لتحويل المبالغ المالية من أرقام إلى نصوص باللغة العربية والإنجليزية، مثالية للعقود والفواتير والشيكات."
+      },
+      dateConverter: {
+        title: "محول التاريخ إلى نص | صيغة مالية",
+        description: "حوّل التواريخ بسهولة إلى نص مكتوب بالكامل باللغتين العربية والإنجليزية للمستندات الرسمية والعقود."
+      },
+      invoiceGenerator: {
+        title: "مولد الفواتير | صيغة مالية",
+        description: "أنشئ فواتير احترافية بسهولة وحملها بصيغة PDF. أداة مثالية للمستقلين والشركات الصغيرة."
+      },
+      glossary: {
+        title: "مسرد المصطلحات المالية | صيغة مالية",
+        description: "ابحث وتصفح قاموس شامل للمصطلحات المالية والمحاسبية باللغتين العربية والإنجليزية لفهم أعمق لعالم المال."
+      },
+      articles: {
+        title: "مقالات | صيغة مالية",
+        description: "مقالات متخصصة حول كتابة المبالغ المالية، الأخطاء الشائعة، والمتطلبات القانونية لضمان دقة مستنداتك."
+      },
+      articleDetail: {
+        title: "%s | صيغة مالية",
+        description: "%s"
+      },
+      about: {
+        title: "عن الموقع | صيغة مالية",
+        description: "تعرف على هدف ورؤية 'صيغة مالية'، الأداة الموثوقة لتحويل الأرقام إلى نصوص مالية بدقة وأمان."
+      },
+      contact: {
+        title: "اتصل بنا | صيغة مالية",
+        description: "تواصل مع فريق 'صيغة مالية'. نرحب بملاحظاتك، استفساراتك، واقتراحاتك لتحسين خدماتنا."
+      },
+      privacy: {
+        title: "سياسة الخصوصية | صيغة مالية",
+        description: "اقرأ سياسة الخصوصية الخاصة بنا لفهم كيف نلتزم بحماية بياناتك. أداتنا لا تجمع أو تخزن أي معلومات شخصية."
+      },
+      terms: {
+        title: "شروط الخدمة | صيغة مالية",
+        description: "اطلع على شروط وأحكام استخدام أداة 'صيغة مالية'. استخدامك للموقع يعني موافقتك على هذه الشروط."
+      }
     }
   },
   en: {
@@ -135,6 +225,9 @@ const translations = {
       title: 'Financial Formula',
       nav: {
         home: 'Home',
+        dateConverter: 'Date Converter',
+        invoiceGenerator: 'Invoice Generator',
+        glossary: 'Glossary',
         articles: 'Articles',
         about: 'About',
         contact: 'Contact',
@@ -155,6 +248,51 @@ const translations = {
         copySuccess: 'Copied!',
         copyFail: 'Copy failed',
         outputPlaceholder: 'Result will appear here...',
+    },
+    dateConverterPage: {
+        mainTitle: 'Date to Text Converter',
+        subtitle: 'A tool to convert dates from a numerical format to fully written text, perfect for official documents and contracts.',
+    },
+    dateConverter: {
+        selectDate: 'Select a Date',
+        result: 'Date in Words',
+        outputPlaceholder: 'Result will appear here...',
+    },
+    invoiceGeneratorPage: {
+      mainTitle: 'Simple Invoice Generator',
+      subtitle: 'Create professional invoices with ease and download them as a PDF. Perfect for freelancers and small businesses.',
+    },
+    invoiceGenerator: {
+      invoice: 'INVOICE',
+      from: 'From',
+      billTo: 'Bill To',
+      yourName: 'Your Name / Company',
+      yourAddress: 'Your Address',
+      clientName: 'Client\'s Name / Company',
+      clientAddress: 'Client\'s Address',
+      invoiceNumber: 'Invoice #',
+      date: 'Date',
+      item: 'Item',
+      quantity: 'Quantity',
+      rate: 'Rate',
+      amount: 'Amount',
+      subtotal: 'Subtotal',
+      total: 'Total',
+      amountInWords: 'Amount in Words',
+      addItem: 'Add Item',
+      downloadPdf: 'Download PDF',
+      notes: 'Notes',
+      notesPlaceholder: 'Add any notes here (optional)',
+      uploadLogo: 'Upload Logo',
+      removeLogo: 'Remove Logo',
+    },
+    glossaryPage: {
+        mainTitle: 'Glossary of Financial Terms',
+        subtitle: 'Your guide to understanding the key financial and accounting terms used in the world of business.',
+    },
+    glossary: {
+        searchPlaceholder: 'Search for a term...',
+        noResults: 'No results found.',
     },
     home: {
         mainTitle: 'Convert Numbers to Words with Ease',
@@ -246,6 +384,48 @@ const translations = {
             message: 'Sorry, we couldn\'t find the article you are looking for.',
         },
         backLink: 'Back to Articles',
+    },
+    meta: {
+      home: {
+        title: "Financial Formula | Number to Financial Text Converter",
+        description: "An accurate tool for converting financial amounts from numbers to text in both Arabic and English, perfect for contracts, invoices, and checks."
+      },
+      dateConverter: {
+        title: "Date to Text Converter | Financial Formula",
+        description: "Easily convert dates into fully written text in Arabic and English for official documents and contracts."
+      },
+      invoiceGenerator: {
+        title: "Invoice Generator | Financial Formula",
+        description: "Create professional invoices with ease and download them as a PDF. The perfect tool for freelancers and small businesses."
+      },
+      glossary: {
+        title: "Glossary of Financial Terms | Financial Formula",
+        description: "Search and browse a comprehensive dictionary of financial and accounting terms in Arabic and English for a deeper understanding of the world of finance."
+      },
+      articles: {
+        title: "Articles | Financial Formula",
+        description: "Specialized articles on writing financial amounts, common mistakes, and legal requirements to ensure the accuracy of your documents."
+      },
+      articleDetail: {
+        title: "%s | Financial Formula",
+        description: "%s"
+      },
+      about: {
+        title: "About Us | Financial Formula",
+        description: "Learn about the mission and vision of 'Financial Formula', the reliable tool for converting numbers to financial text with accuracy and security."
+      },
+      contact: {
+        title: "Contact Us | Financial Formula",
+        description: "Get in touch with the 'Financial Formula' team. We welcome your feedback, inquiries, and suggestions to improve our services."
+      },
+      privacy: {
+        title: "Privacy Policy | Financial Formula",
+        description: "Read our privacy policy to understand how we are committed to protecting your data. Our tool does not collect or store any personal information."
+      },
+      terms: {
+        title: "Terms of Service | Financial Formula",
+        description: "Review the terms and conditions for using the 'Financial Formula' tool. Your use of the site constitutes your agreement to these terms."
+      }
     }
   }
 };

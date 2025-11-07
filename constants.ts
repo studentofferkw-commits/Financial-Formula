@@ -1,8 +1,11 @@
 // FIX: Implemented missing constants for navigation, articles, and currencies.
-import { NavLinkInfo, Article, Currency } from './types';
+import { NavLinkInfo, Article, Currency, GlossaryTerm } from './types';
 
 export const NAV_LINKS: NavLinkInfo[] = [
   { path: '/', key: 'home' },
+  { path: '/date-converter', key: 'dateConverter' },
+  { path: '/invoice-generator', key: 'invoiceGenerator' },
+  { path: '/glossary', key: 'glossary' },
   { path: '/articles', key: 'articles' },
   { path: '/about', key: 'about' },
   { path: '/contact', key: 'contact' },
@@ -154,6 +157,107 @@ export const ARTICLES: Article[] = [
       <p class="mt-4">This ability to adapt automatically is what makes "Financial Formula" so powerful. You no longer need to memorize the names of fractional units or the complex grammatical rules for each currency; the tool does all the heavy lifting for you.</p>
     `,
   }
+];
+
+export const GLOSSARY_TERMS: GlossaryTerm[] = [
+    {
+        id: '1',
+        termAr: 'الأصل',
+        termEn: 'Asset',
+        definitionAr: 'مورد اقتصادي تمتلكه الشركة وله قيمة ويتوقع أن يوفر فائدة اقتصادية مستقبلية.',
+        definitionEn: 'An economic resource controlled by the company as a result of past events and from which future economic benefits are expected to flow to the company.'
+    },
+    {
+        id: '2',
+        termAr: 'الالتزام',
+        termEn: 'Liability',
+        definitionAr: 'تعهد أو دين حالي على الشركة ينشأ من أحداث سابقة، ويتطلب تسويته تدفقاً خارجاً للموارد.',
+        definitionEn: 'A present obligation of the company arising from past events, the settlement of which is expected to result in an outflow of resources.'
+    },
+    {
+        id: '3',
+        termAr: 'حقوق الملكية',
+        termEn: 'Equity',
+        definitionAr: 'القيمة المتبقية في أصول الشركة بعد خصم جميع التزاماتها. تمثل حصة المالكين في الشركة.',
+        definitionEn: 'The residual interest in the assets of the entity after deducting all its liabilities. It represents the owners\' stake in the company.'
+    },
+    {
+        id: '4',
+        termAr: 'الإيرادات',
+        termEn: 'Revenue',
+        definitionAr: 'إجمالي تدفق المنافع الاقتصادية خلال فترة ما، والتي تنشأ عن الأنشطة العادية للشركة وتؤدي إلى زيادة في حقوق الملكية.',
+        definitionEn: 'The gross inflow of economic benefits during a period arising in the course of the ordinary activities of an entity when those inflows result in increases in equity.'
+    },
+    {
+        id: '5',
+        termAr: 'المصروفات',
+        termEn: 'Expenses',
+        definitionAr: 'تكاليف العمليات التي تتكبدها الشركة في سبيل تحقيق الإيرادات.',
+        definitionEn: 'The costs of operations that a company incurs to generate revenue.'
+    },
+    {
+        id: '6',
+        termAr: 'الميزانية العمومية',
+        termEn: 'Balance Sheet',
+        definitionAr: 'بيان مالي يوضح أصول الشركة والتزاماتها وحقوق الملكية في نقطة زمنية محددة. (الأصول = الالتزامات + حقوق الملكية).',
+        definitionEn: 'A financial statement that reports a company\'s assets, liabilities, and equity at a specific point in time. (Assets = Liabilities + Equity).'
+    },
+    {
+        id: '7',
+        termAr: 'قائمة الدخل',
+        termEn: 'Income Statement',
+        definitionAr: 'بيان مالي يوضح أداء الشركة المالي (الإيرادات، المصروفات، وصافي الربح أو الخسارة) خلال فترة زمنية معينة.',
+        definitionEn: 'A financial statement that shows a company\'s financial performance (revenues, expenses, and net profit or loss) over a period of time.'
+    },
+    {
+        id: '8',
+        termAr: 'التدفق النقدي',
+        termEn: 'Cash Flow',
+        definitionAr: 'صافي حركة النقد وما يعادله الذي يتم تحويله إلى ومن الشركة. يقيس قدرة الشركة على توليد النقد.',
+        definitionEn: 'The net movement of cash and cash-equivalents being transferred into and out of a business. It measures a company\'s ability to generate cash.'
+    },
+    {
+        id: '9',
+        termAr: 'الإهلاك',
+        termEn: 'Depreciation',
+        definitionAr: 'النقص المنهجي في القيمة المسجلة للأصل الملموس على مدى عمره الإنتاجي.',
+        definitionEn: 'The systematic decrease in the recorded value of a tangible asset over its useful life.'
+    },
+    {
+        id: '10',
+        termAr: 'حسابات القبض (الذمم المدينة)',
+        termEn: 'Accounts Receivable',
+        definitionAr: 'المبالغ المستحقة للشركة من عملائها مقابل سلع أو خدمات تم بيعها على الحساب.',
+        definitionEn: 'The amounts owed to a company by its customers for goods or services sold on credit.'
+    },
+    {
+        id: '11',
+        termAr: 'حسابات الدفع (الذمم الدائنة)',
+        termEn: 'Accounts Payable',
+        definitionAr: 'المبالغ التي تدين بها الشركة لمورديها مقابل سلع أو خدمات تم شراؤها على الحساب.',
+        definitionEn: 'The amounts a company owes to its suppliers for goods or services purchased on credit.'
+    },
+    {
+        id: '12',
+        termAr: 'التدقيق (المراجعة)',
+        termEn: 'Audit',
+        definitionAr: 'فحص مستقل وموضوعي للبيانات المالية للمنظمة للتأكد من أنها تمثل وجهة نظر حقيقية وعادلة لوضعها المالي.',
+        definitionEn: 'An independent and objective examination of an organization\'s financial statements to ensure they present a true and fair view of its financial position.'
+    },
+     {
+        id: '13',
+        termAr: 'الأرباح المحتجزة',
+        termEn: 'Retained Earnings',
+        definitionAr: 'جزء من صافي أرباح الشركة الذي يتم إعادة استثماره في الشركة بدلاً من توزيعه على المساهمين كأرباح.',
+        definitionEn: 'The portion of a company\'s net income that is reinvested in the business rather than being distributed to shareholders as dividends.'
+    },
+    {
+        id: '14',
+        termAr: 'نقطة التعادل',
+        termEn: 'Break-Even Point',
+        definitionAr: 'النقطة التي تتساوى فيها الإيرادات الإجمالية مع التكاليف الإجمالية، مما يعني عدم وجود ربح أو خسارة.',
+        definitionEn: 'The point at which total revenue equals total costs, resulting in no profit or loss.'
+    }
 ];
 
 

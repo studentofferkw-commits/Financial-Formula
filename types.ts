@@ -35,3 +35,11 @@ export interface Currency {
   
   decimals: number; // number of decimal places, e.g., 2
 }
+
+export interface GlossaryTerm {
+  id: string;
+  termAr: string;
+  termEn: string;
+  definitionAr: string;
+  definitionEn: string;
+}

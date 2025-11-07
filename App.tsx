@@ -8,6 +8,9 @@ import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import TermsOfServicePage from './pages/TermsOfServicePage';
 import ArticlesPage from './pages/ArticlesPage';
 import ArticleDetailPage from './pages/ArticleDetailPage';
+import DateConverterPage from './pages/DateConverterPage';
+import GlossaryPage from './pages/GlossaryPage';
+import InvoiceGeneratorPage from './pages/InvoiceGeneratorPage';
 import { I18nProvider } from './context/I18nContext';
 import { ThemeProvider } from './context/ThemeContext';
 
@@ -19,6 +22,9 @@ const App: React.FC = () => {
           <Layout>
             <Routes>
               <Route path="/" element={<HomePage />} />
+              <Route path="/date-converter" element={<DateConverterPage />} />
+              <Route path="/glossary" element={<GlossaryPage />} />
+              <Route path="/invoice-generator" element={<InvoiceGeneratorPage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
