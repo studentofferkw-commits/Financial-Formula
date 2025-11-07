@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
         <p className="text-sm">
           &copy; {new Date().getFullYear()} {t('footer.copyright')}
         </p>
-        <div className="mt-4 flex justify-center space-x-6">
+        <div className="mt-4 flex justify-center gap-6">
           <Link to="/privacy-policy" className="text-sm text-gray-500 hover:text-teal-600 dark:text-gray-400 dark:hover:text-teal-400">
             {t('footer.privacy')}
           </Link>

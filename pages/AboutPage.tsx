@@ -4,7 +4,7 @@ import MetaTags from '../components/MetaTags';
 
 const AboutPage: React.FC = () => {
   const { t, language } = useTranslation();
-  const textDirectionClass = language === 'ar' ? 'text-justify' : 'text-left';
+  const textDirectionClass = language === 'ar' ? 'text-right' : 'text-left';
 
   return (
     <>

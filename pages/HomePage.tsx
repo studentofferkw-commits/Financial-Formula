@@ -1,53 +1,47 @@
-import React, { useEffect } from 'react';
-import Converter from '../components/Converter';
+import React from 'react';
 import { useTranslation } from '../hooks/useTranslation';
 import MetaTags from '../components/MetaTags';
+import { Link } from 'react-router-dom';
+
+// FIX: Replaced `JSX.Element` with `React.ReactNode` to resolve the 'Cannot find namespace JSX' error.
+const FeatureCard: React.FC<{ path: string; icon: React.ReactNode; title: string; description: string }> = ({ path, icon, title, description }) => {
+  return (
+    <Link to={path} className="group block bg-white dark:bg-slate-800/50 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-slate-700 hover:shadow-2xl hover:-translate-y-2 hover:border-teal-500 dark:hover:shadow-teal-900/50 transition-all duration-300">
+      <div className="flex items-center justify-center h-16 w-16 bg-teal-100 dark:bg-teal-900/50 rounded-full mb-4 group-hover:bg-teal-200 dark:group-hover:bg-teal-900 transition-colors">
+        {icon}
+      </div>
+      <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2">{title}</h3>
+      <p className="text-gray-600 dark:text-gray-400">{description}</p>
+    </Link>
+  );
+};
 
 const HomePage: React.FC = () => {
   const { t, language } = useTranslation();
+  const textDirectionClass = language === 'ar' ? 'text-right' : 'text-left';
   
-  const textDirectionClass = language === 'ar' ? 'text-justify' : 'text-left';
-
-  useEffect(() => {
-    const schemas = [
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Financial Formula",
-        "url": window.location.origin,
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "Financial Formula - Number to Text Converter",
-        "applicationCategory": "FinancialApplication",
-        "operatingSystem": "WebPlatform",
-        "description": "An interactive web tool that converts numbers into written Arabic and English text for financial documents, checks, and contracts.",
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-        }
-      }
-    ];
-
-    const scriptElements = schemas.map(schema => {
-      const script = document.createElement('script');
-      script.type = 'application/ld+json';
-      script.innerHTML = JSON.stringify(schema);
-      document.head.appendChild(script);
-      return script;
-    });
-    
-    // Cleanup function to remove the scripts when the component unmounts
-    return () => {
-      scriptElements.forEach(script => {
-        if (document.head.contains(script)) {
-          document.head.removeChild(script);
-        }
-      });
-    };
-  }, []); // Empty dependency array ensures this runs only once on mount
+  const cardIcons = {
+    numberConverter: (
+      <svg className="h-8 w-8 text-teal-600 dark:text-teal-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 15.75V18m-7.5-6.75h.008v.008H8.25v-.008Zm0 3h.008v.008H8.25v-.008Zm0 3h.008v.008H8.25v-.008Zm3-6h.008v.008H11.25v-.008Zm0 3h.008v.008H11.25v-.008Zm0 3h.008v.008H11.25v-.008Zm3-6h.008v.008H14.25v-.008Zm0 3h.008v.008H14.25v-.008Zm0 3h.008v.008H14.25v-.008ZM6 21v-3.091c0-.34.146-.663.398-.881l1.522-1.299a1.125 1.125 0 0 1 1.282 0l1.522 1.299c.252.218.398.54.398.881V21M6 21h12M6 21H3.75a1.875 1.875 0 0 1-1.875-1.875V4.875C1.875 3.839 2.714 3 3.75 3h16.5c1.036 0 1.875.84 1.875 1.875v14.25A1.875 1.875 0 0 1 20.25 21H18" />
+      </svg>
+    ),
+    dateConverter: (
+      <svg className="h-8 w-8 text-teal-600 dark:text-teal-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0h18M9.75 12h.008v.008H9.75V12Zm3 0h.008v.008H12.75V12Zm3 0h.008v.008H15.75V12Zm-3 3h.008v.008H12.75V15Zm-3 0h.008v.008H9.75V15Z" />
+      </svg>
+    ),
+    invoiceGenerator: (
+      <svg className="h-8 w-8 text-teal-600 dark:text-teal-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5.586a1 1 0 0 1 .707.293l5.414 5.414a1 1 0 0 1 .293.707V19a2 2 0 0 1-2 2Z" />
+      </svg>
+    ),
+    contractClause: (
+      <svg className="h-8 w-8 text-teal-600 dark:text-teal-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 13.5h6m-6-3h6m-6-3h6m-6-3h6M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21m-4.062 0h2.125M9 21h-1.553c-1.295 0-2.41-1.01-2.58-2.303L4.5 5.25a2.25 2.25 0 0 1 2.25-2.25h9a2.25 2.25 0 0 1 2.25 2.25L19.5 18.7a2.5 2.5 0 0 1-2.58 2.303H15M9 21h6" />
+      </svg>
+    ),
+  };
 
   return (
     <>
@@ -66,9 +60,34 @@ const HomePage: React.FC = () => {
         </section>
 
         <section>
-          <Converter />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <FeatureCard 
+              path="/number-converter"
+              icon={cardIcons.numberConverter}
+              title={t('home.cards.numberConverter.title')}
+              description={t('home.cards.numberConverter.description')}
+            />
+            <FeatureCard 
+              path="/date-converter"
+              icon={cardIcons.dateConverter}
+              title={t('home.cards.dateConverter.title')}
+              description={t('home.cards.dateConverter.description')}
+            />
+            <FeatureCard 
+              path="/invoice-generator"
+              icon={cardIcons.invoiceGenerator}
+              title={t('home.cards.invoiceGenerator.title')}
+              description={t('home.cards.invoiceGenerator.description')}
+            />
+            <FeatureCard 
+              path="/contract-clause"
+              icon={cardIcons.contractClause}
+              title={t('home.cards.contractClause.title')}
+              description={t('home.cards.contractClause.description')}
+            />
+          </div>
         </section>
-
+        
         <section className="bg-white dark:bg-slate-800/50 p-8 rounded-xl shadow-md border border-gray-200 dark:border-slate-700">
           <h2 className="text-3xl font-bold text-teal-700 dark:text-teal-400 mb-6 text-center">{t('home.whyUse.title')}</h2>
           <div className={`prose prose-lg max-w-none text-gray-700 dark:text-gray-300 dark:prose-invert leading-relaxed ${textDirectionClass}`}>
@@ -90,6 +109,7 @@ const HomePage: React.FC = () => {
               </p>
           </div>
         </section>
+
       </div>
     </>
   );

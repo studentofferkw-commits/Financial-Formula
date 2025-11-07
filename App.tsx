@@ -14,6 +14,7 @@ import InvoiceGeneratorPage from './pages/InvoiceGeneratorPage';
 import ContractClausePage from './pages/ContractClausePage';
 import { I18nProvider } from './context/I18nContext';
 import { ThemeProvider } from './context/ThemeContext';
+import NumberConverterPage from './pages/NumberConverterPage';
 
 const App: React.FC = () => {
   return (
@@ -23,6 +24,7 @@ const App: React.FC = () => {
           <Layout>
             <Routes>
               <Route path="/" element={<HomePage />} />
+              <Route path="/number-converter" element={<NumberConverterPage />} />
               <Route path="/date-converter" element={<DateConverterPage />} />
               <Route path="/glossary" element={<GlossaryPage />} />
               <Route path="/invoice-generator" element={<InvoiceGeneratorPage />} />

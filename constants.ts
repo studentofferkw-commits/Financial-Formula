@@ -3,6 +3,7 @@ import { NavLinkInfo, Article, Currency, GlossaryTerm } from './types';
 
 export const NAV_LINKS: NavLinkInfo[] = [
   { path: '/', key: 'home' },
+  { path: '/number-converter', key: 'numberConverter' },
   { path: '/date-converter', key: 'dateConverter' },
   { path: '/invoice-generator', key: 'invoiceGenerator' },
   { path: '/contract-clause', key: 'contractClause' },
@@ -156,6 +157,64 @@ export const ARTICLES: Article[] = [
         <li><strong>Japanese Yen (JPY):</strong> Has no fractional units. The tool will ignore any decimals and process only the integer part.</li>
       </ul>
       <p class="mt-4">This ability to adapt automatically is what makes "Financial Formula" so powerful. You no longer need to memorize the names of fractional units or the complex grammatical rules for each currency; the tool does all the heavy lifting for you.</p>
+    `,
+  },
+  {
+    id: '6',
+    title: 'دليلك لإنشاء فواتير احترافية',
+    titleEn: 'Your Guide to Creating Professional Invoices',
+    summary: 'تعلم كيفية استخدام مولد الفواتير لإنشاء مستندات مالية واضحة واحترافية تعكس جودة عملك.',
+    summaryEn: 'Learn how to use the invoice generator to create clear, professional financial documents that reflect the quality of your work.',
+    content: `
+      <p>الفاتورة ليست مجرد طلب للدفع؛ إنها وثيقة تمثل علامتك التجارية واحترافيتك. فاتورة جيدة التنظيم وواضحة تترك انطباعًا إيجابيًا لدى العملاء وتسهل عملية الدفع. إليك كيف يساعدك مولد الفواتير الخاص بنا على تحقيق ذلك.</p>
+      <h3 class="font-bold text-xl mt-4">عناصر الفاتورة المثالية:</h3>
+      <ul class="list-disc ps-5">
+        <li><strong>بيانات واضحة:</strong> تأكد من أن اسمك وعنوانك واسم العميل وعنوانه مكتوبة بوضوح. أداة رفع الشعار تضيف لمسة احترافية إضافية.</li>
+        <li><strong>تفاصيل دقيقة:</strong> يجب أن تحتوي الفاتورة على رقم فريد وتاريخ إصدار. هذا ضروري للتتبع والأغراض المحاسبية.</li>
+        <li><strong>بنود مفصلة:</strong> بدلاً من مبلغ إجمالي واحد، قم بتقسيم الخدمات أو المنتجات إلى بنود منفصلة مع الكمية والسعر لكل منها. هذا يزيد من الشفافية.</li>
+        <li><strong>المبلغ الإجمالي كتابةً:</strong> هذه ميزة فريدة في أداتنا، حيث يتم تحويل المبلغ الإجمالي إلى نص تلقائيًا، مما يضيف طبقة من الحماية القانونية ويمنع الأخطاء.</li>
+      </ul>
+      <p class="mt-4">باستخدام مولد الفواتير، يمكنك إنشاء مستندات تفي بكل هذه المعايير في دقائق، وتنزيلها كملف PDF جاهز للإرسال. ابدأ في ترك انطباع رائع لدى عملائك اليوم!</p>
+    `,
+    contentEn: `
+      <p>An invoice is not just a request for payment; it's a document that represents your brand and professionalism. A well-organized, clear invoice leaves a positive impression on clients and facilitates the payment process. Here’s how our invoice generator helps you achieve that.</p>
+      <h3 class="font-bold text-xl mt-4">Elements of a Perfect Invoice:</h3>
+      <ul class="list-disc ps-5">
+        <li><strong>Clear Information:</strong> Ensure your name, address, and the client's name and address are clearly stated. The logo upload feature adds an extra professional touch.</li>
+        <li><strong>Accurate Details:</strong> The invoice must have a unique number and an issue date. This is crucial for tracking and accounting purposes.</li>
+        <li><strong>Itemized List:</strong> Instead of a single total amount, break down services or products into separate line items with quantity and rate for each. This increases transparency.</li>
+        <li><strong>Total Amount in Words:</strong> This is a unique feature of our tool, where the total amount is automatically converted to text, adding a layer of legal protection and preventing errors.</li>
+      </ul>
+      <p class="mt-4">Using the invoice generator, you can create documents that meet all these criteria in minutes and download them as a ready-to-send PDF. Start making a great impression on your clients today!</p>
+    `,
+  },
+  {
+    id: '7',
+    title: 'صياغة بنود مالية محكمة في عقودك',
+    titleEn: 'Crafting Airtight Financial Clauses in Your Contracts',
+    summary: 'اكتشف كيف يمكن لمساعد صياغة البنود المالية أن يحول الطريقة التي تكتب بها العقود، مما يضيف الدقة والحماية القانونية.',
+    summaryEn: 'Discover how the contract clause helper can transform the way you write contracts, adding precision and legal protection.',
+    content: `
+      <p>البند المالي هو قلب أي عقد تجاري. أي غموض في هذا البند يمكن أن يؤدي إلى نزاعات طويلة ومكلفة. تم تصميم "مساعد صياغة البنود المالية" لتزويدك بصياغات قوية ومفصلة تقلل من المخاطر وتزيد من الوضوح.</p>
+      <h3 class="font-bold text-xl mt-4">لماذا الصياغة المفصلة مهمة؟</h3>
+      <ul class="list-disc ps-5">
+        <li><strong>تجنب الغموض:</strong> صياغة مثل "المبلغ شامل للضريبة" لا تترك مجالاً للشك حول من يتحمل تكلفة الضريبة.</li>
+        <li><strong>تحديد هيكل الدفع:</strong> تحديد ما إذا كان المبلغ سيُدفع كدفعة واحدة أو على أقساط يمنع أي خلافات مستقبلية حول مواعيد السداد.</li>
+        <li><strong>الاحترافية:</strong> استخدام صياغات قانونية دقيقة يعكس احترافيتك ويظهر للطرف الآخر أنك تأخذ العقد على محمل الجد.</li>
+        <li><strong>الحماية القانونية:</strong> في حالة النزاع، سيعتمد القاضي على النص المكتوب. كلما كان النص أكثر تفصيلاً ووضوحًا، كان موقفك أقوى.</li>
+      </ul>
+      <p class="mt-4">أداتنا المتقدمة تأخذ في الاعتبار متغيرات مثل الضرائب وهيكل الدفع لتزويدك ببنود جاهزة للنسخ. لا تترك أهم جزء في عقدك للصدفة؛ استخدم أداتنا لضمان صياغة محكمة ودقيقة.</p>
+    `,
+    contentEn: `
+      <p>The financial clause is the heart of any commercial contract. Any ambiguity in this clause can lead to long and costly disputes. The "Contract Clause Helper" is designed to provide you with robust and detailed phrasing that minimizes risk and increases clarity.</p>
+      <h3 class="font-bold text-xl mt-4">Why is Detailed Phrasing Important?</h3>
+      <ul class="list-disc ps-5">
+        <li><strong>Avoid Ambiguity:</strong> Phrasing like "the amount is tax-inclusive" leaves no room for doubt about who bears the cost of the tax.</li>
+        <li><strong>Define Payment Structure:</strong> Specifying whether the amount will be paid as a lump sum or in installments prevents future disagreements about payment schedules.</li>
+        <li><strong>Professionalism:</strong> Using precise legal phrasing reflects your professionalism and shows the other party that you take the contract seriously.</li>
+        <li><strong>Legal Protection:</strong> In case of a dispute, a judge will rely on the written text. The more detailed and clear the text, the stronger your position.</li>
+      </ul>
+      <p class="mt-4">Our advanced tool considers variables like taxes and payment structure to provide you with ready-to-copy clauses. Don't leave the most important part of your contract to chance; use our tool to ensure airtight and accurate phrasing.</p>
     `,
   }
 ];

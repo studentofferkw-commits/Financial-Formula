@@ -63,7 +63,7 @@ const ArticleDetailPage: React.FC = () => {
   const articleTitle = language === 'ar' ? article.title : article.titleEn;
   const articleSummary = language === 'ar' ? article.summary : article.summaryEn;
   const content = language === 'ar' ? article.content : article.contentEn;
-  const textDirectionClass = language === 'ar' ? 'text-justify' : 'text-left';
+  const textDirectionClass = language === 'ar' ? 'text-right' : 'text-left';
   
   const metaTitle = t('meta.articleDetail.title').replace('%s', articleTitle);
   const metaDescription = t('meta.articleDetail.description').replace('%s', articleSummary);

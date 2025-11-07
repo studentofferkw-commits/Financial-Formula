@@ -6,6 +6,11 @@
     <priority>1.00</priority>
   </url>
   <url>
+    <loc>https://financialformula.app/#/number-converter</loc>
+    <lastmod>2024-05-22</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
     <loc>https://financialformula.app/#/date-converter</loc>
     <lastmod>2024-05-22</lastmod>
     <priority>0.80</priority>
@@ -62,6 +67,16 @@
   </url>
   <url>
     <loc>https://financialformula.app/#/articles/5</loc>
+    <lastmod>2024-05-22</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://financialformula.app/#/articles/6</loc>
+    <lastmod>2024-05-22</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://financialformula.app/#/articles/7</loc>
     <lastmod>2024-05-22</lastmod>
     <priority>0.64</priority>
   </url>

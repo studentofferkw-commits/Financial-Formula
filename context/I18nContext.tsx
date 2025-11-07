@@ -17,6 +17,7 @@ const translations = {
       title: 'صيغة مالية',
       nav: {
         home: 'الرئيسية',
+        numberConverter: 'تحويل الأرقام',
         dateConverter: 'تحويل التاريخ',
         invoiceGenerator: 'مولد الفواتير',
         contractClause: 'صياغة البنود',
@@ -122,23 +123,45 @@ const translations = {
       noResults: 'لم يتم العثور على نتائج.',
     },
     home: {
+      mainTitle: 'لوحة أدوات صيغة مالية',
+      subtitle: 'مجموعة متكاملة من الأدوات المالية لمساعدتك على إنجاز أعمالك بدقة واحترافية.',
+      cards: {
+        numberConverter: {
+          title: 'تحويل الأرقام إلى كلمات',
+          description: 'تحويل دقيق للمبالغ المالية من أرقام إلى نصوص للعقود والشيكات.'
+        },
+        dateConverter: {
+          title: 'تحويل التاريخ إلى نص',
+          description: 'صياغة التواريخ بشكل نصي كامل للمستندات والوثائق الرسمية.'
+        },
+        invoiceGenerator: {
+          title: 'مولد الفواتير السريع',
+          description: 'أنشئ فواتير احترافية وحملها كملف PDF في دقائق.'
+        },
+        contractClause: {
+          title: 'مساعد صياغة البنود المالية',
+          description: 'إنشاء بنود مالية قانونية ومفصلة لعقودك واتفاقياتك.'
+        }
+      },
+      whyUse: {
+          title: 'لماذا تستخدم صيغة مالية؟',
+          p1: 'في عالم الأعمال والمال، الدقة هي كل شيء. خطأ صغير في كتابة مبلغ مالي يمكن أن يؤدي إلى سوء فهم، نزاعات قانونية، أو خسائر مالية. تم تصميم "صيغة مالية" لتوفير حل سريع، دقيق، وموثوق لتحويل الأرقام إلى نصوص، مما يضمن أن مستنداتك المالية واضحة وخالية من الأخطاء.',
+          p2: 'سواء كنت تقوم بإعداد فاتورة، تحرير شيك، أو صياغة عقد قانوني، فإن أداتنا تضمن تطابق النص المكتوب مع الأرقام بدقة متناهية، مع مراعاة القواعد النحوية المعقدة للغة العربية.',
+          beneficiariesTitle: 'من يستفيد من خدماتنا؟',
+          b1_strong: 'المحاسبون والمهنيون الماليون:',
+          b1_text: 'لضمان دقة الفواتير والتقارير المالية.',
+          b2_strong: 'المحامون والمستشارون القانونيون:',
+          b2_text: 'لصياغة عقود ووثائق قانونية لا لبس فيها.',
+          b3_strong: 'أصحاب الأعمال والمديرون:',
+          b3_text: 'لتحرير الشيكات والأوامر المالية بثقة.',
+          b4_strong: 'أي شخص يتعامل مع المستندات المالية:',
+          b4_text: 'لتجنب الأخطاء الشائعة وضمان الوضوح.',
+          p3: 'استخدم "صيغة مالية" اليوم وانعم براحة البال التي تأتي مع الدقة المطلقة.'
+      },
+    },
+    numberConverterPage: {
         mainTitle: 'تحويل الأرقام إلى كلمات بسهولة',
         subtitle: 'أداة دقيقة لتحويل المبالغ المالية من أرقام إلى نصوص باللغتين العربية والإنجليزية، مثالية للعقود والفواتير والشيكات.',
-        whyUse: {
-            title: 'لماذا تستخدم صيغة مالية؟',
-            p1: 'في عالم الأعمال والمال، الدقة هي كل شيء. خطأ صغير في كتابة مبلغ مالي يمكن أن يؤدي إلى سوء فهم، نزاعات قانونية، أو خسائر مالية. تم تصميم "صيغة مالية" لتوفير حل سريع، دقيق، وموثوق لتحويل الأرقام إلى نصوص، مما يضمن أن مستنداتك المالية واضحة وخالية من الأخطاء.',
-            p2: 'سواء كنت تقوم بإعداد فاتورة، تحرير شيك، أو صياغة عقد قانوني، فإن أداتنا تضمن تطابق النص المكتوب مع الأرقام بدقة متناهية، مع مراعاة القواعد النحوية المعقدة للغة العربية.',
-            beneficiariesTitle: 'من يستفيد من خدماتنا؟',
-            b1_strong: 'المحاسبون والمهنيون الماليون:',
-            b1_text: 'لضمان دقة الفواتير والتقارير المالية.',
-            b2_strong: 'المحامون والمستشارون القانونيون:',
-            b2_text: 'لصياغة عقود ووثائق قانونية لا لبس فيها.',
-            b3_strong: 'أصحاب الأعمال والمديرون:',
-            b3_text: 'لتحرير الشيكات والأوامر المالية بثقة.',
-            b4_strong: 'أي شخص يتعامل مع المستندات المالية:',
-            b4_text: 'لتجنب الأخطاء الشائعة وضمان الوضوح.',
-            p3: 'استخدم "صيغة مالية" اليوم وانعم براحة البال التي تأتي مع الدقة المطلقة.'
-        },
     },
     about: {
         title: 'عن صيغة مالية',
@@ -214,7 +237,11 @@ const translations = {
     },
     meta: {
       home: {
-        title: "صيغة مالية | محول الأرقام إلى نصوص مالية",
+        title: "صيغة مالية | لوحة الأدوات المالية المتكاملة",
+        description: "مجموعة أدوات مالية: محول أرقام، محول تاريخ، مولد فواتير، ومساعد صياغة بنود العقود."
+      },
+      numberConverter: {
+        title: "محول الأرقام إلى نصوص | صيغة مالية",
         description: "أداة دقيقة لتحويل المبالغ المالية من أرقام إلى نصوص باللغة العربية والإنجليزية، مثالية للعقود والفواتير والشيكات."
       },
       dateConverter: {
@@ -264,6 +291,7 @@ const translations = {
       title: 'Financial Formula',
       nav: {
         home: 'Home',
+        numberConverter: 'Number Converter',
         dateConverter: 'Date Converter',
         invoiceGenerator: 'Invoice Generator',
         contractClause: 'Contract Clause',
@@ -369,23 +397,45 @@ const translations = {
         noResults: 'No results found.',
     },
     home: {
+      mainTitle: 'Financial Formula Toolkit',
+      subtitle: 'An integrated suite of financial tools to help you get your work done with accuracy and professionalism.',
+      cards: {
+        numberConverter: {
+          title: 'Number to Words Converter',
+          description: 'Accurately convert financial amounts from numbers to text for contracts and checks.'
+        },
+        dateConverter: {
+          title: 'Date to Text Converter',
+          description: 'Format dates into full written text for official documents and records.'
+        },
+        invoiceGenerator: {
+          title: 'Simple Invoice Generator',
+          description: 'Create professional invoices and download them as PDFs in minutes.'
+        },
+        contractClause: {
+          title: 'Contract Clause Helper',
+          description: 'Generate legally sound and detailed financial clauses for your contracts.'
+        }
+      },
+      whyUse: {
+          title: 'Why Use Financial Formula?',
+          p1: 'In the world of business and finance, precision is everything. A small mistake in writing a financial amount can lead to misunderstandings, legal disputes, or financial losses. "Financial Formula" is designed to provide a fast, accurate, and reliable solution for converting numbers to text, ensuring your financial documents are clear and error-free.',
+          p2: 'Whether you are preparing an invoice, writing a check, or drafting a legal contract, our tool ensures that the written text matches the numbers with utmost accuracy, taking into account the complex grammatical rules of the Arabic language.',
+          beneficiariesTitle: 'Who Benefits from Our Service?',
+          b1_strong: 'Accountants and Financial Professionals:',
+          b1_text: 'To ensure the accuracy of invoices and financial reports.',
+          b2_strong: 'Lawyers and Legal Advisors:',
+          b2_text: 'For drafting unambiguous contracts and legal documents.',
+          b3_strong: 'Business Owners and Managers:',
+          b3_text: 'For writing checks and financial orders with confidence.',
+          b4_strong: 'Anyone Dealing with Financial Documents:',
+          b4_text: 'To avoid common errors and ensure clarity.',
+          p3: 'Use "Financial Formula" today and enjoy the peace of mind that comes with absolute accuracy.'
+      },
+    },
+    numberConverterPage: {
         mainTitle: 'Convert Numbers to Words with Ease',
         subtitle: 'An accurate tool for converting financial amounts from numbers to text in both Arabic and English, perfect for contracts, invoices, and checks.',
-        whyUse: {
-            title: 'Why Use Financial Formula?',
-            p1: 'In the world of business and finance, precision is everything. A small mistake in writing a financial amount can lead to misunderstandings, legal disputes, or financial losses. "Financial Formula" is designed to provide a fast, accurate, and reliable solution for converting numbers to text, ensuring your financial documents are clear and error-free.',
-            p2: 'Whether you are preparing an invoice, writing a check, or drafting a legal contract, our tool ensures that the written text matches the numbers with utmost accuracy, taking into account the complex grammatical rules of the Arabic language.',
-            beneficiariesTitle: 'Who Benefits from Our Service?',
-            b1_strong: 'Accountants and Financial Professionals:',
-            b1_text: 'To ensure the accuracy of invoices and financial reports.',
-            b2_strong: 'Lawyers and Legal Advisors:',
-            b2_text: 'For drafting unambiguous contracts and legal documents.',
-            b3_strong: 'Business Owners and Managers:',
-            b3_text: 'For writing checks and financial orders with confidence.',
-            b4_strong: 'Anyone Dealing with Financial Documents:',
-            b4_text: 'To avoid common errors and ensure clarity.',
-            p3: 'Use "Financial Formula" today and enjoy the peace of mind that comes with absolute accuracy.'
-        },
     },
     about: {
         title: 'About Financial Formula',
@@ -461,7 +511,11 @@ const translations = {
     },
     meta: {
       home: {
-        title: "Financial Formula | Number to Financial Text Converter",
+        title: "Financial Formula | The Complete Financial Toolkit",
+        description: "A suite of financial tools: Number Converter, Date Converter, Invoice Generator, and Contract Clause Helper."
+      },
+      numberConverter: {
+        title: "Number to Text Converter | Financial Formula",
         description: "An accurate tool for converting financial amounts from numbers to text in both Arabic and English, perfect for contracts, invoices, and checks."
       },
       dateConverter: {
