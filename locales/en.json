@@ -114,5 +114,35 @@
       "title": "Article Not Found",
       "message": "Sorry, we couldn't find the article you are looking for."
     }
+  },
+  "meta": {
+    "home": {
+      "title": "Financial Formula | Number to Financial Text Converter",
+      "description": "An accurate tool for converting financial amounts from numbers to text in both Arabic and English, perfect for contracts, invoices, and checks."
+    },
+    "articles": {
+      "title": "Articles | Financial Formula",
+      "description": "Specialized articles on writing financial amounts, common mistakes, and legal requirements to ensure the accuracy of your documents."
+    },
+    "articleDetail": {
+      "title": "%s | Financial Formula",
+      "description": "%s"
+    },
+    "about": {
+      "title": "About Us | Financial Formula",
+      "description": "Learn about the mission and vision of 'Financial Formula', the reliable tool for converting numbers to financial text with accuracy and security."
+    },
+    "contact": {
+      "title": "Contact Us | Financial Formula",
+      "description": "Get in touch with the 'Financial Formula' team. We welcome your feedback, inquiries, and suggestions to improve our services."
+    },
+    "privacy": {
+      "title": "Privacy Policy | Financial Formula",
+      "description": "Read our privacy policy to understand how we are committed to protecting your data. Our tool does not collect or store any personal information."
+    },
+    "terms": {
+      "title": "Terms of Service | Financial Formula",
+      "description": "Review the terms and conditions for using the 'Financial Formula' tool. Your use of the site constitutes your agreement to these terms."
+    }
   }
 }

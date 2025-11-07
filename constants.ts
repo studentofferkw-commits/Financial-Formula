@@ -51,6 +51,109 @@ export const ARTICLES: Article[] = [
       <p>For example, the number '2' is followed by a noun in the dual form (like 'dollar-an'), while numbers from 3 to 10 are followed by a noun in the plural form (like 'dollars'). These subtle details are what make accurate conversion a challenge, which our tool handles effectively.</p>
     `,
   },
+  {
+    id: '3',
+    title: 'الأخطاء الشائعة عند كتابة المبالغ المالية',
+    titleEn: 'Common Mistakes When Writing Financial Amounts',
+    summary: 'تعرف على أكثر الأخطاء شيوعًا عند كتابة الأرقام في المستندات المالية وكيف يمكن لأداتنا مساعدتك على تجنبها.',
+    summaryEn: 'Learn about the most common errors when writing numbers in financial documents and how our tool can help you avoid them.',
+    content: `
+      <p>حتى أكثر المهنيين خبرة يمكن أن يقعوا في أخطاء بسيطة عند كتابة المبالغ المالية، ولكن هذه الأخطاء قد تكون مكلفة. الوعي بها هو الخطوة الأولى نحو تجنبها.</p>
+      <h3 class="font-bold text-xl mt-4">أشهر 5 أخطاء يجب الانتباه إليها:</h3>
+      <ol class="list-decimal ps-5 space-y-2">
+        <li><strong>عدم تطابق الأرقام مع الكلمات:</strong> هذا هو الخطأ الأكثر شيوعًا. قد تكتب "1500" بالأرقام، ولكن "ألف وخمسمائة وخمسون" بالكلمات. في معظم الأنظمة القانونية، يتم الاعتداد بالمبلغ المكتوب بالكلمات.</li>
+        <li><strong>إهمال الكسور أو كتابتها بشكل خاطئ:</strong> كتابة "مائة ريال و 50 هللة" بدلاً من "مائة ريال وخمسون هللة" قد يخلق التباسًا. الدقة في كتابة الوحدات الفرعية للعملة (مثل الهللات أو القروش) لا تقل أهمية.</li>
+        <li><strong>عدم تحديد العملة بوضوح:</strong> كتابة "ألف ريال" فقط قد لا تكون كافية إذا كانت الصفقة دولية. يجب دائمًا تحديد العملة بوضوح (مثل "ريال سعودي" أو "ريال قطري").</li>
+        <li><strong>الكتابة اليدوية غير الواضحة:</strong> في الشيكات والمستندات المكتوبة بخط اليد، يمكن أن يتم تفسير رقم '7' على أنه '1' أو '5' على أنها '6'، مما يسبب مشاكل كبيرة.</li>
+        <li><strong>نسيان عبارة "فقط لا غير":</strong> هذه العبارة البسيطة في نهاية المبلغ المكتوب بالحروف تغلق الباب أمام أي محاولة للاحتيال أو التعديل على المبلغ.</li>
+      </ol>
+      <p class="mt-4">تم تصميم أداة "صيغة مالية" لمعالجة هذه المشاكل بشكل مباشر. فهي تضمن تطابقًا تامًا، وتتعامل مع الكسور بدقة، وتضيف عبارات الحماية تلقائيًا، مما يمنحك مستندات مالية موثوقة ومحصنة ضد الأخطاء.</p>
+    `,
+    contentEn: `
+      <p>Even the most experienced professionals can make simple mistakes when writing financial amounts, but these mistakes can be costly. Being aware of them is the first step toward avoidance.</p>
+      <h3 class="font-bold text-xl mt-4">Top 5 Mistakes to Watch Out For:</h3>
+      <ol class="list-decimal ps-5 space-y-2">
+        <li><strong>Mismatched Numbers and Words:</strong> This is the most common error. You might write "1500" in figures but "One thousand five hundred and fifty" in words. In most legal systems, the amount written in words prevails.</li>
+        <li><strong>Neglecting or Incorrectly Writing Fractions:</strong> Writing "one hundred dollars and 50 cent" instead of "one hundred dollars and fifty cents" can create ambiguity. Precision in writing the currency's fractional units (like cents or piastres) is equally important.</li>
+        <li><strong>Not Specifying the Currency Clearly:</strong> Simply writing "one thousand riyals" may not be sufficient if the transaction is international. The currency should always be clearly specified (e.g., "Saudi Riyal" or "Qatari Riyal").</li>
+        <li><strong>Illegible Handwriting:</strong> In handwritten checks and documents, a '7' can be mistaken for a '1', or a '5' for a '6', causing significant problems.</li>
+        <li><strong>Forgetting the Word "Only":</strong> This simple word at the end of the written amount closes the door to fraudulent alterations of the amount.</li>
+      </ol>
+      <p class="mt-4">The "Financial Formula" tool is designed to address these issues directly. It ensures perfect matching, handles fractions with precision, and automatically adds protective phrases, giving you reliable and error-proof financial documents.</p>
+    `,
+  },
+  {
+    id: '4',
+    title: 'المتطلبات القانونية لكتابة الأرقام في العقود',
+    titleEn: 'Legal Requirements for Writing Numbers in Contracts',
+    summary: 'فهم لماذا تعتبر كتابة الأرقام بالحروف شرطًا أساسيًا في العقود وكيف يحمي ذلك حقوقك.',
+    summaryEn: 'Understand why writing numbers in words is a fundamental requirement in contracts and how it protects your rights.',
+    content: `
+      <p>في عالم القانون، الوضوح هو الملك. العقود هي وثائق ملزمة قانونًا، وأي غموض فيها يمكن أن يؤدي إلى نزاعات مكلفة. لهذا السبب، تولي الأنظمة القانونية أهمية قصوى للطريقة التي تُكتب بها المبالغ المالية.</p>
+      <h3 class="font-bold text-xl mt-4">مبدأ "الكلمات تسود على الأرقام"</h3>
+      <p>أحد المبادئ القانونية الراسخة في العديد من الولايات القضائية هو أنه في حالة وجود تعارض بين المبلغ المكتوب بالأرقام والمبلغ المكتوب بالحروف في مستند قانوني (مثل شيك أو عقد)، فإن المبلغ المكتوب <strong>بالحروف</strong> هو الذي يتم الاعتداد به. السبب بسيط: من الأصعب بكثير تغيير أو تزوير مبلغ مكتوب بالحروف مقارنة بتغيير رقم.</p>
+      <h3 class="font-bold text-xl mt-4">أفضل الممارسات القانونية:</h3>
+      <ul class="list-disc ps-5 space-y-2">
+        <li><strong>اكتب المبلغ دائمًا بالطريقتين:</strong> لا تكتفِ بكتابة المبلغ بالأرقام فقط. قم دائمًا بتضمين الصيغة النصية الكاملة.</li>
+        <li><strong>ضمان التطابق التام:</strong> استخدم أداة موثوقة مثل "صيغة مالية" لضمان عدم وجود أي اختلاف بين الصيغتين الرقمية والنصية.</li>
+        <li><strong>كن محددًا بشأن العملة:</strong> حدد اسم العملة ورمزها (على سبيل المثال، "ريال سعودي (SAR)") لتجنب أي التباس.</li>
+        <li><strong>استخدم لغة واضحة:</strong> تجنب الاختصارات أو المصطلحات غير الشائعة التي يمكن أن يساء تفسيرها.</li>
+      </ul>
+      <p class="mt-4">إن الالتزام بهذه الممارسات لا يجعل عقودك أكثر احترافية فحسب، بل يوفر لك أيضًا حماية قانونية قوية. استخدام أداتنا يضمن أنك تتبع هذه المعايير بسهولة ودقة.</p>
+    `,
+    contentEn: `
+      <p>In the legal world, clarity is king. Contracts are legally binding documents, and any ambiguity within them can lead to costly disputes. This is why legal systems place extreme importance on the way financial amounts are written.</p>
+      <h3 class="font-bold text-xl mt-4">The "Words Over Figures" Rule</h3>
+      <p>A well-established legal principle in many jurisdictions is that if there is a discrepancy between an amount written in numerals and the same amount written in words in a legal document (like a check or contract), the amount written in <strong>words</strong> is considered the binding one. The reason is simple: it is much harder to alter or forge an amount written in words compared to changing a numeral.</p>
+      <h3 class="font-bold text-xl mt-4">Legal Best Practices:</h3>
+      <ul class="list-disc ps-5 space-y-2">
+        <li><strong>Always Write the Amount Both Ways:</strong> Never settle for just writing the amount in figures. Always include the full text version.</li>
+        <li><strong>Ensure Perfect Consistency:</strong> Use a reliable tool like "Financial Formula" to ensure there is zero discrepancy between the numerical and text versions.</li>
+        <li><strong>Be Specific About the Currency:</strong> State the currency name and code (e.g., "Saudi Riyal (SAR)") to avoid any confusion.</li>
+        <li><strong>Use Clear Language:</strong> Avoid abbreviations or uncommon terms that could be misinterpreted.</li>
+      </ul>
+      <p class="mt-4">Adhering to these practices not only makes your contracts more professional but also provides you with strong legal protection. Using our tool ensures you follow these standards with ease and accuracy.</p>
+    `,
+  },
+  {
+    id: '5',
+    title: 'كيفية استخدام صيغة مالية لمختلف العملات',
+    titleEn: 'How to Use Financial Formula for Different Currencies',
+    summary: 'دليل خطوة بخطوة للاستفادة من دعم الأداة متعدد العملات، مع أمثلة توضح الفروق الدقيقة في كل لغة.',
+    summaryEn: 'A step-by-step guide to leveraging the tool\'s multi-currency support, with examples showing the nuances for each language.',
+    content: `
+      <p>تم تصميم "صيغة مالية" لتكون أداة عالمية، قادرة على التعامل مع مجموعة واسعة من العملات وقواعدها النحوية الفريدة باللغة العربية. الاستفادة من هذه الميزة أمر بسيط ومباشر.</p>
+      <h3 class="font-bold text-xl mt-4">دليل الاستخدام:</h3>
+      <ol class="list-decimal ps-5 space-y-2">
+        <li><strong>أدخل المبلغ:</strong> اكتب المبلغ الذي تريد تحويله في حقل "أدخل المبلغ بالأرقام". يمكنك تضمين الكسور العشرية.</li>
+        <li><strong>اختر العملة:</strong> انقر على القائمة المنسدلة "اختر العملة". ستجد قائمة شاملة بالعملات. يمكنك البحث عن عملتك عن طريق كتابة اسمها لتصفية القائمة.</li>
+        <li><strong>شاهد النتيجة الفورية:</strong> بمجرد اختيارك للعملة، ستقوم الأداة تلقائيًا بتحديث النص الناتج ليعكس الوحدات الصحيحة (مثل الريالات والهللات، أو الدينارات والفلوس) والقواعد النحوية المناسبة لها.</li>
+      </ol>
+      <h3 class="font-bold text-xl mt-4">أمثلة على الفروق التي تعالجها الأداة:</h3>
+      <ul class="list-disc ps-5 space-y-2">
+        <li><strong>الدينار الكويتي (KWD):</strong> يتعامل مع 3 منازل عشرية (فلوس). ستحول الأداة 10.125 إلى "عشرة دنانير ومائة وخمسة وعشرون فلسًا".</li>
+        <li><strong>الريال السعودي (SAR):</strong> يتعامل مع منزلتين عشريتين (هللات). ستحول الأداة 2.00 إلى "ريالان". لاحظ استخدام صيغة المثنى الصحيحة.</li>
+        <li><strong>الين الياباني (JPY):</strong> لا يحتوي على وحدات فرعية. ستتجاهل الأداة أي كسور عشرية وتتعامل مع العدد الصحيح فقط.</li>
+      </ul>
+      <p class="mt-4">هذه القدرة على التكيف التلقائي هي ما يجعل "صيغة مالية" أداة قوية. لم تعد بحاجة إلى حفظ أسماء الوحدات الفرعية أو القواعد النحوية المعقدة لكل عملة؛ فالأداة تقوم بكل العمل الشاق نيابة عنك.</p>
+    `,
+    contentEn: `
+      <p>"Financial Formula" is designed to be a global tool, capable of handling a wide range of currencies and their unique grammatical rules. Leveraging this feature is simple and straightforward.</p>
+      <h3 class="font-bold text-xl mt-4">How to Use:</h3>
+      <ol class="list-decimal ps-5 space-y-2">
+        <li><strong>Enter the Amount:</strong> Type the amount you want to convert into the "Enter amount in numbers" field. You can include decimals.</li>
+        <li><strong>Select the Currency:</strong> Click on the "Select Currency" dropdown. You will find a comprehensive list of currencies. You can search for your currency by typing its name to filter the list.</li>
+        <li><strong>See the Instant Result:</strong> As soon as you select a currency, the tool will automatically update the output text to reflect the correct units (e.g., Riyals and Halalas, or Dinars and Fils) and their corresponding grammatical rules.</li>
+      </ol>
+      <h3 class="font-bold text-xl mt-4">Examples of Nuances Handled by the Tool:</h3>
+      <ul class="list-disc ps-5 space-y-2">
+        <li><strong>Kuwaiti Dinar (KWD):</strong> Handles 3 decimal places (fils). The tool will convert 10.125 to "Ten dinars and one hundred twenty-five fils".</li>
+        <li><strong>Saudi Riyal (SAR):</strong> Handles 2 decimal places (halalas). The tool will convert 2.00 to "Two riyals". Notice the correct pluralization.</li>
+        <li><strong>Japanese Yen (JPY):</strong> Has no fractional units. The tool will ignore any decimals and process only the integer part.</li>
+      </ul>
+      <p class="mt-4">This ability to adapt automatically is what makes "Financial Formula" so powerful. You no longer need to memorize the names of fractional units or the complex grammatical rules for each currency; the tool does all the heavy lifting for you.</p>
+    `,
+  }
 ];
 
 
