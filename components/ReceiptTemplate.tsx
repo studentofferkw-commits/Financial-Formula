@@ -45,7 +45,7 @@ const ReceiptTemplate = forwardRef<HTMLDivElement, ReceiptTemplateProps>((props,
   const mainTextAction = receiptType === 'receipt' ? t('receiptGenerator.receivedFrom') : t('receiptGenerator.paidTo');
 
   return (
-    <div ref={ref} id="receipt-template" className="p-8 bg-white text-gray-900 aspect-[1.414/1] w-full" dir={isRtl ? 'rtl' : 'ltr'}>
+    <div ref={ref} id="receipt-template" className="p-8 bg-white text-gray-900 aspect-[1.414/1] w-full min-w-[595px]" dir={isRtl ? 'rtl' : 'ltr'}>
       <div className="border-2 border-gray-800 p-6 h-full flex flex-col">
         {/* Header */}
         <header className="flex justify-between items-start pb-4 border-b border-gray-400">

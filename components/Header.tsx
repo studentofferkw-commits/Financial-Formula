@@ -21,8 +21,11 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
-            <NavLink to="/" className="text-2xl font-bold text-teal-600 dark:text-teal-400">
-              {t('header.title')}
+            <NavLink to="/" className="flex items-center gap-2 text-2xl font-bold text-teal-600 dark:text-teal-400">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-8 w-8">
+                <path d="M4 4H8V20H4V4ZM10 10H14V20H10V10ZM16 16H20V20H16V16Z" />
+              </svg>
+              <span>{t('header.title')}</span>
             </NavLink>
           </div>
           <div className="hidden md:flex items-center">
@@ -63,11 +66,11 @@ const Header: React.FC = () => {
             >
               <span className="sr-only">{t('header.openMenu')}</span>
               {isOpen ? (
-                <svg className="h-6 w-6" xmlns="http://www.w.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
               ) : (
-                <svg className="h-6 w-6" xmlns="http://www.w.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
               )}

@@ -180,7 +180,7 @@ const ReceiptGenerator: React.FC = () => {
 
       {/* Preview Section */}
       <div className="bg-white dark:bg-slate-800 p-2 rounded-xl shadow-lg border border-gray-200 dark:border-slate-700">
-        <div className="overflow-auto h-[70vh]">
+        <div className="overflow-auto max-h-[500px]">
            <ReceiptTemplate ref={receiptTemplateRef} {...receiptData} />
         </div>
       </div>

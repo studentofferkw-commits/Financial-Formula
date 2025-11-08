@@ -222,11 +222,11 @@ const InvoiceGenerator: React.FC = () => {
         <div>
           <h3 className="font-bold mb-2 border-b pb-1 dark:border-slate-600">{t('invoiceGenerator.item')}s</h3>
           {lineItems.map((item) => (
-            <div key={item.id} className="grid grid-cols-12 gap-2 mb-2 items-center">
-              <input type="text" placeholder={t('invoiceGenerator.item')} value={item.description} onChange={e => handleLineItemChange(item.id, 'description', e.target.value)} className="col-span-5 input-style" />
-              <input type="number" placeholder={t('invoiceGenerator.quantity')} value={item.quantity} onChange={e => handleLineItemChange(item.id, 'quantity', e.target.value)} className="col-span-2 input-style" min="0" />
-              <input type="number" placeholder={t('invoiceGenerator.rate')} value={item.rate} onChange={e => handleLineItemChange(item.id, 'rate', e.target.value)} className="col-span-3 input-style" min="0" />
-              <button onClick={() => removeLineItem(item.id)} className="col-span-2 text-red-500 hover:text-red-700 disabled:opacity-50" disabled={lineItems.length === 1}>&times;</button>
+            <div key={item.id} className="grid grid-cols-1 md:grid-cols-12 gap-2 mb-2 items-center">
+              <input type="text" placeholder={t('invoiceGenerator.item')} value={item.description} onChange={e => handleLineItemChange(item.id, 'description', e.target.value)} className="md:col-span-5 input-style" />
+              <input type="number" placeholder={t('invoiceGenerator.quantity')} value={item.quantity} onChange={e => handleLineItemChange(item.id, 'quantity', e.target.value)} className="md:col-span-2 input-style" min="0" />
+              <input type="number" placeholder={t('invoiceGenerator.rate')} value={item.rate} onChange={e => handleLineItemChange(item.id, 'rate', e.target.value)} className="md:col-span-3 input-style" min="0" />
+              <button onClick={() => removeLineItem(item.id)} className="md:col-span-2 text-red-500 hover:text-red-700 disabled:opacity-50 justify-self-end md:justify-self-center" disabled={lineItems.length === 1}>&times;</button>
             </div>
           ))}
           <button onClick={addLineItem} className="mt-2 text-sm text-teal-600 dark:text-teal-400 font-semibold hover:text-teal-700 dark:hover:text-teal-300">+ {t('invoiceGenerator.addItem')}</button>
@@ -245,7 +245,7 @@ const InvoiceGenerator: React.FC = () => {
 
       {/* Preview Section */}
       <div className="bg-white dark:bg-slate-800 p-2 rounded-xl shadow-lg border border-gray-200 dark:border-slate-700">
-        <div className="overflow-auto h-[80vh]">
+        <div className="overflow-auto max-h-[500px] md:max-h-[80vh]">
            <InvoiceTemplate ref={invoiceTemplateRef} {...invoiceData} />
         </div>
       </div>

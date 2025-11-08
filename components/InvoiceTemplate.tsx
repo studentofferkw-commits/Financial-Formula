@@ -37,7 +37,7 @@ const InvoiceTemplate = forwardRef<HTMLDivElement, InvoiceTemplateProps>((props,
   const isRtl = language === 'ar';
 
   return (
-    <div ref={ref} id="invoice-template" className="p-8 bg-white text-gray-800" dir={isRtl ? 'rtl' : 'ltr'}>
+    <div ref={ref} id="invoice-template" className="p-8 bg-white text-gray-800 aspect-[1/1.414] w-full min-w-[595px]" dir={isRtl ? 'rtl' : 'ltr'}>
       <div className="grid grid-cols-2 gap-4 mb-8">
         <div>
           <h1 className="text-3xl font-bold text-teal-600 uppercase mb-2">{t('invoiceGenerator.invoice')}</h1>
