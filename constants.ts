@@ -6,7 +6,9 @@ export const NAV_LINKS: NavLinkInfo[] = [
   { path: '/number-converter', key: 'numberConverter' },
   { path: '/date-converter', key: 'dateConverter' },
   { path: '/invoice-generator', key: 'invoiceGenerator' },
+  { path: '/receipt-generator', key: 'receiptGenerator' },
   { path: '/contract-clause', key: 'contractClause' },
+  { path: '/loan-calculator', key: 'loanCalculator' },
   { path: '/glossary', key: 'glossary' },
   { path: '/articles', key: 'articles' },
   { path: '/about', key: 'about' },
@@ -216,108 +218,168 @@ export const ARTICLES: Article[] = [
       </ul>
       <p class="mt-4">Our advanced tool considers variables like taxes and payment structure to provide you with ready-to-copy clauses. Don't leave the most important part of your contract to chance; use our tool to ensure airtight and accurate phrasing.</p>
     `,
-  }
+  },
+  {
+    id: '8',
+    title: 'دليلك الشامل لاستخدام حاسبة الأقساط والتمويل',
+    titleEn: 'Your Comprehensive Guide to Using the Loan & Installment Calculator',
+    summary: 'خطط لتمويلك بثقة. تعلم كيف تساعدك حاسبتنا الجديدة على فهم دفعاتك الشهرية، إجمالي الفائدة، وجدول السداد الكامل.',
+    summaryEn: 'Plan your finances with confidence. Learn how our new calculator helps you understand your monthly payments, total interest, and the full amortization schedule.',
+    content: `
+      <p>يعد التخطيط المالي السليم حجر الزاوية في اتخاذ القرارات الهامة، سواء كنت تفكر في شراء سيارة، أو منزل، أو الحصول على تمويل شخصي. حاسبة الأقساط والتمويل الجديدة لدينا هي أداة قوية مصممة لإزالة الغموض عن القروض ومساعدتك على فهم التزاماتك المالية بوضوح تام.</p>
+      <h3 class="font-bold text-xl mt-4">كيف تعمل الحاسبة؟</h3>
+      <p>تعتمد الحاسبة على معادلة مالية قياسية لحساب القسط الشهري، مع الأخذ في الاعتبار ثلاثة مدخلات رئيسية:</p>
+      <ol class="list-decimal ps-5 space-y-2">
+        <li><strong>مبلغ التمويل:</strong> هو المبلغ الإجمالي الذي ترغب في اقتراضه.</li>
+        <li><strong>نسبة الفائدة السنوية:</strong> هي التكلفة التي يفرضها المُقرض على اقتراض المال، معبرًا عنها كنسبة مئوية سنوية.</li>
+        <li><strong>مدة التمويل (بالسنوات):</strong> هي الفترة الزمنية التي ستستغرقها لسداد القرض بالكامل.</li>
+      </ol>
+      <p class="mt-4">بمجرد إدخال هذه القيم، ستقوم الأداة على الفور بحساب:</p>
+      <ul class="list-disc ps-5 space-y-2">
+        <li><strong>القسط الشهري:</strong> المبلغ الثابت الذي ستدفعه كل شهر.</li>
+        <li><strong>إجمالي المبلغ المدفوع:</strong> مجموع كل الأقساط الشهرية على مدى عمر القرض.</li>
+        <li><strong>إجمالي الفوائد:</strong> الفرق بين إجمالي المبلغ المدفوع ومبلغ التمويل الأصلي. هذا هو الربح الذي يحققه المُقرض.</li>
+      </ul>
+      <h3 class="font-bold text-xl mt-4">فهم جدول السداد (Amortization Schedule)</h3>
+      <p>الميزة الأكثر احترافية في أداتنا هي "جدول السداد". يوضح هذا الجدول بالتفصيل كيف يتم تقسيم كل دفعة شهرية بين سداد أصل القرض (المبلغ الأساسي) ودفع الفائدة. في بداية القرض، يذهب جزء أكبر من دفعتك نحو الفائدة، وبمرور الوقت، يتناقص هذا الجزء ويزداد الجزء الذي يذهب لسداد الأصل. يوفر لك هذا الجدول رؤية شفافة ومفصلة لرحلة سداد قرضك شهرًا بشهر.</p>
+      <p class="mt-4">استخدم حاسبتنا اليوم لاتخاذ قرارات مالية مستنيرة وتخطيط مستقبلك بثقة!</p>
+    `,
+    contentEn: `
+      <p>Sound financial planning is the cornerstone of making important decisions, whether you're considering buying a car, a house, or taking out a personal loan. Our new Loan & Installment Calculator is a powerful tool designed to demystify loans and help you understand your financial commitments with complete clarity.</p>
+      <h3 class="font-bold text-xl mt-4">How Does the Calculator Work?</h3>
+      <p>The calculator uses a standard financial formula to compute the monthly installment, taking into account three key inputs:</p>
+      <ol class="list-decimal ps-5 space-y-2">
+        <li><strong>Loan Amount:</strong> This is the total principal amount you wish to borrow.</li>
+        <li><strong>Annual Interest Rate:</strong> This is the cost the lender charges for borrowing money, expressed as an annual percentage.</li>
+        <li><strong>Loan Term (in Years):</strong> This is the period over which you will repay the loan in full.</li>
+      </ol>
+      <p class="mt-4">Once you enter these values, the tool will instantly calculate:</p>
+      <ul class="list-disc ps-5 space-y-2">
+        <li><strong>Monthly Payment:</strong> The fixed amount you will pay each month.</li>
+        <li><strong>Total Payment:</strong> The sum of all monthly payments over the life of the loan.</li>
+        <li><strong>Total Interest:</strong> The difference between the total payment and the original loan amount. This is the lender's profit.</li>
+      </ul>
+      <h3 class="font-bold text-xl mt-4">Understanding the Amortization Schedule</h3>
+      <p>The most professional feature of our tool is the "Amortization Schedule." This table details how each monthly payment is broken down between paying down the principal (the original loan amount) and paying the interest. At the beginning of the loan, a larger portion of your payment goes toward interest. Over time, this portion decreases, and the portion going to the principal increases. This schedule provides you with a transparent, detailed view of your loan repayment journey, month by month.</p>
+      <p class="mt-4">Use our calculator today to make informed financial decisions and plan your future with confidence!</p>
+    `,
+  },
+  {
+    id: '9',
+    title: 'أهمية إيصالات الدفع وكيفية إنشائها باحترافية',
+    titleEn: 'The Importance of Payment Receipts and How to Create Them Professionally',
+    summary: 'دليل شامل حول لماذا تعتبر إيصالات الدفع ضرورية لعملك، وما هي المعلومات التي يجب أن تتضمنها، وكيفية استخدام أداتنا الجديدة لإنشاء إيصالات واضحة وموثوقة.',
+    summaryEn: 'A comprehensive guide on why payment receipts are essential for your business, what information they must include, and how to use our new tool to create clear and reliable receipts.',
+    content: `
+      <p>إيصال الدفع هو وثيقة حاسمة تثبت إتمام معاملة مالية. إنه ليس مجرد ورقة، بل هو حماية قانونية لكل من الدافع والمستلم، وسجل أساسي للمحاسبة الدقيقة. سواء كنت تدير شركة صغيرة، أو تعمل كمستقل، أو حتى في معاملاتك الشخصية، فإن إصدار واستلام إيصال واضح هو ممارسة تجارية سليمة.</p>
+      <h3 class="font-bold text-xl mt-4">لماذا تعتبر إيصالات الدفع مهمة؟</h3>
+      <ul class="list-disc ps-5 space-y-2">
+        <li><strong>إثبات الدفع:</strong> هو الدليل القاطع على أن الدين قد تم سداده، مما يمنع أي نزاعات مستقبلية حول المدفوعات.</li>
+        <li><strong>التوثيق المحاسبي:</strong> تعتبر الإيصالات ضرورية لتسجيل المعاملات بدقة في الدفاتر المحاسبية، مما يسهل تتبع الإيرادات والنفقات.</li>
+        <li><strong>المتطلبات الضريبية:</strong> في العديد من البلدان، تكون الإيصالات مطلوبة كدليل على النفقات التجارية للمطالبة بالخصومات الضريبية.</li>
+        <li><strong>بناء الثقة:</strong> إصدار إيصال احترافي يعكس مصداقيتك ويترك انطباعًا إيجابيًا لدى العملاء.</li>
+      </ul>
+      <h3 class="font-bold text-xl mt-4">العناصر الأساسية في أي إيصال دفع:</h3>
+      <p>لضمان أن يكون إيصالك كاملاً ورسمياً، يجب أن يتضمن:</p>
+      <ol class="list-decimal ps-5 space-y-2">
+        <li><strong>عنوان واضح:</strong> "إيصال استلام" أو "Payment Receipt".</li>
+        <li><strong>بيانات المستلم:</strong> اسم الشخص أو الشركة التي استلمت المبلغ.</li>
+        <li><strong>بيانات الدافع:</strong> اسم الشخص أو الشركة التي قامت بالدفع.</li>
+        <li><strong>المبلغ:</strong> يجب كتابته بالأرقام والحروف لزيادة الوضوح ومنع التلاعب.</li>
+        <li><strong>تاريخ الدفع:</strong> اليوم الذي تم فيه استلام المبلغ.</li>
+        <li><strong>الغرض من الدفع:</strong> وصف موجز للخدمة أو المنتج الذي تم الدفع مقابله.</li>
+        <li><strong>طريقة الدفع:</strong> (نقداً، شيك، تحويل بنكي، إلخ).</li>
+        <li><strong>توقيع المستلم:</strong> لإضفاء الطابع الرسمي على الوثيقة.</li>
+      </ol>
+      <p class="mt-4">تم تصميم "مولد إيصالات الدفع" الجديد لدينا ليجعل هذه العملية سهلة وسريعة. يمكنك إدخال جميع التفاصيل اللازمة، وسيقوم النظام بإنشاء إيصال احترافي جاهز للطباعة أو التنزيل كملف PDF. ابدأ في توثيق معاملاتك المالية باحترافية اليوم!</p>
+    `,
+    contentEn: `
+      <p>A payment receipt is a crucial document that proves a financial transaction has been completed. It's not just a piece of paper; it's legal protection for both the payer and the recipient, and an essential record for accurate accounting. Whether you're running a small business, working as a freelancer, or even in your personal dealings, issuing and receiving a clear receipt is a sound business practice.</p>
+      <h3 class="font-bold text-xl mt-4">Why Are Payment Receipts Important?</h3>
+      <ul class="list-disc ps-5 space-y-2">
+        <li><strong>Proof of Payment:</strong> It is the definitive proof that a debt has been settled, preventing future disputes over payments.</li>
+        <li><strong>Accounting Records:</strong> Receipts are essential for accurately recording transactions in accounting books, making it easier to track revenue and expenses.</li>
+        <li><strong>Tax Requirements:</strong> In many countries, receipts are required as proof of business expenses to claim tax deductions.</li>
+        <li><strong>Building Trust:</strong> Issuing a professional receipt reflects your credibility and leaves a positive impression on clients.</li>
+      </ul>
+      <h3 class="font-bold text-xl mt-4">Essential Elements of a Payment Receipt:</h3>
+      <p>To ensure your receipt is complete and official, it must include:</p>
+      <ol class="list-decimal ps-5 space-y-2">
+        <li><strong>A Clear Title:</strong> "Payment Receipt".</li>
+        <li><strong>Recipient's Information:</strong> The name of the person or company that received the money.</li>
+        <li><strong>Payer's Information:</strong> The name of the person or company that made the payment.</li>
+        <li><strong>The Amount:</strong> It should be written in both figures and words to increase clarity and prevent tampering.</li>
+        <li><strong>Date of Payment:</strong> The day the payment was received.</li>
+        <li><strong>Purpose of Payment:</strong> A brief description of the service or product for which the payment was made.</li>
+        <li><strong>Payment Method:</strong> (Cash, Check, Bank Transfer, etc.).</li>
+        <li><strong>Recipient's Signature:</strong> To formalize the document.</li>
+      </ol>
+      <p class="mt-4">Our new "Payment Receipt Generator" is designed to make this process quick and easy. You can enter all the necessary details, and the system will generate a professional receipt ready for printing or downloading as a PDF. Start documenting your financial transactions professionally today!</p>
+    `,
+  },
 ];
 
 export const GLOSSARY_TERMS: GlossaryTerm[] = [
-    {
-        id: '1',
-        termAr: 'الأصل',
-        termEn: 'Asset',
-        definitionAr: 'مورد اقتصادي تمتلكه الشركة وله قيمة ويتوقع أن يوفر فائدة اقتصادية مستقبلية.',
-        definitionEn: 'An economic resource controlled by the company as a result of past events and from which future economic benefits are expected to flow to the company.'
-    },
-    {
-        id: '2',
-        termAr: 'الالتزام',
-        termEn: 'Liability',
-        definitionAr: 'تعهد أو دين حالي على الشركة ينشأ من أحداث سابقة، ويتطلب تسويته تدفقاً خارجاً للموارد.',
-        definitionEn: 'A present obligation of the company arising from past events, the settlement of which is expected to result in an outflow of resources.'
-    },
-    {
-        id: '3',
-        termAr: 'حقوق الملكية',
-        termEn: 'Equity',
-        definitionAr: 'القيمة المتبقية في أصول الشركة بعد خصم جميع التزاماتها. تمثل حصة المالكين في الشركة.',
-        definitionEn: 'The residual interest in the assets of the entity after deducting all its liabilities. It represents the owners\' stake in the company.'
-    },
-    {
-        id: '4',
-        termAr: 'الإيرادات',
-        termEn: 'Revenue',
-        definitionAr: 'إجمالي تدفق المنافع الاقتصادية خلال فترة ما، والتي تنشأ عن الأنشطة العادية للشركة وتؤدي إلى زيادة في حقوق الملكية.',
-        definitionEn: 'The gross inflow of economic benefits during a period arising in the course of the ordinary activities of an entity when those inflows result in increases in equity.'
-    },
-    {
-        id: '5',
-        termAr: 'المصروفات',
-        termEn: 'Expenses',
-        definitionAr: 'تكاليف العمليات التي تتكبدها الشركة في سبيل تحقيق الإيرادات.',
-        definitionEn: 'The costs of operations that a company incurs to generate revenue.'
-    },
-    {
-        id: '6',
-        termAr: 'الميزانية العمومية',
-        termEn: 'Balance Sheet',
-        definitionAr: 'بيان مالي يوضح أصول الشركة والتزاماتها وحقوق الملكية في نقطة زمنية محددة. (الأصول = الالتزامات + حقوق الملكية).',
-        definitionEn: 'A financial statement that reports a company\'s assets, liabilities, and equity at a specific point in time. (Assets = Liabilities + Equity).'
-    },
-    {
-        id: '7',
-        termAr: 'قائمة الدخل',
-        termEn: 'Income Statement',
-        definitionAr: 'بيان مالي يوضح أداء الشركة المالي (الإيرادات، المصروفات، وصافي الربح أو الخسارة) خلال فترة زمنية معينة.',
-        definitionEn: 'A financial statement that shows a company\'s financial performance (revenues, expenses, and net profit or loss) over a period of time.'
-    },
-    {
-        id: '8',
-        termAr: 'التدفق النقدي',
-        termEn: 'Cash Flow',
-        definitionAr: 'صافي حركة النقد وما يعادله الذي يتم تحويله إلى ومن الشركة. يقيس قدرة الشركة على توليد النقد.',
-        definitionEn: 'The net movement of cash and cash-equivalents being transferred into and out of a business. It measures a company\'s ability to generate cash.'
-    },
-    {
-        id: '9',
-        termAr: 'الإهلاك',
-        termEn: 'Depreciation',
-        definitionAr: 'النقص المنهجي في القيمة المسجلة للأصل الملموس على مدى عمره الإنتاجي.',
-        definitionEn: 'The systematic decrease in the recorded value of a tangible asset over its useful life.'
-    },
-    {
-        id: '10',
-        termAr: 'حسابات القبض (الذمم المدينة)',
-        termEn: 'Accounts Receivable',
-        definitionAr: 'المبالغ المستحقة للشركة من عملائها مقابل سلع أو خدمات تم بيعها على الحساب.',
-        definitionEn: 'The amounts owed to a company by its customers for goods or services sold on credit.'
-    },
-    {
-        id: '11',
-        termAr: 'حسابات الدفع (الذمم الدائنة)',
-        termEn: 'Accounts Payable',
-        definitionAr: 'المبالغ التي تدين بها الشركة لمورديها مقابل سلع أو خدمات تم شراؤها على الحساب.',
-        definitionEn: 'The amounts a company owes to its suppliers for goods or services purchased on credit.'
-    },
-    {
-        id: '12',
-        termAr: 'التدقيق (المراجعة)',
-        termEn: 'Audit',
-        definitionAr: 'فحص مستقل وموضوعي للبيانات المالية للمنظمة للتأكد من أنها تمثل وجهة نظر حقيقية وعادلة لوضعها المالي.',
-        definitionEn: 'An independent and objective examination of an organization\'s financial statements to ensure they present a true and fair view of its financial position.'
-    },
-     {
-        id: '13',
-        termAr: 'الأرباح المحتجزة',
-        termEn: 'Retained Earnings',
-        definitionAr: 'جزء من صافي أرباح الشركة الذي يتم إعادة استثماره في الشركة بدلاً من توزيعه على المساهمين كأرباح.',
-        definitionEn: 'The portion of a company\'s net income that is reinvested in the business rather than being distributed to shareholders as dividends.'
-    },
-    {
-        id: '14',
-        termAr: 'نقطة التعادل',
-        termEn: 'Break-Even Point',
-        definitionAr: 'النقطة التي تتساوى فيها الإيرادات الإجمالية مع التكاليف الإجمالية، مما يعني عدم وجود ربح أو خسارة.',
-        definitionEn: 'The point at which total revenue equals total costs, resulting in no profit or loss.'
-    }
+    // A
+    { id: '1', termAr: 'حسابات القبض', termEn: 'Accounts Receivable', abbreviationEn: 'AR', definitionAr: 'الأموال المستحقة للشركة من عملائها مقابل سلع أو خدمات تم بيعها على الحساب.', definitionEn: 'Money owed to a company by its customers for goods or services delivered on credit.' },
+    { id: '2', termAr: 'حسابات الدفع', termEn: 'Accounts Payable', abbreviationEn: 'AP', definitionAr: 'الأموال التي تدين بها الشركة لمورديها مقابل سلع أو خدمات تم شراؤها على الحساب.', definitionEn: 'Money a company owes to its suppliers for goods or services purchased on credit.' },
+    { id: '3', termAr: 'الأصل', termEn: 'Asset', definitionAr: 'مورد اقتصادي تمتلكه الشركة ويتوقع أن يوفر فائدة اقتصادية مستقبلية.', definitionEn: 'An economic resource owned by a company that is expected to provide future economic benefit.' },
+    { id: '4', termAr: 'التدقيق (المراجعة)', termEn: 'Audit', definitionAr: 'فحص مستقل للبيانات المالية للمنظمة للتأكد من أنها تمثل وجهة نظر حقيقية وعادلة لوضعها المالي.', definitionEn: 'An independent examination of an organization\'s financial statements to ensure they present a true and fair view.' },
+    { id: '5', termAr: 'الاستهلاك', termEn: 'Amortization', definitionAr: 'عملية توزيع تكلفة أصل غير ملموس على مدى عمره الإنتاجي.', definitionEn: 'The process of spreading the cost of an intangible asset over its useful life.' },
+    // B
+    { id: '6', termAr: 'الميزانية العمومية', termEn: 'Balance Sheet', definitionAr: 'بيان مالي يوضح أصول الشركة والتزاماتها وحقوق الملكية في نقطة زمنية محددة.', definitionEn: 'A financial statement that reports a company\'s assets, liabilities, and equity at a specific point in time.' },
+    { id: '7', termAr: 'سند', termEn: 'Bond', definitionAr: 'أداة دين تصدرها الشركات أو الحكومات لجمع الأموال، مع وعد بسداد المبلغ الأصلي مع الفائدة.', definitionEn: 'A debt instrument issued by corporations or governments to raise capital, promising to repay the principal with interest.' },
+    { id: '8', termAr: 'نقطة التعادل', termEn: 'Break-Even Point', abbreviationEn: 'BEP', definitionAr: 'النقطة التي تتساوى فيها الإيرادات الإجمالية مع التكاليف الإجمالية، مما يعني عدم وجود ربح أو خسارة.', definitionEn: 'The point at which total revenue equals total costs, resulting in no profit or loss.' },
+    { id: '9', termAr: 'الميزانية', termEn: 'Budget', definitionAr: 'خطة مالية تقدر الإيرادات والمصروفات على مدى فترة زمنية محددة.', definitionEn: 'A financial plan that estimates revenue and expenses over a specified period.' },
+    // C
+    { id: '10', termAr: 'التدفق النقدي', termEn: 'Cash Flow', abbreviationEn: 'CF', definitionAr: 'صافي حركة النقد وما يعادله الذي يتم تحويله إلى ومن الشركة.', definitionEn: 'The net movement of cash and cash equivalents being transferred into and out of a business.' },
+    { id: '11', termAr: 'النفقات الرأسمالية', termEn: 'Capital Expenditure', abbreviationEn: 'CapEx', definitionAr: 'الأموال التي تستخدمها الشركة لشراء أو ترقية أو صيانة الأصول المادية مثل الممتلكات والمباني والتكنولوجيا.', definitionEn: 'Funds used by a company to acquire, upgrade, and maintain physical assets such as property, buildings, and technology.' },
+    { id: '12', termAr: 'تكلفة البضاعة المباعة', termEn: 'Cost of Goods Sold', abbreviationEn: 'COGS', definitionAr: 'التكاليف المباشرة المنسوبة إلى إنتاج السلع التي تبيعها الشركة.', definitionEn: 'The direct costs attributable to the production of the goods sold by a company.' },
+    { id: '13', termAr: 'الدائن', termEn: 'Credit', abbreviationEn: 'Cr.', definitionAr: 'قيد محاسبي يؤدي إلى زيادة في حسابات الالتزامات أو حقوق الملكية أو الإيرادات، أو نقصان في حسابات الأصول أو المصروفات.', definitionEn: 'An accounting entry that results in either an increase in liabilities, equity, or revenue, or a decrease in assets or expenses.' },
+    { id: '14', termAr: 'الأصول المتداولة', termEn: 'Current Assets', definitionAr: 'جميع أصول الشركة التي يتوقع تحويلها إلى نقد في غضون عام واحد.', definitionEn: 'All of a company\'s assets that are expected to be converted into cash within one year.' },
+    { id: '15', termAr: 'الالتزامات المتداولة', termEn: 'Current Liabilities', definitionAr: 'ديون الشركة أو التزاماتها المستحقة خلال عام واحد.', definitionEn: 'A company\'s debts or obligations that are due within one year.' },
+    // D
+    { id: '16', termAr: 'المدين', termEn: 'Debit', abbreviationEn: 'Dr.', definitionAr: 'قيد محاسبي يؤدي إلى زيادة في الأصول أو المصروفات، أو نقصان في الالتزامات أو حقوق الملكية أو الإيرادات.', definitionEn: 'An accounting entry that results in either an increase in assets or expenses, or a decrease in liabilities, equity, or revenue.' },
+    { id: '17', termAr: 'الدين', termEn: 'Debt', definitionAr: 'مبلغ من المال مقترض من طرف لآخر.', definitionEn: 'An amount of money borrowed by one party from another.' },
+    { id: '18', termAr: 'الإهلاك', termEn: 'Depreciation', definitionAr: 'النقص المنهجي في القيمة المسجلة للأصل الملموس على مدى عمره الإنتاجي.', definitionEn: 'The systematic decrease in the recorded value of a tangible asset over its useful life.' },
+    { id: '19', termAr: 'توزيعات الأرباح', termEn: 'Dividend', definitionAr: 'توزيع جزء من أرباح الشركة على مساهميها.', definitionEn: 'A distribution of a portion of a company\'s earnings to its shareholders.' },
+    // E
+    { id: '20', termAr: 'ربحية السهم', termEn: 'Earnings Per Share', abbreviationEn: 'EPS', definitionAr: 'جزء من ربح الشركة المخصص لكل سهم من الأسهم العادية القائمة.', definitionEn: 'The portion of a company\'s profit allocated to each outstanding share of common stock.' },
+    { id: '21', termAr: 'حقوق الملكية', termEn: 'Equity', definitionAr: 'القيمة المتبقية في أصول الشركة بعد خصم جميع التزاماتها.', definitionEn: 'The residual interest in the assets of an entity after deducting all its liabilities.' },
+    { id: '22', termAr: 'المصروفات', termEn: 'Expenses', definitionAr: 'تكاليف العمليات التي تتكبدها الشركة في سبيل تحقيق الإيرادات.', definitionEn: 'The costs of operations that a company incurs to generate revenue.' },
+    // F
+    { id: '23', termAr: 'الأصول الثابتة', termEn: 'Fixed Asset', definitionAr: 'أصل طويل الأجل تستخدمه الشركة لإنتاج السلع أو الخدمات، وليس من المتوقع تحويله إلى نقد في غضون عام.', definitionEn: 'A long-term tangible piece of property that a firm owns and uses in the production of its income and is not expected to be consumed or converted into cash within a year.' },
+    { id: '24', termAr: 'المبادئ المحاسبية المقبولة عموماً', termEn: 'Generally Accepted Accounting Principles', abbreviationEn: 'GAAP', definitionAr: 'مجموعة مشتركة من المعايير والمبادئ المحاسبية التي تتبعها الشركات عند إعداد بياناتها المالية.', definitionEn: 'A common set of accounting principles, standards, and procedures that companies must follow when they compile their financial statements.' },
+    // G
+    { id: '25', termAr: 'إجمالي الربح', termEn: 'Gross Profit', definitionAr: 'الربح الذي تحققه الشركة بعد خصم التكاليف المرتبطة بصنع وبيع منتجاتها.', definitionEn: 'The profit a company makes after deducting the costs associated with making and selling its products.' },
+    // I
+    { id: '26', termAr: 'قائمة الدخل', termEn: 'Income Statement', definitionAr: 'بيان مالي يوضح أداء الشركة المالي (الإيرادات، المصروفات، وصافي الربح أو الخسارة) خلال فترة زمنية معينة.', definitionEn: 'A financial statement that reports a company\'s financial performance over a specific accounting period.' },
+    { id: '27', termAr: 'الأصول غير الملموسة', termEn: 'Intangible Asset', definitionAr: 'أصل ليس له وجود مادي، مثل براءات الاختراع والعلامات التجارية وحقوق النشر.', definitionEn: 'An asset that is not physical in nature, such as patents, trademarks, and copyrights.' },
+    { id: '28', termAr: 'الفائدة', termEn: 'Interest', definitionAr: 'تكلفة اقتراض المال، أو العائد من إقراض المال.', definitionEn: 'The cost of borrowing money, or the return from lending money.' },
+    { id: '29', termAr: 'المخزون', termEn: 'Inventory', definitionAr: 'السلع والمواد التي تحتفظ بها الشركة للبيع في نهاية المطاف.', definitionEn: 'The goods and materials that a business holds for the ultimate goal of resale.' },
+    // L
+    { id: '30', termAr: 'الالتزام', termEn: 'Liability', definitionAr: 'تعهد أو دين حالي على الشركة ينشأ من أحداث سابقة، ويتطلب تسويته تدفقاً خارجاً للموارد.', definitionEn: 'A company\'s financial debt or obligations that arise during the course of its business operations.' },
+    { id: '31', termAr: 'السيولة', termEn: 'Liquidity', definitionAr: 'سهولة تحويل الأصل إلى نقد دون التأثير على سعره في السوق.', definitionEn: 'The ease with which an asset can be converted into cash without affecting its market price.' },
+    // N
+    { id: '32', termAr: 'صافي الدخل', termEn: 'Net Income', definitionAr: 'إجمالي أرباح الشركة بعد خصم جميع التكاليف والمصروفات والضرائب.', definitionEn: 'A company\'s total earnings or profit after subtracting all costs, expenses, and taxes.' },
+    // O
+    { id: '33', termAr: 'المصروفات التشغيلية', termEn: 'Operating Expense', abbreviationEn: 'OpEx', definitionAr: 'المصروفات التي تتكبدها الشركة من خلال عملياتها التجارية العادية.', definitionEn: 'Expenses a business incurs through its normal business operations.' },
+    // P
+    { id: '34', termAr: 'الأرباح والخسائر', termEn: 'Profit and Loss Statement', abbreviationEn: 'P&L', definitionAr: 'مرادف لقائمة الدخل.', definitionEn: 'Synonymous with the income statement.' },
+    // R
+    { id: '35', termAr: 'الأرباح المحتجزة', termEn: 'Retained Earnings', definitionAr: 'جزء من صافي أرباح الشركة الذي يتم إعادة استثماره في الشركة.', definitionEn: 'The portion of a company\'s net income that is reinvested in the business.' },
+    { id: '36', termAr: 'العائد على الاستثمار', termEn: 'Return on Investment', abbreviationEn: 'ROI', definitionAr: 'مقياس أداء يستخدم لتقييم كفاءة أو ربحية استثمار ما.', definitionEn: 'A performance measure used to evaluate the efficiency or profitability of an investment.' },
+    { id: '37', termAr: 'الإيرادات', termEn: 'Revenue', definitionAr: 'إجمالي تدفق المنافع الاقتصادية خلال فترة ما، والتي تنشأ عن الأنشطة العادية للشركة.', definitionEn: 'The total amount of income generated by the sale of goods or services related to the company\'s primary operations.' },
+    // S
+    { id: '38', termAr: 'السهم', termEn: 'Stock', definitionAr: 'ورقة مالية تمثل ملكية جزئية في شركة.', definitionEn: 'A security that represents a fractional ownership in a corporation.' },
+    // T
+    { id: '39', termAr: 'ميزان المراجعة', termEn: 'Trial Balance', definitionAr: 'ورقة عمل محاسبية يتم فيها تجميع أرصدة جميع دفاتر الأستاذ في أعمدة الخصم والائتمان.', definitionEn: 'An accounting worksheet in which the balances of all ledgers are compiled into debit and credit columns.' },
+    // V
+    { id: '40', termAr: 'التكلفة المتغيرة', termEn: 'Variable Cost', definitionAr: 'مصروف شركة يتغير بما يتناسب مع حجم إنتاجها.', definitionEn: 'A corporate expense that changes in proportion to production output.' },
+    // W
+    { id: '41', termAr: 'رأس المال العامل', termEn: 'Working Capital', definitionAr: 'الفرق بين الأصول المتداولة والالتزامات المتداولة، وهو مقياس للسيولة قصيرة الأجل.', definitionEn: 'The difference between current assets and current liabilities; a measure of short-term liquidity.' },
+    // Y
+    { id: '42', termAr: 'العائد', termEn: 'Yield', definitionAr: 'الدخل العائد من استثمار ما، وعادة ما يتم التعبير عنه كنسبة مئوية سنوية.', definitionEn: 'The income returned on an investment, usually expressed as an annual percentage.' },
 ];
 
 

@@ -42,4 +42,6 @@ export interface GlossaryTerm {
   termEn: string;
   definitionAr: string;
   definitionEn: string;
+  abbreviationAr?: string;
+  abbreviationEn?: string;
 }

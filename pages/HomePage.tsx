@@ -36,9 +36,20 @@ const HomePage: React.FC = () => {
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5.586a1 1 0 0 1 .707.293l5.414 5.414a1 1 0 0 1 .293.707V19a2 2 0 0 1-2 2Z" />
       </svg>
     ),
+    receiptGenerator: (
+       <svg className="h-8 w-8 text-teal-600 dark:text-teal-400"  fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m5.231 13.481L15 17.25m-4.5-15H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Zm3.75 11.625a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
+        </svg>
+    ),
     contractClause: (
       <svg className="h-8 w-8 text-teal-600 dark:text-teal-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 13.5h6m-6-3h6m-6-3h6m-6-3h6M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21m-4.062 0h2.125M9 21h-1.553c-1.295 0-2.41-1.01-2.58-2.303L4.5 5.25a2.25 2.25 0 0 1 2.25-2.25h9a2.25 2.25 0 0 1 2.25 2.25L19.5 18.7a2.5 2.5 0 0 1-2.58 2.303H15M9 21h6" />
+      </svg>
+    ),
+    loanCalculator: (
+      <svg className="h-8 w-8 text-teal-600 dark:text-teal-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 15.75l-2.489-2.489m0 0a3.375 3.375 0 10-4.773-4.773 3.375 3.375 0 004.774 4.774zM21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 15.75l-2.489-2.489" />
       </svg>
     ),
   };
@@ -60,7 +71,7 @@ const HomePage: React.FC = () => {
         </section>
 
         <section>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <FeatureCard 
               path="/number-converter"
               icon={cardIcons.numberConverter}
@@ -80,10 +91,22 @@ const HomePage: React.FC = () => {
               description={t('home.cards.invoiceGenerator.description')}
             />
             <FeatureCard 
+              path="/receipt-generator"
+              icon={cardIcons.receiptGenerator}
+              title={t('home.cards.receiptGenerator.title')}
+              description={t('home.cards.receiptGenerator.description')}
+            />
+            <FeatureCard 
               path="/contract-clause"
               icon={cardIcons.contractClause}
               title={t('home.cards.contractClause.title')}
               description={t('home.cards.contractClause.description')}
+            />
+             <FeatureCard 
+              path="/loan-calculator"
+              icon={cardIcons.loanCalculator}
+              title={t('home.cards.loanCalculator.title')}
+              description={t('home.cards.loanCalculator.description')}
             />
           </div>
         </section>

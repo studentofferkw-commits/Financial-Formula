@@ -20,8 +20,10 @@ const translations = {
         numberConverter: 'تحويل الأرقام',
         dateConverter: 'تحويل التاريخ',
         invoiceGenerator: 'مولد الفواتير',
+        receiptGenerator: 'مولد الإيصالات',
         contractClause: 'صياغة البنود',
-        glossary: 'مسرد المصطلحات',
+        loanCalculator: 'حاسبة الأقساط',
+        glossary: 'مصطلحات مالية',
         articles: 'مقالات',
         about: 'عن الموقع',
         contact: 'اتصل بنا',
@@ -80,6 +82,38 @@ const translations = {
       uploadLogo: 'رفع الشعار',
       removeLogo: 'إزالة الشعار',
     },
+    receiptGeneratorPage: {
+      mainTitle: 'مولد إيصالات الدفع الاحترافي',
+      subtitle: 'أداة سهلة لإنشاء وتخصيص إيصالات الدفع، مع إمكانية تحميلها بصيغة PDF.',
+    },
+    receiptGenerator: {
+      receiptVoucher: 'إيصال استلام',
+      paymentVoucher: 'إيصال دفع',
+      receiptType: 'نوع الإيصال',
+      receiptNo: 'رقم الإيصال',
+      amount: 'المبلغ',
+      receivedFrom: 'استلمنا من السيد/السادة',
+      paidTo: 'دفعنا إلى السيد/السادة',
+      amountInWords: 'مبلغ وقدره',
+      paymentFor: 'وذلك مقابل',
+      paymentMethod: 'طريقة الدفع',
+      cash: 'نقداً',
+      check: 'شيك',
+      bankTransfer: 'تحويل بنكي',
+      creditCard: 'بطاقة ائتمان',
+      date: 'التاريخ',
+      signature: 'توقيع المستلم',
+      stamp: 'الختم أو التوقيع',
+      recipientInfo: 'بياناتك (مُصدر الإيصال)',
+      yourName: 'اسمك / اسم شركتك',
+      payerInfo: 'بيانات الطرف الآخر',
+      payerName: 'اسم الدافع',
+      recipientNameForForm: 'اسم المستلم',
+      purposeOfPayment: 'الغرض من الدفع',
+      downloadPdf: 'تحميل PDF',
+      uploadLogo: 'رفع الشعار',
+      removeLogo: 'إزالة الشعار',
+    },
     contractClausePage: {
       mainTitle: 'مساعد صياغة البنود المالية للعقود',
       subtitle: 'أداة متقدمة لإنشاء بنود مالية دقيقة ومفصلة للعقود والاتفاقيات الرسمية بسهولة واحترافية.',
@@ -114,8 +148,30 @@ const translations = {
       annually: 'سنوياً',
       paymentSchedule: 'جدول الدفعات (مثال توضيحي)',
     },
+    loanCalculatorPage: {
+      mainTitle: 'حاسبة الأقساط والتمويل',
+      subtitle: 'أداة احترافية لحساب أقساط القروض الشهرية، إجمالي الفوائد، وعرض جدول السداد الكامل لمساعدتك على التخطيط المالي.',
+    },
+    loanCalculator: {
+      loanAmount: 'مبلغ التمويل',
+      interestRate: 'نسبة الفائدة السنوية (%)',
+      loanTerm: 'مدة التمويل (سنوات)',
+      calculate: 'احسب',
+      results: 'النتائج',
+      monthlyPayment: 'القسط الشهري',
+      totalPayment: 'إجمالي المبلغ المدفوع',
+      totalInterest: 'إجمالي الفوائد',
+      principal: 'أصل المبلغ',
+      interest: 'الفوائد',
+      amortizationSchedule: 'جدول السداد',
+      showSchedule: 'إظهار الجدول',
+      hideSchedule: 'إخفاء الجدول',
+      month: 'الشهر',
+      payment: 'القسط',
+      remainingBalance: 'الرصيد المتبقي',
+    },
     glossaryPage: {
-      mainTitle: 'مسرد المصطلحات المالية',
+      mainTitle: 'مصطلحات مالية',
       subtitle: 'دليلك لفهم أهم المصطلحات المالية والمحاسبية المستخدمة في عالم الأعمال.',
     },
     glossary: {
@@ -138,9 +194,17 @@ const translations = {
           title: 'مولد الفواتير السريع',
           description: 'أنشئ فواتير احترافية وحملها كملف PDF في دقائق.'
         },
+        receiptGenerator: {
+          title: 'مولد إيصالات الدفع',
+          description: 'أنشئ إيصالات دفع رسمية وسريعة لإثبات المعاملات المالية.'
+        },
         contractClause: {
           title: 'مساعد صياغة البنود المالية',
           description: 'إنشاء بنود مالية قانونية ومفصلة لعقودك واتفاقياتك.'
+        },
+        loanCalculator: {
+          title: 'حاسبة الأقساط والتمويل',
+          description: 'خطط لقروضك وتمويلك الشخصي بفهم واضح للأقساط والفوائد.'
         }
       },
       whyUse: {
@@ -252,12 +316,20 @@ const translations = {
         title: "مولد الفواتير | صيغة مالية",
         description: "أنشئ فواتير احترافية بسهولة وحملها بصيغة PDF. أداة مثالية للمستقلين والشركات الصغيرة."
       },
+      receiptGenerator: {
+        title: "مولد إيصالات الدفع | صيغة مالية",
+        description: "أنشئ إيصالات دفع احترافية وقابلة للتخصيص بسهولة. أدخل التفاصيل وحمل الإيصال بصيغة PDF."
+      },
       contractClause: {
         title: "مساعد صياغة البنود المالية | صيغة مالية",
         description: "أنشئ بنودًا مالية دقيقة وقانونية لعقودك واتفاقياتك بسهولة. أدخل المبلغ واحصل على فقرة جاهزة للنسخ."
       },
+      loanCalculator: {
+        title: "حاسبة الأقساط والتمويل | صيغة مالية",
+        description: "أداة احترافية لحساب أقساط القروض الشهرية، إجمالي الفوائد، وعرض جدول السداد الكامل لمساعدتك على التخطيط المالي."
+      },
       glossary: {
-        title: "مسرد المصطلحات المالية | صيغة مالية",
+        title: "مصطلحات مالية | صيغة مالية",
         description: "ابحث وتصفح قاموس شامل للمصطلحات المالية والمحاسبية باللغتين العربية والإنجليزية لفهم أعمق لعالم المال."
       },
       articles: {
@@ -294,8 +366,10 @@ const translations = {
         numberConverter: 'Number Converter',
         dateConverter: 'Date Converter',
         invoiceGenerator: 'Invoice Generator',
+        receiptGenerator: 'Receipt Generator',
         contractClause: 'Contract Clause',
-        glossary: 'Glossary',
+        loanCalculator: 'Loan Calculator',
+        glossary: 'Financial Terms',
         articles: 'Articles',
         about: 'About',
         contact: 'Contact',
@@ -354,6 +428,38 @@ const translations = {
       uploadLogo: 'Upload Logo',
       removeLogo: 'Remove Logo',
     },
+    receiptGeneratorPage: {
+      mainTitle: 'Professional Payment Receipt Generator',
+      subtitle: 'An easy tool to create and customize payment receipts, with the ability to download as a PDF.',
+    },
+    receiptGenerator: {
+      receiptVoucher: 'Receipt Voucher',
+      paymentVoucher: 'Payment Voucher',
+      receiptType: 'Receipt Type',
+      receiptNo: 'Receipt No.',
+      amount: 'Amount',
+      receivedFrom: 'Received from',
+      paidTo: 'Paid to',
+      amountInWords: 'The sum of',
+      paymentFor: 'For',
+      paymentMethod: 'Payment Method',
+      cash: 'Cash',
+      check: 'Check',
+      bankTransfer: 'Bank Transfer',
+      creditCard: 'Credit Card',
+      date: 'Date',
+      signature: 'Recipient\'s Signature',
+      stamp: 'Stamp or Signature',
+      recipientInfo: 'Your Info (Issuer)',
+      yourName: 'Your Name / Company',
+      payerInfo: 'Other Party Info',
+      payerName: 'Payer Name',
+      recipientNameForForm: 'Recipient Name',
+      purposeOfPayment: 'Purpose of Payment',
+      downloadPdf: 'Download PDF',
+      uploadLogo: 'Upload Logo',
+      removeLogo: 'Remove Logo',
+    },
     contractClausePage: {
       mainTitle: 'Advanced Contract Clause Generator',
       subtitle: 'An advanced tool to create accurate and detailed financial clauses for official contracts and agreements with ease and professionalism.',
@@ -388,8 +494,30 @@ const translations = {
       annually: 'Annually',
       paymentSchedule: 'Payment Schedule (Illustrative Example)',
     },
+    loanCalculatorPage: {
+      mainTitle: 'Loan & Installment Calculator',
+      subtitle: 'A professional tool to calculate monthly loan installments, total interest, and view a full amortization schedule to help with your financial planning.',
+    },
+    loanCalculator: {
+      loanAmount: 'Loan Amount',
+      interestRate: 'Annual Interest Rate (%)',
+      loanTerm: 'Loan Term (Years)',
+      calculate: 'Calculate',
+      results: 'Results',
+      monthlyPayment: 'Monthly Payment',
+      totalPayment: 'Total Payment',
+      totalInterest: 'Total Interest',
+      principal: 'Principal',
+      interest: 'Interest',
+      amortizationSchedule: 'Amortization Schedule',
+      showSchedule: 'Show Schedule',
+      hideSchedule: 'Hide Schedule',
+      month: 'Month',
+      payment: 'Payment',
+      remainingBalance: 'Remaining Balance',
+    },
     glossaryPage: {
-        mainTitle: 'Glossary of Financial Terms',
+        mainTitle: 'Financial Terms',
         subtitle: 'Your guide to understanding the key financial and accounting terms used in the world of business.',
     },
     glossary: {
@@ -412,9 +540,17 @@ const translations = {
           title: 'Simple Invoice Generator',
           description: 'Create professional invoices and download them as PDFs in minutes.'
         },
+        receiptGenerator: {
+          title: 'Payment Receipt Generator',
+          description: 'Create official and quick payment receipts to document financial transactions.'
+        },
         contractClause: {
           title: 'Contract Clause Helper',
           description: 'Generate legally sound and detailed financial clauses for your contracts.'
+        },
+        loanCalculator: {
+          title: 'Loan & Installment Calculator',
+          description: 'Plan your loans and personal financing with a clear understanding of installments and interest.'
         }
       },
       whyUse: {
@@ -453,7 +589,7 @@ const translations = {
     },
     privacy: {
         title: 'Privacy Policy',
-        effectiveDate: 'Effective Date: January 1, 2023',
+        effectiveDate: 'January 1, 2023',
         intro: 'At "Financial Formula," we respect your privacy and are committed to protecting it. This Privacy Policy explains how we handle your information.',
         section1: {
             title: 'Information We Collect',
@@ -526,12 +662,20 @@ const translations = {
         title: "Invoice Generator | Financial Formula",
         description: "Create professional invoices with ease and download them as a PDF. The perfect tool for freelancers and small businesses."
       },
+       receiptGenerator: {
+        title: "Payment Receipt Generator | Financial Formula",
+        description: "Create professional and customizable payment receipts easily. Enter the details and download the receipt as a PDF."
+      },
       contractClause: {
         title: "Contract Clause Helper | Financial Formula",
         description: "Easily create accurate and legally sound financial clauses for your contracts and agreements. Enter the amount and get a ready-to-copy paragraph."
       },
+      loanCalculator: {
+        title: "Loan & Installment Calculator | Financial Formula",
+        description: "A professional tool to calculate monthly loan installments, total interest, and view a full amortization schedule to help with your financial planning."
+      },
       glossary: {
-        title: "Glossary of Financial Terms | Financial Formula",
+        title: "Financial Terms | Financial Formula",
         description: "Search and browse a comprehensive dictionary of financial and accounting terms in Arabic and English for a deeper understanding of the world of finance."
       },
       articles: {

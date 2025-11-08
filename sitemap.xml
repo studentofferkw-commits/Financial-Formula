@@ -21,9 +21,19 @@
     <priority>0.90</priority>
   </url>
   <url>
+    <loc>https://financialformula.app/#/receipt-generator</loc>
+    <lastmod>2024-05-22</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
     <loc>https://financialformula.app/#/contract-clause</loc>
     <lastmod>2024-05-22</lastmod>
     <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://financialformula.app/#/loan-calculator</loc>
+    <lastmod>2024-05-22</lastmod>
+    <priority>0.90</priority>
   </url>
    <url>
     <loc>https://financialformula.app/#/glossary</loc>
@@ -77,6 +87,16 @@
   </url>
   <url>
     <loc>https://financialformula.app/#/articles/7</loc>
+    <lastmod>2024-05-22</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://financialformula.app/#/articles/8</loc>
+    <lastmod>2024-05-22</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://financialformula.app/#/articles/9</loc>
     <lastmod>2024-05-22</lastmod>
     <priority>0.64</priority>
   </url>
