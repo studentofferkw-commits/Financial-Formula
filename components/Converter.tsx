@@ -1,9 +1,10 @@
+
 // FIX: Implemented the main Converter component for the home page.
 import React, { useState, useEffect } from 'react';
-import { useTranslation } from '../hooks/useTranslation';
-import { CURRENCIES } from '../constants';
-import { numberToText } from '../services/numberToTextService';
-import SearchableSelect from './SearchableSelect';
+import { useTranslation } from '../hooks/useTranslation.ts';
+import { CURRENCIES } from '../constants.ts';
+import { numberToText } from '../services/numberToTextService.ts';
+import SearchableSelect from './SearchableSelect.tsx';
 
 const Converter: React.FC = () => {
   const { t, language } = useTranslation();

@@ -1,8 +1,9 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ARTICLES } from '../constants';
-import { useTranslation } from '../hooks/useTranslation';
-import MetaTags from '../components/MetaTags';
+import { ARTICLES } from '../constants.ts';
+import { useTranslation } from '../hooks/useTranslation.ts';
+import MetaTags from '../components/MetaTags.tsx';
 
 const ArticlesPage: React.FC = () => {
   const { t, language } = useTranslation();

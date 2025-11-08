@@ -1,7 +1,8 @@
+
 import React from 'react';
-import Glossary from '../components/Glossary';
-import { useTranslation } from '../hooks/useTranslation';
-import MetaTags from '../components/MetaTags';
+import Glossary from '../components/Glossary.tsx';
+import { useTranslation } from '../hooks/useTranslation.ts';
+import MetaTags from '../components/MetaTags.tsx';
 
 const GlossaryPage: React.FC = () => {
   const { t } = useTranslation();

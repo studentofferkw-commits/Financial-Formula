@@ -1,7 +1,7 @@
 import React from 'react';
-import Converter from '../components/Converter';
-import { useTranslation } from '../hooks/useTranslation';
-import MetaTags from '../components/MetaTags';
+import Converter from '../components/Converter.tsx';
+import { useTranslation } from '../hooks/useTranslation.ts';
+import MetaTags from '../components/MetaTags.tsx';
 
 const NumberConverterPage: React.FC = () => {
   const { t } = useTranslation();
@@ -25,7 +25,6 @@ const NumberConverterPage: React.FC = () => {
         <section>
           <Converter />
         </section>
-
       </div>
     </>
   );

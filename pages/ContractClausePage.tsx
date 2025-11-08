@@ -1,7 +1,8 @@
+
 import React from 'react';
-import ContractClauseGenerator from '../components/ContractClauseGenerator';
-import { useTranslation } from '../hooks/useTranslation';
-import MetaTags from '../components/MetaTags';
+import ContractClauseGenerator from '../components/ContractClauseGenerator.tsx';
+import { useTranslation } from '../hooks/useTranslation.ts';
+import MetaTags from '../components/MetaTags.tsx';
 
 const ContractClausePage: React.FC = () => {
   const { t } = useTranslation();

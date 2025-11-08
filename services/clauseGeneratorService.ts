@@ -1,5 +1,6 @@
-import { Currency } from '../types';
-import { numberToText } from './numberToTextService';
+
+import { Currency } from '../types.ts';
+import { numberToText } from './numberToTextService.ts';
 
 interface ClauseOptions {
     amountStr: string;

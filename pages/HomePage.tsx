@@ -1,6 +1,7 @@
+
 import React from 'react';
-import { useTranslation } from '../hooks/useTranslation';
-import MetaTags from '../components/MetaTags';
+import { useTranslation } from '../hooks/useTranslation.ts';
+import MetaTags from '../components/MetaTags.tsx';
 import { Link } from 'react-router-dom';
 
 // FIX: Replaced `JSX.Element` with `React.ReactNode` to resolve the 'Cannot find namespace JSX' error.

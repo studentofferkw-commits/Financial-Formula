@@ -1,6 +1,7 @@
+
 import React from 'react';
-import { useTranslation } from '../hooks/useTranslation';
-import MetaTags from '../components/MetaTags';
+import { useTranslation } from '../hooks/useTranslation.ts';
+import MetaTags from '../components/MetaTags.tsx';
 
 const PrivacyPolicyPage: React.FC = () => {
   const { t, language } = useTranslation();

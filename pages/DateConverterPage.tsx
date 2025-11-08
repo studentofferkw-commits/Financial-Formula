@@ -1,7 +1,8 @@
+
 import React from 'react';
-import DateConverter from '../components/DateConverter';
-import { useTranslation } from '../hooks/useTranslation';
-import MetaTags from '../components/MetaTags';
+import DateConverter from '../components/DateConverter.tsx';
+import { useTranslation } from '../hooks/useTranslation.ts';
+import MetaTags from '../components/MetaTags.tsx';
 
 const DateConverterPage: React.FC = () => {
   const { t } = useTranslation();

@@ -1,8 +1,9 @@
+
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { NAV_LINKS } from '../constants';
-import { useTranslation } from '../hooks/useTranslation';
-import ThemeToggle from './ThemeToggle';
+import { NAV_LINKS } from '../constants.ts';
+import { useTranslation } from '../hooks/useTranslation.ts';
+import ThemeToggle from './ThemeToggle.tsx';
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -63,11 +64,11 @@ const Header: React.FC = () => {
             >
               <span className="sr-only">{t('header.openMenu')}</span>
               {isOpen ? (
-                <svg className="h-6 w-6" xmlns="http://www.w.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
               ) : (
-                <svg className="h-6 w-6" xmlns="http://www.w.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
               )}

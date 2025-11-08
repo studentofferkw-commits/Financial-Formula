@@ -1,7 +1,8 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useTranslation } from '../hooks/useTranslation';
-import { FOOTER_LINKS } from '../constants';
+import { useTranslation } from '../hooks/useTranslation.ts';
+import { FOOTER_LINKS } from '../constants.ts';
 
 const Footer: React.FC = () => {
   const { t } = useTranslation();

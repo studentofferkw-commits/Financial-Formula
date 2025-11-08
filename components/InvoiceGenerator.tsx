@@ -1,9 +1,10 @@
+
 import React, { useState, useMemo, useRef } from 'react';
-import { useTranslation } from '../hooks/useTranslation';
-import { CURRENCIES } from '../constants';
-import { numberToText } from '../services/numberToTextService';
-import SearchableSelect from './SearchableSelect';
-import InvoiceTemplate from './InvoiceTemplate';
+import { useTranslation } from '../hooks/useTranslation.ts';
+import { CURRENCIES } from '../constants.ts';
+import { numberToText } from '../services/numberToTextService.ts';
+import SearchableSelect from './SearchableSelect.tsx';
+import InvoiceTemplate from './InvoiceTemplate.tsx';
 
 interface LineItem {
   id: number;

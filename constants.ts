@@ -1,5 +1,6 @@
+
 // FIX: Implemented missing constants for navigation, articles, and currencies.
-import { NavLinkInfo, Article, Currency, GlossaryTerm } from './types';
+import { NavLinkInfo, Article, Currency, GlossaryTerm } from './types.ts';
 
 export const NAV_LINKS: NavLinkInfo[] = [
   { path: '/', key: 'home' },
