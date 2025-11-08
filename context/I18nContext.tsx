@@ -23,17 +23,19 @@ const translations = {
         receiptGenerator: 'مولد الإيصالات',
         contractClause: 'صياغة البنود',
         loanCalculator: 'حاسبة الأقساط',
-        glossary: 'مصطلحات مالية',
-        articles: 'مقالات',
-        about: 'عن الموقع',
-        contact: 'اتصل بنا',
       },
       openMenu: 'افتح القائمة',
     },
     footer: {
       copyright: 'صيغة مالية. جميع الحقوق محفوظة.',
-      privacy: 'سياسة الخصوصية',
-      terms: 'شروط الخدمة',
+      nav: {
+        glossary: 'مصطلحات مالية',
+        articles: 'مقالات',
+        about: 'عن الموقع',
+        contact: 'اتصل بنا',
+        privacy: 'سياسة الخصوصية',
+        terms: 'شروط الخدمة',
+      }
     },
     converter: {
         enterNumber: 'أدخل المبلغ بالأرقام',
@@ -369,17 +371,19 @@ const translations = {
         receiptGenerator: 'Receipt Generator',
         contractClause: 'Contract Clause',
         loanCalculator: 'Loan Calculator',
-        glossary: 'Financial Terms',
-        articles: 'Articles',
-        about: 'About',
-        contact: 'Contact',
       },
       openMenu: 'Open menu',
     },
     footer: {
       copyright: 'Financial Formula. All rights reserved.',
-      privacy: 'Privacy Policy',
-      terms: 'Terms of Service',
+      nav: {
+        glossary: 'Financial Terms',
+        articles: 'Articles',
+        about: 'About',
+        contact: 'Contact',
+        privacy: 'Privacy Policy',
+        terms: 'Terms of Service',
+      }
     },
     converter: {
         enterNumber: 'Enter amount in numbers',

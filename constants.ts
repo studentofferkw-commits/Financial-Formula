@@ -9,10 +9,15 @@ export const NAV_LINKS: NavLinkInfo[] = [
   { path: '/receipt-generator', key: 'receiptGenerator' },
   { path: '/contract-clause', key: 'contractClause' },
   { path: '/loan-calculator', key: 'loanCalculator' },
+];
+
+export const FOOTER_LINKS: NavLinkInfo[] = [
   { path: '/glossary', key: 'glossary' },
   { path: '/articles', key: 'articles' },
   { path: '/about', key: 'about' },
   { path: '/contact', key: 'contact' },
+  { path: '/privacy-policy', key: 'privacy' },
+  { path: '/terms-of-service', key: 'terms' },
 ];
 
 export const ARTICLES: Article[] = [
