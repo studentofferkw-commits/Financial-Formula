@@ -18,6 +18,7 @@ export interface Currency {
   code: string; // e.g., 'USD'
   name: string; // e.g., 'US Dollar'
   nameAr: string; // e.g., 'دولار أمريكي'
+  symbol: string; // e.g., '$'
   
   // Main currency unit names
   singular: string; // e.g., 'dollar'

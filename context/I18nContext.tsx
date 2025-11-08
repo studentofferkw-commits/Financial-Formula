@@ -23,6 +23,7 @@ const translations = {
         receiptGenerator: 'مولد الإيصالات',
         contractClause: 'صياغة البنود',
         loanCalculator: 'حاسبة الأقساط',
+        currencyConverter: 'محول العملات',
       },
       openMenu: 'افتح القائمة',
     },
@@ -172,6 +173,22 @@ const translations = {
       payment: 'القسط',
       remainingBalance: 'الرصيد المتبقي',
     },
+    currencyConverterPage: {
+      mainTitle: 'محول العملات المباشر',
+      subtitle: 'أداة احترافية لتحويل العملات بناءً على أحدث أسعار الصرف العالمية.',
+    },
+    currencyConverter: {
+      amount: 'المبلغ',
+      from: 'من',
+      to: 'إلى',
+      result: 'النتيجة',
+      rate: 'سعر الصرف',
+      lastUpdated: 'آخر تحديث',
+      swap: 'تبديل العملات',
+      loading: 'جاري جلب أحدث الأسعار...',
+      error: 'حدث خطأ أثناء جلب أسعار الصرف. يرجى المحاولة مرة أخرى.',
+      rateUnavailable: 'سعر الصرف المباشر غير متوفر للعملة'
+    },
     glossaryPage: {
       mainTitle: 'مصطلحات مالية',
       subtitle: 'دليلك لفهم أهم المصطلحات المالية والمحاسبية المستخدمة في عالم الأعمال.',
@@ -207,6 +224,10 @@ const translations = {
         loanCalculator: {
           title: 'حاسبة الأقساط والتمويل',
           description: 'خطط لقروضك وتمويلك الشخصي بفهم واضح للأقساط والفوائد.'
+        },
+        currencyConverter: {
+            title: 'محول العملات المباشر',
+            description: 'احصل على أسعار الصرف اللحظية وقم بتحويل العملات العالمية بدقة وسرعة.'
         }
       },
       whyUse: {
@@ -330,6 +351,10 @@ const translations = {
         title: "حاسبة الأقساط والتمويل | صيغة مالية",
         description: "أداة احترافية لحساب أقساط القروض الشهرية، إجمالي الفوائد، وعرض جدول السداد الكامل لمساعدتك على التخطيط المالي."
       },
+      currencyConverter: {
+        title: "محول العملات المباشر | صيغة مالية",
+        description: "أداة احترافية لتحويل العملات بناءً على أحدث أسعار الصرف العالمية. سريعة ودقيقة ومجانية."
+      },
       glossary: {
         title: "مصطلحات مالية | صيغة مالية",
         description: "ابحث وتصفح قاموس شامل للمصطلحات المالية والمحاسبية باللغتين العربية والإنجليزية لفهم أعمق لعالم المال."
@@ -371,6 +396,7 @@ const translations = {
         receiptGenerator: 'Receipt Generator',
         contractClause: 'Contract Clause',
         loanCalculator: 'Loan Calculator',
+        currencyConverter: 'Currency Converter',
       },
       openMenu: 'Open menu',
     },
@@ -520,6 +546,22 @@ const translations = {
       payment: 'Payment',
       remainingBalance: 'Remaining Balance',
     },
+    currencyConverterPage: {
+      mainTitle: 'Live Currency Converter',
+      subtitle: 'A professional tool to convert currencies based on the latest global exchange rates.',
+    },
+    currencyConverter: {
+      amount: 'Amount',
+      from: 'From',
+      to: 'To',
+      result: 'Result',
+      rate: 'Exchange Rate',
+      lastUpdated: 'Last updated',
+      swap: 'Swap currencies',
+      loading: 'Fetching latest rates...',
+      error: 'An error occurred while fetching exchange rates. Please try again.',
+      rateUnavailable: 'Live rate not available for'
+    },
     glossaryPage: {
         mainTitle: 'Financial Terms',
         subtitle: 'Your guide to understanding the key financial and accounting terms used in the world of business.',
@@ -555,6 +597,10 @@ const translations = {
         loanCalculator: {
           title: 'Loan & Installment Calculator',
           description: 'Plan your loans and personal financing with a clear understanding of installments and interest.'
+        },
+        currencyConverter: {
+          title: 'Live Currency Converter',
+          description: 'Get real-time exchange rates and convert global currencies with accuracy and speed.'
         }
       },
       whyUse: {
@@ -677,6 +723,10 @@ const translations = {
       loanCalculator: {
         title: "Loan & Installment Calculator | Financial Formula",
         description: "A professional tool to calculate monthly loan installments, total interest, and view a full amortization schedule to help with your financial planning."
+      },
+      currencyConverter: {
+        title: "Live Currency Converter | Financial Formula",
+        description: "A professional tool to convert currencies based on the latest global exchange rates. Fast, accurate, and free."
       },
       glossary: {
         title: "Financial Terms | Financial Formula",

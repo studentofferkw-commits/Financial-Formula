@@ -17,6 +17,7 @@ import { ThemeProvider } from './context/ThemeContext';
 import NumberConverterPage from './pages/NumberConverterPage';
 import LoanCalculatorPage from './pages/LoanCalculatorPage';
 import ReceiptGeneratorPage from './pages/ReceiptGeneratorPage';
+import CurrencyConverterPage from './pages/CurrencyConverterPage';
 
 const App: React.FC = () => {
   return (
@@ -31,6 +32,7 @@ const App: React.FC = () => {
               <Route path="/invoice-generator" element={<InvoiceGeneratorPage />} />
               <Route path="/contract-clause" element={<ContractClausePage />} />
               <Route path="/loan-calculator" element={<LoanCalculatorPage />} />
+              <Route path="/currency-converter" element={<CurrencyConverterPage />} />
               <Route path="/receipt-generator" element={<ReceiptGeneratorPage />} />
               <Route path="/glossary" element={<GlossaryPage />} />
               <Route path="/about" element={<AboutPage />} />
