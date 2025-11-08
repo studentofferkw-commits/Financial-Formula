@@ -259,10 +259,15 @@ const translations = {
         p5: 'نأمل أن تجد أداتنا مفيدة في عملك اليومي. نحن ملتزمون بالتحسين المستمر ونرحب بأي ملاحظات منك.',
     },
     contact: {
-        title: 'اتصل بنا',
-        p1: 'نحن نقدر ملاحظاتك واستفساراتك.',
-        p2: 'لأي أسئلة أو اقتراحات أو دعم فني، يرجى التواصل معنا عبر البريد الإلكتروني:',
-        p3: 'سنبذل قصارى جهدنا للرد عليك في أقرب وقت ممكن.',
+      title: 'اتصل بنا',
+      p1: 'هل لديك سؤال أو اقتراح؟ املأ النموذج أدناه وسنعاود الاتصال بك.',
+      formName: 'الاسم',
+      formEmail: 'البريد الإلكتروني',
+      formMessage: 'رسالتك',
+      sendButton: 'إرسال الرسالة',
+      sending: 'جاري الإرسال...',
+      successMessage: 'تم إرسال رسالتك بنجاح! سنتواصل معك قريبا.',
+      errorMessage: 'حدث خطأ ما. يرجى المحاولة مرة أخرى لاحقًا.',
     },
     privacy: {
         title: 'سياسة الخصوصية',
@@ -373,7 +378,7 @@ const translations = {
       },
       contact: {
         title: "اتصل بنا | صيغة مالية",
-        description: "تواصل مع فريق 'صيغة مالية'. نرحب بملاحظاتك، استفساراتك، واقتراحاتك لتحسين خدماتنا."
+        description: "تواصل مع فريق 'صيغة مالية' عبر نموذج الاتصال الآمن. نرحب بملاحظاتك واستفساراتك."
       },
       privacy: {
         title: "سياسة الخصوصية | صيغة مالية",
@@ -632,10 +637,15 @@ const translations = {
         p5: 'We hope you find our tool useful in your daily work. We are committed to continuous improvement and welcome any feedback from you.',
     },
     contact: {
-        title: 'Contact Us',
-        p1: 'We value your feedback and inquiries.',
-        p2: 'For any questions, suggestions, or technical support, please contact us via email:',
-        p3: 'We will do our best to get back to you as soon as possible.',
+      title: 'Contact Us',
+      p1: 'Have a question or a suggestion? Fill out the form below and we\'ll get back to you.',
+      formName: 'Name',
+      formEmail: 'Email',
+      formMessage: 'Your Message',
+      sendButton: 'Send Message',
+      sending: 'Sending...',
+      successMessage: 'Your message has been sent successfully! We will get back to you soon.',
+      errorMessage: 'An error occurred. Please try again later.',
     },
     privacy: {
         title: 'Privacy Policy',
@@ -746,7 +756,7 @@ const translations = {
       },
       contact: {
         title: "Contact Us | Financial Formula",
-        description: "Get in touch with the 'Financial Formula' team. We welcome your feedback, inquiries, and suggestions to improve our services."
+        description: "Get in touch with the 'Financial Formula' team through our secure contact form. We welcome your feedback and inquiries."
       },
       privacy: {
         title: "Privacy Policy | Financial Formula",
