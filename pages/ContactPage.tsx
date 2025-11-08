@@ -9,7 +9,8 @@ const ContactPage: React.FC = () => {
   const [message, setMessage] = useState('');
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
 
-  const WEB3FORMS_ACCESS_KEY = "e25b6a76-0e10-4416-8c65-0b2848b3b320";
+  // Correct access key for support@financial-formula.com
+  const WEB3FORMS_ACCESS_KEY = "06f9e5a1-4328-4c7b-871d-1512b9a79a32";
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -20,7 +21,6 @@ const ContactPage: React.FC = () => {
       name: name,
       email: email,
       message: message,
-      subject: "New Contact Form Submission from Financial Formula",
     };
 
     try {
@@ -42,7 +42,7 @@ const ContactPage: React.FC = () => {
         setMessage('');
         setTimeout(() => setStatus('idle'), 5000); // Reset after 5 seconds
       } else {
-        console.error("Submission error:", result);
+        console.error("Submission error:", result.message || result);
         setStatus('error');
       }
     } catch (error) {
