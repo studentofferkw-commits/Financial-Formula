@@ -1,24 +1,23 @@
-
 import React from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
-import Layout from './components/Layout.tsx';
-import HomePage from './pages/HomePage.tsx';
-import AboutPage from './pages/AboutPage.tsx';
-import ContactPage from './pages/ContactPage.tsx';
-import PrivacyPolicyPage from './pages/PrivacyPolicyPage.tsx';
-import TermsOfServicePage from './pages/TermsOfServicePage.tsx';
-import ArticlesPage from './pages/ArticlesPage.tsx';
-import ArticleDetailPage from './pages/ArticleDetailPage.tsx';
-import DateConverterPage from './pages/DateConverterPage.tsx';
-import GlossaryPage from './pages/GlossaryPage.tsx';
-import InvoiceGeneratorPage from './pages/InvoiceGeneratorPage.tsx';
-import ContractClausePage from './pages/ContractClausePage.tsx';
-import { I18nProvider } from './context/I18nContext.tsx';
-import { ThemeProvider } from './context/ThemeContext.tsx';
-import NumberConverterPage from './pages/NumberConverterPage.tsx';
-import LoanCalculatorPage from './pages/LoanCalculatorPage.tsx';
-import ReceiptGeneratorPage from './pages/ReceiptGeneratorPage.tsx';
-import CurrencyConverterPage from './pages/CurrencyConverterPage.tsx';
+import Layout from './components/Layout';
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import TermsOfServicePage from './pages/TermsOfServicePage';
+import ArticlesPage from './pages/ArticlesPage';
+import ArticleDetailPage from './pages/ArticleDetailPage';
+import DateConverterPage from './pages/DateConverterPage';
+import GlossaryPage from './pages/GlossaryPage';
+import InvoiceGeneratorPage from './pages/InvoiceGeneratorPage';
+import ContractClausePage from './pages/ContractClausePage';
+import { I18nProvider } from './context/I18nContext';
+import { ThemeProvider } from './context/ThemeContext';
+import NumberConverterPage from './pages/NumberConverterPage';
+import LoanCalculatorPage from './pages/LoanCalculatorPage';
+import ReceiptGeneratorPage from './pages/ReceiptGeneratorPage';
+import CurrencyConverterPage from './pages/CurrencyConverterPage';
 
 const App: React.FC = () => {
   return (

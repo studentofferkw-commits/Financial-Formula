@@ -1,7 +1,6 @@
-
 import React, { useState, useEffect } from 'react';
-import { useTranslation } from '../hooks/useTranslation.ts';
-import { dateToText } from '../services/dateToTextService.ts';
+import { useTranslation } from '../hooks/useTranslation';
+import { dateToText } from '../services/dateToTextService';
 
 const DateConverter: React.FC = () => {
   const { t, language } = useTranslation();

@@ -1,7 +1,6 @@
-
 import React, { useState, useMemo } from 'react';
-import { useTranslation } from '../hooks/useTranslation.ts';
-import { GLOSSARY_TERMS } from '../constants.ts';
+import { useTranslation } from '../hooks/useTranslation';
+import { GLOSSARY_TERMS } from '../constants';
 
 const Glossary: React.FC = () => {
   const { t, language } = useTranslation();

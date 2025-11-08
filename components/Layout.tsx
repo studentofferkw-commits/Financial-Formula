@@ -1,8 +1,7 @@
-
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import Header from './Header.tsx';
-import Footer from './Footer.tsx';
+import Header from './Header';
+import Footer from './Footer';
 
 // Extend the Window interface to include gtag for TypeScript
 declare global {

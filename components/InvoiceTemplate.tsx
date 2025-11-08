@@ -1,7 +1,6 @@
-
 import React, { forwardRef } from 'react';
-import { useTranslation } from '../hooks/useTranslation.ts';
-import { Currency } from '../types.ts';
+import { useTranslation } from '../hooks/useTranslation';
+import { Currency } from '../types';
 
 interface LineItem {
   id: number;

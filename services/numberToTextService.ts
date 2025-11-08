@@ -1,6 +1,5 @@
-
 // FIX: Implemented the number to text conversion logic.
-import { Currency } from '../types.ts';
+import { Currency } from '../types';
 
 // --- English Conversion Logic ---
 

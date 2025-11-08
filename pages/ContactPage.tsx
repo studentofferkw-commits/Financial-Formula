@@ -1,7 +1,6 @@
-
 import React from 'react';
-import { useTranslation } from '../hooks/useTranslation.ts';
-import MetaTags from '../components/MetaTags.tsx';
+import { useTranslation } from '../hooks/useTranslation';
+import MetaTags from '../components/MetaTags';
 
 const ContactPage: React.FC = () => {
   const { t } = useTranslation();

@@ -1,9 +1,8 @@
-
 import React, { useState, useEffect } from 'react';
-import { useTranslation } from '../hooks/useTranslation.ts';
-import { CURRENCIES } from '../constants.ts';
-import { generateContractClauses } from '../services/clauseGeneratorService.ts';
-import SearchableSelect from './SearchableSelect.tsx';
+import { useTranslation } from '../hooks/useTranslation';
+import { CURRENCIES } from '../constants';
+import { generateContractClauses } from '../services/clauseGeneratorService';
+import SearchableSelect from './SearchableSelect';
 
 const ClauseOutput: React.FC<{ title: string; content: string; rows?: number }> = ({ title, content, rows = 6 }) => {
   const { t } = useTranslation();
