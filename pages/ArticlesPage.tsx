@@ -3,15 +3,36 @@ import { Link } from 'react-router-dom';
 import { ARTICLES } from '../constants';
 import { useTranslation } from '../hooks/useTranslation';
 import MetaTags from '../components/MetaTags';
+import SchemaInjector from '../components/SchemaInjector';
 
 const ArticlesPage: React.FC = () => {
   const { t, language } = useTranslation();
+
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": t('meta.articles.title'),
+    "description": t('meta.articles.description'),
+    "url": "https://financialformula.app/#/articles",
+    "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": ARTICLES.map((article, index) => ({
+            "@type": "ListItem",
+            "position": index + 1,
+            "url": `https://financialformula.app/#/articles/${article.id}`,
+            "name": language === 'ar' ? article.title : article.titleEn
+        }))
+    }
+  };
+
+
   return (
     <>
       <MetaTags 
         title={t('meta.articles.title')} 
         description={t('meta.articles.description')} 
       />
+      <SchemaInjector schema={schema} id="articles-page-schema" />
       <div className="space-y-8">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-800 dark:text-white mb-4">{t('articles.title')}</h1>

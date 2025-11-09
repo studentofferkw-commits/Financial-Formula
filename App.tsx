@@ -18,6 +18,8 @@ import NumberConverterPage from './pages/NumberConverterPage';
 import LoanCalculatorPage from './pages/LoanCalculatorPage';
 import ReceiptGeneratorPage from './pages/ReceiptGeneratorPage';
 import CurrencyConverterPage from './pages/CurrencyConverterPage';
+import DocumentCheckerPage from './pages/DocumentCheckerPage';
+import FaqPage from './pages/FaqPage';
 
 const App: React.FC = () => {
   return (
@@ -34,9 +36,11 @@ const App: React.FC = () => {
               <Route path="/loan-calculator" element={<LoanCalculatorPage />} />
               <Route path="/currency-converter" element={<CurrencyConverterPage />} />
               <Route path="/receipt-generator" element={<ReceiptGeneratorPage />} />
+              <Route path="/document-checker" element={<DocumentCheckerPage />} />
               <Route path="/glossary" element={<GlossaryPage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />
+              <Route path="/faq" element={<FaqPage />} />
               <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
               <Route path="/terms-of-service" element={<TermsOfServicePage />} />
               <Route path="/articles" element={<ArticlesPage />} />

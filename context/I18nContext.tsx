@@ -4,7 +4,7 @@ import React, { createContext, useState, useEffect, useCallback } from 'react';
 interface I18nContextType {
   language: 'ar' | 'en';
   setLanguage: (lang: 'ar' | 'en') => void;
-  t: (key: string) => string;
+  t: (key: string) => any; // Return 'any' to support arrays and objects
 }
 
 // Create the context with a default value
@@ -25,6 +25,7 @@ const translations = {
         contractClause: 'صياغة البنود',
         loanCalculator: 'حاسبة الأقساط',
         currencyConverter: 'محول العملات',
+        documentChecker: 'مدقق المستندات',
         articles: 'مقالات',
         glossary: 'مصطلحات مالية',
       },
@@ -35,6 +36,7 @@ const translations = {
       nav: {
         about: 'عن الموقع',
         contact: 'اتصل بنا',
+        faq: 'الأسئلة الشائعة',
         privacy: 'سياسة الخصوصية',
         terms: 'شروط الخدمة',
       }
@@ -195,6 +197,26 @@ const translations = {
       error: 'حدث خطأ أثناء جلب أسعار الصرف. يرجى المحاولة مرة أخرى.',
       rateUnavailable: 'سعر الصرف المباشر غير متوفر للعملة'
     },
+    documentCheckerPage: {
+      mainTitle: "مدقق المستندات بالذكاء الاصطناعي",
+      subtitle: "استخدم قوة الذكاء الاصطناعي لتحليل مستنداتك المالية، واكتشاف الأخطاء، وتحديد المخاطر المحتملة."
+    },
+    documentChecker: {
+      pasteText: "ألصق نص المستند هنا",
+      or: "أو",
+      uploadPrompt: "ارفع ملف لتحليله",
+      supportedFiles: "الملفات المدعومة: PDF, DOCX, XLSX",
+      unsupportedFile: "نوع الملف غير مدعوم.",
+      fileParseError: "حدث خطأ أثناء قراءة الملف.",
+      fileSelected: "الملف المحدد:",
+      removeFile: "إزالة الملف",
+      analyze: "تحليل الآن",
+      loading: "جاري التحليل...",
+      analyzingFile: "جاري قراءة الملف...",
+      analysisReport: "تقرير التحليل",
+      error: "حدث خطأ أثناء التحليل. يرجى المحاولة مرة أخرى.",
+      disclaimer: "إخلاء مسؤولية: هذه الأداة تستخدم الذكاء الاصطناعي وهي للمساعدة فقط. النتائج قد لا تكون دقيقة 100%. يرجى استشارة خبير متخصص قبل اتخاذ أي قرارات."
+    },
     glossaryPage: {
       mainTitle: 'مصطلحات مالية',
       subtitle: 'دليلك لفهم أهم المصطلحات المالية والمحاسبية المستخدمة في عالم الأعمال.',
@@ -202,6 +224,7 @@ const translations = {
     glossary: {
       searchPlaceholder: 'ابحث عن مصطلح...',
       noResults: 'لم يتم العثور على نتائج.',
+      example: 'مثال'
     },
     home: {
       mainTitle: 'لوحة أدوات صيغة مالية',
@@ -234,6 +257,10 @@ const translations = {
         currencyConverter: {
             title: 'محول العملات المباشر',
             description: 'احصل على أسعار الصرف اللحظية وقم بتحويل العملات العالمية بدقة وسرعة.'
+        },
+        documentChecker: {
+          title: "مدقق المستندات بالذكاء الاصطناعي",
+          description: "حلل العقود والفواتير لاكتشاف الأخطاء والمخاطر المحتملة."
         }
       },
       whyUse: {
@@ -353,6 +380,39 @@ const translations = {
             message: 'عذراً، لم نتمكن من العثور على المقالة التي تبحث عنها.',
         },
         backLink: 'العودة إلى المقالات',
+        shareTitle: 'شارك هذا المقال',
+        copyLink: 'نسخ الرابط',
+        copyLinkSuccess: 'تم نسخ الرابط!',
+    },
+    faqPage: {
+      title: "الأسئلة الشائعة",
+      subtitle: "إجابات على أكثر الاستفسارات شيوعًا حول أدواتنا وخدماتنا.",
+      questions: [
+        {
+          q: "هل استخدام أدوات 'صيغة مالية' آمن؟",
+          a: "نعم، آمن تمامًا. جميع أدواتنا تعمل بالكامل داخل متصفحك (Client-Side). هذا يعني أن أي بيانات تدخلها لا تغادر جهازك أبدًا ولا يتم إرسالها أو تخزينها على خوادمنا. خصوصيتك وأمان بياناتك هما أولويتنا القصوى."
+        },
+        {
+          q: "هل الأدوات مجانية؟",
+          a: "نعم، جميع أدواتنا الحالية متاحة للاستخدام مجانًا بشكل كامل. هدفنا هو توفير أدوات دقيقة وموثوقة لمساعدة أكبر عدد ممكن من المهنيين والأفراد."
+        },
+        {
+          q: "ما مدى دقة أداة تحويل الأرقام؟",
+          a: "الأداة دقيقة للغاية. تم تصميم الخوارزمية الخاصة بنا بعناية فائقة لتتوافق مع القواعد النحوية المعقدة للغة العربية والإنجليزية، مع مراعاة صيغ المفرد والمثنى والجمع، وتذكير وتأنيث العدد والمعدود. ومع ذلك، نوصي دائمًا بمراجعة النتائج قبل استخدامها في المستندات الرسمية النهائية."
+        },
+        {
+          q: "هل يمكنني استخدام مولد الفواتير لعملي التجاري؟",
+          a: "بالتأكيد. تم تصميم مولد الفواتير ليكون أداة عملية للمستقلين والشركات الصغيرة. يمكنك إنشاء فواتير احترافية وتنزيلها كملف PDF. ننصح دائمًا بالتحقق من المتطلبات القانونية للفواتير في بلدك."
+        },
+        {
+          q: "ما هي العملات التي تدعمها الأداة؟",
+          a: "تدعم أداة تحويل الأرقام مجموعة واسعة من العملات العربية والعالمية. يمكنك العثور على قائمة كاملة في القائمة المنسدلة لاختيار العملة. إذا كانت هناك عملة تود إضافتها، فلا تتردد في <a href=\"#/contact\" class=\"text-teal-600 dark:text-teal-400 font-semibold hover:underline\">الاتصال بنا</a>."
+        },
+        {
+          q: "كيف يعمل مدقق المستندات بالذكاء الاصطناعي؟",
+          a: "تستخدم هذه الأداة نماذج لغوية متقدمة (من خلال Gemini API) لتحليل النص الذي تقدمه. يقوم النموذج بمراجعة النص بناءً على تعليمات مخصصة للتدقيق المالي والقانوني، ثم يقدم تقريرًا بالمشاكل المحتملة والتوصيات. تذكر أن هذه الأداة هي للمساعدة فقط ولا تحل محل استشارة خبير بشري."
+        }
+      ]
     },
     meta: {
       home: {
@@ -387,6 +447,10 @@ const translations = {
         title: "محول العملات المباشر | صيغة مالية",
         description: "أداة احترافية لتحويل العملات بناءً على أحدث أسعار الصرف العالمية. سريعة ودقيقة ومجانية."
       },
+      documentChecker: {
+        title: "مدقق المستندات بالذكاء الاصطناعي | صيغة مالية",
+        description: "استخدم الذكاء الاصطناعي لمراجعة العقود والفواتير والمستندات المالية لاكتشاف الأخطاء والمخاطر المحتملة."
+      },
       glossary: {
         title: "مصطلحات مالية | صيغة مالية",
         description: "ابحث وتصفح قاموس شامل للمصطلحات المالية والمحاسبية باللغتين العربية والإنجليزية لفهم أعمق لعالم المال."
@@ -406,6 +470,10 @@ const translations = {
       contact: {
         title: "اتصل بنا | صيغة مالية",
         description: "تواصل مع فريق 'صيغة مالية'. نرحب بملاحظاتك، استفساراتك، واقتراحاتك لتحسين خدماتنا."
+      },
+      faq: {
+        title: "الأسئلة الشائعة | صيغة مالية",
+        description: "ابحث عن إجابات للأسئلة الشائعة حول أدواتنا، الخصوصية، دقة البيانات، وكيفية تحقيق أقصى استفادة من 'صيغة مالية'."
       },
       privacy: {
         title: "سياسة الخصوصية | صيغة مالية",
@@ -430,6 +498,7 @@ const translations = {
         contractClause: 'Contract Clause',
         loanCalculator: 'Loan Calculator',
         currencyConverter: 'Currency Converter',
+        documentChecker: 'Document Checker',
         articles: 'Articles',
         glossary: 'Glossary',
       },
@@ -440,6 +509,7 @@ const translations = {
       nav: {
         about: 'About',
         contact: 'Contact',
+        faq: 'FAQ',
         privacy: 'Privacy Policy',
         terms: 'Terms of Service',
       }
@@ -600,6 +670,26 @@ const translations = {
       error: 'An error occurred while fetching exchange rates. Please try again.',
       rateUnavailable: 'Live rate not available for'
     },
+    documentCheckerPage: {
+      mainTitle: "AI Document Checker",
+      subtitle: "Use the power of AI to analyze your financial documents, spot errors, and identify potential risks."
+    },
+    documentChecker: {
+      pasteText: "Paste your document text here",
+      or: "OR",
+      uploadPrompt: "Upload a file to analyze",
+      supportedFiles: "Supported files: PDF, DOCX, XLSX",
+      unsupportedFile: "Unsupported file type.",
+      fileParseError: "An error occurred while parsing the file.",
+      fileSelected: "File selected:",
+      removeFile: "Remove file",
+      analyze: "Analyze Now",
+      loading: "Analyzing...",
+      analyzingFile: "Reading file...",
+      analysisReport: "Analysis Report",
+      error: "An error occurred during analysis. Please try again.",
+      disclaimer: "Disclaimer: This tool uses AI and is for assistance only. Results may not be 100% accurate. Please consult a professional expert before making any decisions."
+    },
     glossaryPage: {
       mainTitle: 'Financial Glossary',
       subtitle: 'Your guide to understanding the most important financial and accounting terms used in the business world.',
@@ -607,6 +697,7 @@ const translations = {
     glossary: {
       searchPlaceholder: 'Search for a term...',
       noResults: 'No results found.',
+      example: 'Example'
     },
     home: {
       mainTitle: 'Financial Formula Toolkit',
@@ -639,6 +730,10 @@ const translations = {
         currencyConverter: {
             title: 'Live Currency Converter',
             description: 'Get real-time exchange rates and convert global currencies accurately and quickly.'
+        },
+        documentChecker: {
+          title: "AI Document Checker",
+          description: "Analyze contracts and invoices to spot errors and potential risks."
         }
       },
       whyUse: {
@@ -758,6 +853,39 @@ const translations = {
             message: 'Sorry, we couldn\'t find the article you are looking for.',
         },
         backLink: 'Back to Articles',
+        shareTitle: 'Share this article',
+        copyLink: 'Copy link',
+        copyLinkSuccess: 'Link copied!',
+    },
+    faqPage: {
+      title: "Frequently Asked Questions",
+      subtitle: "Answers to the most common inquiries about our tools and services.",
+      questions: [
+        {
+          q: "Is it safe to use 'Financial Formula' tools?",
+          a: "Yes, completely safe. All our tools operate entirely within your browser (Client-Side). This means that any data you enter never leaves your device and is not sent to or stored on our servers. Your privacy and data security are our top priority."
+        },
+        {
+          q: "Are the tools free?",
+          a: "Yes, all our current tools are available for use completely free of charge. Our goal is to provide accurate and reliable tools to help as many professionals and individuals as possible."
+        },
+        {
+          q: "How accurate is the number conversion tool?",
+          a: "The tool is highly accurate. Our algorithm has been meticulously designed to comply with the complex grammatical rules of both Arabic and English, considering singular, dual, and plural forms, as well as the gender agreement between numbers and nouns. However, we always recommend reviewing the results before using them in final official documents."
+        },
+        {
+          q: "Can I use the invoice generator for my business?",
+          a: "Absolutely. The invoice generator is designed to be a practical tool for freelancers and small businesses. You can create professional invoices and download them as a PDF. We always advise checking the legal requirements for invoices in your country."
+        },
+        {
+          q: "Which currencies does the tool support?",
+          a: "The number converter tool supports a wide range of Arab and international currencies. You can find a full list in the currency selection dropdown. If there is a currency you would like us to add, please feel free to <a href=\"#/contact\" class=\"text-teal-600 dark:text-teal-400 font-semibold hover:underline\">contact us</a>."
+        },
+        {
+          q: "How does the AI Document Checker work?",
+          a: "This tool uses advanced language models (via the Gemini API) to analyze the text you provide. The model reviews the text based on custom instructions for financial and legal auditing, then provides a report of potential issues and recommendations. Remember that this tool is for assistance only and does not replace consultation with a human expert."
+        }
+      ]
     },
     meta: {
       home: {
@@ -792,6 +920,10 @@ const translations = {
         title: "Live Currency Converter | Financial Formula",
         description: "A professional tool for converting currencies based on the latest global exchange rates. Fast, accurate, and free."
       },
+      documentChecker: {
+        title: "AI Document Checker | Financial Formula",
+        description: "Use AI to review your contracts, invoices, and financial documents to find errors and potential risks."
+      },
       glossary: {
         title: "Financial Glossary | Financial Formula",
         description: "Search and browse a comprehensive dictionary of financial and accounting terms in English and Arabic for a deeper understanding of the world of finance."
@@ -812,6 +944,10 @@ const translations = {
         title: "Contact Us | Financial Formula",
         description: "Get in touch with the 'Financial Formula' team. We welcome your feedback, inquiries, and suggestions to improve our services."
       },
+      faq: {
+        title: "FAQ | Financial Formula",
+        description: "Find answers to frequently asked questions about our tools, privacy, data accuracy, and how to get the most out of 'Financial Formula'."
+      },
       privacy: {
         title: "Privacy Policy | Financial Formula",
         description: "Read our privacy policy to understand how we are committed to protecting your data. Our tool does not collect or store any personal information."
@@ -824,7 +960,6 @@ const translations = {
   }
 };
 
-// FIX: Added the missing I18nProvider component to manage internationalization state.
 // Define the provider component props
 interface I18nProviderProps {
   children: React.ReactNode;
@@ -858,7 +993,7 @@ export const I18nProvider: React.FC<I18nProviderProps> = ({ children }) => {
     setLanguageState(lang);
   };
 
-  const t = useCallback((key: string): string => {
+  const t = useCallback((key: string): any => {
     const keys = key.split('.');
     let result: any = translations[language];
     for (const k of keys) {

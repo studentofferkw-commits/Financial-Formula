@@ -4,6 +4,7 @@ import DateConverter from '../components/DateConverter';
 import { useTranslation } from '../hooks/useTranslation';
 import MetaTags from '../components/MetaTags';
 import { ARTICLES } from '../constants';
+import SchemaInjector from '../components/SchemaInjector';
 
 const DateConverterPage: React.FC = () => {
   const { t, language } = useTranslation();
@@ -16,12 +17,27 @@ const DateConverterPage: React.FC = () => {
   const relatedArticleIds = ['4'];
   const relatedArticles = ARTICLES.filter(a => relatedArticleIds.includes(a.id));
 
+  const toolSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": t('meta.dateConverter.title'),
+    "description": t('meta.dateConverter.description'),
+    "applicationCategory": "Utilities",
+    "operatingSystem": "Any",
+    "url": "https://financialformula.app/#/date-converter",
+    "offers": {
+      "@type": "Offer",
+      "price": "0"
+    }
+  };
+
   return (
     <>
       <MetaTags 
         title={t('meta.dateConverter.title')} 
         description={t('meta.dateConverter.description')} 
       />
+      <SchemaInjector schema={toolSchema} id="webapp-schema" />
       <div className="space-y-12">
         <section className="text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-4">
@@ -40,28 +56,24 @@ const DateConverterPage: React.FC = () => {
           <h2 className="text-2xl font-bold mb-6 text-center text-gray-800 dark:text-white">{t('relatedContent.title')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-xl font-semibold mb-3 text-teal-600 dark:text-teal-400">{t('relatedContent.tools')}</h3>
-              <ul className="space-y-2 list-disc ps-5">
+              <h3 className="text-xl font-semibold mb-4 text-teal-600 dark:text-teal-400">{t('relatedContent.tools')}</h3>
+              <div className="space-y-3">
                 {relatedTools.map(tool => (
-                  <li key={tool.key}>
-                    <Link to={tool.path} className="text-gray-700 dark:text-gray-300 hover:text-teal-600 dark:hover:text-teal-400 hover:underline">
-                      {t(`header.nav.${tool.key}`)}
-                    </Link>
-                  </li>
+                  <Link key={tool.key} to={tool.path} className="block p-4 rounded-lg bg-gray-50 dark:bg-slate-900/50 hover:bg-teal-50 dark:hover:bg-slate-700/50 border border-gray-200 dark:border-slate-700 transition-colors transform hover:scale-105">
+                    <span className="font-semibold text-teal-700 dark:text-teal-400">{t(`header.nav.${tool.key}`)}</span>
+                  </Link>
                 ))}
-              </ul>
+              </div>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-3 text-teal-600 dark:text-teal-400">{t('relatedContent.articles')}</h3>
-              <ul className="space-y-2 list-disc ps-5">
+              <h3 className="text-xl font-semibold mb-4 text-teal-600 dark:text-teal-400">{t('relatedContent.articles')}</h3>
+              <div className="space-y-3">
                 {relatedArticles.map(article => (
-                  <li key={article.id}>
-                    <Link to={`/articles/${article.id}`} className="text-gray-700 dark:text-gray-300 hover:text-teal-600 dark:hover:text-teal-400 hover:underline">
-                      {language === 'ar' ? article.title : article.titleEn}
-                    </Link>
-                  </li>
+                  <Link key={article.id} to={`/articles/${article.id}`} className="block p-4 rounded-lg bg-gray-50 dark:bg-slate-900/50 hover:bg-teal-50 dark:hover:bg-slate-700/50 border border-gray-200 dark:border-slate-700 transition-colors transform hover:scale-105">
+                    <span className="font-semibold text-gray-700 dark:text-gray-300">{language === 'ar' ? article.title : article.titleEn}</span>
+                  </Link>
                 ))}
-              </ul>
+              </div>
             </div>
           </div>
         </section>

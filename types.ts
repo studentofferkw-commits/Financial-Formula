@@ -46,4 +46,8 @@ export interface GlossaryTerm {
   definitionEn: string;
   abbreviationAr?: string;
   abbreviationEn?: string;
+  category: string; // e.g., 'accounting'
+  categoryAr: string; // e.g., 'المحاسبة'
+  exampleAr?: string;
+  exampleEn?: string;
 }

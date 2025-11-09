@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from '../hooks/useTranslation';
 import MetaTags from '../components/MetaTags';
+import SchemaInjector from '../components/SchemaInjector';
 
 const Section: React.FC<{ title: string; children: React.ReactNode }> = ({ title, children }) => (
   <section className="mb-12">
@@ -22,12 +23,26 @@ const AboutPage: React.FC = () => {
   const { t, language } = useTranslation();
   const textDirectionClass = language === 'ar' ? 'text-right' : 'text-left';
 
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": t('meta.about.title'),
+    "description": t('meta.about.description'),
+    "url": "https://financialformula.app/#/about",
+    "isPartOf": {
+      "@type": "WebSite",
+      "url": "https://financialformula.app/",
+      "name": t('header.title')
+    }
+  };
+
   return (
     <>
       <MetaTags 
         title={t('meta.about.title')} 
         description={t('meta.about.description')} 
       />
+      <SchemaInjector schema={schema} id="about-page-schema" />
       <div className={`bg-white dark:bg-slate-800 p-8 rounded-xl shadow-md border border-gray-200 dark:border-slate-700 ${textDirectionClass}`}>
         
         {/* Hero Section */}

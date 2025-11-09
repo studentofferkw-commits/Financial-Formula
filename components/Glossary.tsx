@@ -18,16 +18,16 @@ const Glossary: React.FC = () => {
       : GLOSSARY_TERMS;
 
     return filtered.reduce((acc, term) => {
-      const firstLetter = term.termEn.charAt(0).toUpperCase();
-      if (!acc[firstLetter]) {
-        acc[firstLetter] = [];
+      const category = language === 'ar' ? term.categoryAr : term.category;
+      if (!acc[category]) {
+        acc[category] = [];
       }
-      acc[firstLetter].push(term);
+      acc[category].push(term);
       return acc;
     }, {} as Record<string, typeof GLOSSARY_TERMS>);
-  }, [searchTerm]);
+  }, [searchTerm, language]);
   
-  const sortedGroupKeys = Object.keys(groupedAndFilteredTerms).sort();
+  const sortedGroupKeys = Object.keys(groupedAndFilteredTerms).sort((a,b) => a.localeCompare(b, language === 'ar' ? 'ar' : 'en'));
 
   const toggleItem = (id: string) => {
     setOpenItemId(prevId => (prevId === id ? null : id));
@@ -45,16 +45,17 @@ const Glossary: React.FC = () => {
         />
       </div>
 
-      <div className="space-y-6">
+      <div className="space-y-8">
         {sortedGroupKeys.length > 0 ? (
-          sortedGroupKeys.map(letter => (
-            <div key={letter}>
-              <h2 className="text-2xl font-bold text-teal-600 dark:text-teal-400 mb-3 pb-2 border-b-2 border-teal-500/50">{letter}</h2>
+          sortedGroupKeys.map(category => (
+            <div key={category}>
+              <h2 className="text-2xl font-bold text-teal-600 dark:text-teal-400 mb-4 pb-2 border-b-2 border-teal-500/50">{category}</h2>
               <div className="space-y-2">
-                {groupedAndFilteredTerms[letter].map(term => {
+                {groupedAndFilteredTerms[category].map(term => {
                   const isOpen = openItemId === term.id;
                   const termText = language === 'ar' ? term.termAr : term.termEn;
                   const abbreviation = language === 'ar' ? term.abbreviationAr : term.abbreviationEn;
+                  const example = language === 'ar' ? term.exampleAr : term.exampleEn;
                   
                   return (
                     <div key={term.id} className="border border-gray-200 dark:border-slate-700 rounded-lg overflow-hidden">
@@ -81,11 +82,18 @@ const Glossary: React.FC = () => {
                       </button>
                       <div
                         id={`content-${term.id}`}
-                        className={`px-4 pt-2 pb-4 bg-white dark:bg-slate-800/20 text-gray-700 dark:text-gray-300 transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100 visible' : 'max-h-0 opacity-0 invisible'} overflow-hidden`}
+                        className={`transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden`}
                       >
-                          <p className="prose dark:prose-invert max-w-none">
-                              {language === 'ar' ? term.definitionAr : term.definitionEn}
-                          </p>
+                          <div className="px-4 pt-2 pb-4 bg-white dark:bg-slate-800/20 text-gray-700 dark:text-gray-300">
+                            <p className="prose dark:prose-invert max-w-none mb-3">
+                                {language === 'ar' ? term.definitionAr : term.definitionEn}
+                            </p>
+                            {example && (
+                                <div className="p-3 border-s-4 border-teal-500 bg-teal-50 dark:bg-teal-900/30">
+                                    <p className="prose prose-sm dark:prose-invert max-w-none italic"><strong className="not-italic">{t('glossary.example')}:</strong> {example}</p>
+                                </div>
+                            )}
+                          </div>
                       </div>
                     </div>
                   );

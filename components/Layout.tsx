@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
+import { useTranslation } from '../hooks/useTranslation';
 
 // Extend the Window interface to include gtag for TypeScript
 declare global {
@@ -18,6 +19,7 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const location = useLocation();
+  const { t } = useTranslation();
 
   // This effect hook will run on component mount and whenever the location changes.
   useEffect(() => {
@@ -33,6 +35,33 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       });
     }
   }, [location]);
+
+  // Organization Schema Markup Effect
+  useEffect(() => {
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": t('header.title'),
+      "url": "https://financialformula.app/",
+      "description": t('meta.home.description'),
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "support@financial-formula.com",
+        "contactType": "Customer Support",
+        "availableLanguage": ["en", "ar"]
+      }
+    };
+
+    const scriptId = 'organization-schema';
+    let script = document.getElementById(scriptId) as HTMLScriptElement | null;
+    if (!script) {
+      script = document.createElement('script');
+      script.id = scriptId;
+      script.type = 'application/ld+json';
+      document.head.appendChild(script);
+    }
+    script.innerHTML = JSON.stringify(schema);
+  }, [t]);
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-50 text-gray-800 dark:bg-slate-900 dark:text-gray-300 transition-colors duration-300">

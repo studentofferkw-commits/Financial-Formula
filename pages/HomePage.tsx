@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from '../hooks/useTranslation';
 import MetaTags from '../components/MetaTags';
 import { Link } from 'react-router-dom';
+import SchemaInjector from '../components/SchemaInjector';
 
 // FIX: Replaced `JSX.Element` with `React.ReactNode` to resolve the 'Cannot find namespace JSX' error.
 const FeatureCard: React.FC<{ path: string; icon: React.ReactNode; title: string; description: string }> = ({ path, icon, title, description }) => {
@@ -57,6 +58,19 @@ const HomePage: React.FC = () => {
         <path strokeLinecap="round" strokeLinejoin="round" d="M7.5 21 3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />
       </svg>
     ),
+    documentChecker: (
+       <svg className="h-8 w-8 text-teal-600 dark:text-teal-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456Z" />
+       </svg>
+    ),
+  };
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "https://financialformula.app/",
+    "name": t('header.title'),
+    "description": t('meta.home.description')
   };
 
   return (
@@ -65,6 +79,7 @@ const HomePage: React.FC = () => {
         title={t('meta.home.title')} 
         description={t('meta.home.description')} 
       />
+      <SchemaInjector schema={websiteSchema} id="website-schema" />
       <div className="space-y-12">
         <section className="text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-4">
@@ -118,6 +133,12 @@ const HomePage: React.FC = () => {
               icon={cardIcons.currencyConverter}
               title={t('home.cards.currencyConverter.title')}
               description={t('home.cards.currencyConverter.description')}
+            />
+            <FeatureCard 
+              path="/document-checker"
+              icon={cardIcons.documentChecker}
+              title={t('home.cards.documentChecker.title')}
+              description={t('home.cards.documentChecker.description')}
             />
           </div>
         </section>
