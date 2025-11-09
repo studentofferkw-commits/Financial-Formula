@@ -17,6 +17,7 @@ const translations = {
       title: 'صيغة مالية',
       nav: {
         home: 'الرئيسية',
+        tools: 'الأدوات',
         numberConverter: 'تحويل الأرقام',
         dateConverter: 'تحويل التاريخ',
         invoiceGenerator: 'مولد الفواتير',
@@ -24,19 +25,24 @@ const translations = {
         contractClause: 'صياغة البنود',
         loanCalculator: 'حاسبة الأقساط',
         currencyConverter: 'محول العملات',
+        articles: 'مقالات',
+        glossary: 'مصطلحات مالية',
       },
       openMenu: 'افتح القائمة',
     },
     footer: {
       copyright: 'صيغة مالية. جميع الحقوق محفوظة.',
       nav: {
-        glossary: 'مصطلحات مالية',
-        articles: 'مقالات',
         about: 'عن الموقع',
         contact: 'اتصل بنا',
         privacy: 'سياسة الخصوصية',
         terms: 'شروط الخدمة',
       }
+    },
+    relatedContent: {
+      title: 'محتوى ذو صلة',
+      tools: 'أدوات أخرى قد تهمك',
+      articles: 'مقالات ذات صلة'
     },
     converter: {
         enterNumber: 'أدخل المبلغ بالأرقام',
@@ -251,12 +257,38 @@ const translations = {
         subtitle: 'أداة دقيقة لتحويل المبالغ المالية من أرقام إلى نصوص باللغتين العربية والإنجليزية، مثالية للعقود والفواتير والشيكات.',
     },
     about: {
-        title: 'عن صيغة مالية',
-        p1: 'مرحبًا بك في "صيغة مالية"، الأداة الموثوقة لتحويل المبالغ الرقمية إلى نصوص مكتوبة بدقة باللغتين العربية والإنجليزية.',
-        p2: 'وُلد هذا المشروع من رحم الحاجة إلى الدقة في المعاملات المالية والمستندات القانونية. لاحظنا أن العديد من المهنيين يواجهون تحديًا في كتابة المبالغ المالية بالحروف بشكل صحيح، خاصة مع تعقيدات القواعد النحوية في اللغة العربية.',
-        p3: 'هدفنا هو توفير أداة بسيطة ومباشرة تخدم المحاسبين والمحامين وأصحاب الأعمال وأي شخص يحتاج إلى ضمان تطابق الأرقام مع الكلمات في مستنداته الهامة.',
-        p4: 'نحن نؤمن بأن الوضوح والدقة هما أساس الثقة في أي معاملة. لذلك، قمنا بتطوير خوارزمياتنا بعناية فائقة لتغطية مختلف العملات ومراعاة أدق التفاصيل اللغوية.',
-        p5: 'نأمل أن تجد أداتنا مفيدة في عملك اليومي. نحن ملتزمون بالتحسين المستمر ونرحب بأي ملاحظات منك.',
+      heroTitle: 'عن صيغة مالية',
+      heroSubtitle: 'ردم الفجوة بين الأرقام والكلمات بدقة لا تضاهى.',
+      storyTitle: 'قصتنا: من فكرة إلى أداة أساسية',
+      storyP1: 'وُلد مشروع "صيغة مالية" من رحم التحديات العملية التي يواجهها المهنيون يوميًا. لاحظنا وجود فجوة حرجة في عالم المال والأعمال: التعقيد الكامن في تحويل المبالغ الرقمية إلى نصوص مكتوبة بشكل صحيح، خاصة مع القواعد النحوية الدقيقة للغة العربية التي لا تترك مجالاً للخطأ في المستندات الرسمية.',
+      storyP2: 'لم تكن المشكلة مجرد إزعاج بسيط، بل كانت مصدرًا محتملاً للمخاطر القانونية والمالية. خطأ واحد في كلمة أو حرف يمكن أن يغير معنى بند في عقد أو قيمة شيك. من هنا، انطلقنا في مهمة لإنشاء حل ليس مجرد محول، بل حرفي رقمي يصوغ النصوص المالية بدقة متناهية.',
+      storyP3: 'هدفنا كان واضحًا: تطوير أداة ذكية، بديهية، وآمنة تمامًا، تمكّن المستخدمين من التركيز على أعمالهم الأساسية، تاركين لنا مهمة ضمان الدقة اللغوية والمالية. اليوم، تطورت "صيغة مالية" من أداة واحدة إلى مجموعة متكاملة من الأدوات، وكلها مصممة لخدمة هذا الهدف الأساسي.',
+      missionVisionTitle: 'مهمتنا ورؤيتنا',
+      missionTitle: 'مهمتنا',
+      missionText: 'تمكين المهنيين والأفراد من خلال توفير أدوات مالية هي الأكثر دقة وأمانًا وسهولة في الاستخدام، مما يزيل الغموض ويعزز الثقة في كل معاملة.',
+      visionTitle: 'رؤيتنا',
+      visionText: 'أن نصبح المعيار العالمي في إعداد المستندات المالية والتحقق منها، من خلال دمج التكنولوجيا الذكية لتبسيط التعقيدات وتعزيز الكفاءة المهنية.',
+      principlesTitle: 'مبادئنا الأساسية',
+      principle1Title: 'الدقة التي لا هوادة فيها',
+      principle1Text: 'كل خوارزمية نطورها تخضع لاختبارات صارمة لضمان توافقها التام مع المعايير المحاسبية واللغوية. الدقة ليست ميزة، بل هي أساس وجودنا.',
+      principle2Title: 'الأمان المطلق',
+      principle2Text: 'نحن نؤمن بأن الخصوصية حق أساسي. تعمل جميع أدواتنا بالكامل على جهازك. لا يتم إرسال أو تخزين أي بيانات تدخلها على خوادمنا على الإطلاق.',
+      principle3Title: 'البساطة الأنيقة',
+      principle3Text: 'نترجم العمليات المعقدة إلى واجهات مستخدم نظيفة وبديهية. هدفنا هو توفير تجربة سلسة تتيح لك إنجاز مهامك بسرعة وكفاءة.',
+      principle4Title: 'الابتكار المستمر',
+      principle4Text: 'نحن نستمع بإنصات لملاحظات مستخدمينا ونسعى باستمرار لتوسيع مجموعة أدواتنا وتطوير ميزات جديدة تلبي الاحتياجات المتغيرة لعالم الأعمال.',
+      whoWeServeTitle: 'من نخدم؟',
+      whoWeServeIntro: 'تم تصميم أدواتنا لتلبية احتياجات مجموعة واسعة من المستخدمين الذين يتعاملون مع الدقة المالية:',
+      serve1Title: 'المحاسبون والمهنيون الماليون',
+      serve1Text: 'لضمان دقة الفواتير والتقارير المالية وإيصالات الدفع.',
+      serve2Title: 'المحامون والمستشارون القانونيون',
+      serve2Text: 'لصياغة بنود مالية محكمة في العقود والاتفاقيات.',
+      serve3Title: 'أصحاب الأعمال والمديرون',
+      serve3Text: 'لتحرير الشيكات والأوامر المالية والتخطيط للقروض بثقة.',
+      serve4Title: 'أي شخص يتعامل مع المستندات المالية',
+      serve4Text: 'لتجنب الأخطاء الشائعة وضمان الوضوح في المعاملات الشخصية.',
+      commitmentTitle: 'التزامنا تجاهك',
+      commitmentText: 'نحن في "صيغة مالية" لسنا مجرد مزود للأدوات؛ نحن شركاؤك في الدقة. نحن ملتزمون بتقديم دعم استثنائي وتطوير مستمر لمنصتنا. ملاحظاتك هي المحرك الذي يدفعنا للابتكار. شكرًا لثقتك بنا.'
     },
     contact: {
         title: 'اتصل بنا',
@@ -390,6 +422,7 @@ const translations = {
       title: 'Financial Formula',
       nav: {
         home: 'Home',
+        tools: 'Tools',
         numberConverter: 'Number Converter',
         dateConverter: 'Date Converter',
         invoiceGenerator: 'Invoice Generator',
@@ -397,19 +430,24 @@ const translations = {
         contractClause: 'Contract Clause',
         loanCalculator: 'Loan Calculator',
         currencyConverter: 'Currency Converter',
+        articles: 'Articles',
+        glossary: 'Glossary',
       },
       openMenu: 'Open menu',
     },
     footer: {
       copyright: 'Financial Formula. All rights reserved.',
       nav: {
-        glossary: 'Financial Terms',
-        articles: 'Articles',
         about: 'About',
         contact: 'Contact',
         privacy: 'Privacy Policy',
         terms: 'Terms of Service',
       }
+    },
+    relatedContent: {
+      title: 'Related Content',
+      tools: 'Other Useful Tools',
+      articles: 'Related Articles'
     },
     converter: {
         enterNumber: 'Enter amount in numbers',
@@ -522,11 +560,11 @@ const translations = {
       monthly: 'Monthly',
       quarterly: 'Quarterly',
       annually: 'Annually',
-      paymentSchedule: 'Payment Schedule (Illustrative Example)',
+      paymentSchedule: 'Payment Schedule (Example)',
     },
     loanCalculatorPage: {
       mainTitle: 'Loan & Installment Calculator',
-      subtitle: 'A professional tool to calculate monthly loan installments, total interest, and view a full amortization schedule to help with your financial planning.',
+      subtitle: 'A professional tool to calculate monthly loan installments, total interest, and view the full amortization schedule to help you with financial planning.',
     },
     loanCalculator: {
       loanAmount: 'Loan Amount',
@@ -548,7 +586,7 @@ const translations = {
     },
     currencyConverterPage: {
       mainTitle: 'Live Currency Converter',
-      subtitle: 'A professional tool to convert currencies based on the latest global exchange rates.',
+      subtitle: 'A professional tool for converting currencies based on the latest global exchange rates.',
     },
     currencyConverter: {
       amount: 'Amount',
@@ -563,16 +601,16 @@ const translations = {
       rateUnavailable: 'Live rate not available for'
     },
     glossaryPage: {
-        mainTitle: 'Financial Terms',
-        subtitle: 'Your guide to understanding the key financial and accounting terms used in the world of business.',
+      mainTitle: 'Financial Glossary',
+      subtitle: 'Your guide to understanding the most important financial and accounting terms used in the business world.',
     },
     glossary: {
-        searchPlaceholder: 'Search for a term...',
-        noResults: 'No results found.',
+      searchPlaceholder: 'Search for a term...',
+      noResults: 'No results found.',
     },
     home: {
       mainTitle: 'Financial Formula Toolkit',
-      subtitle: 'An integrated suite of financial tools to help you get your work done with accuracy and professionalism.',
+      subtitle: 'An integrated suite of financial tools to help you get your work done with precision and professionalism.',
       cards: {
         numberConverter: {
           title: 'Number to Words Converter',
@@ -580,67 +618,93 @@ const translations = {
         },
         dateConverter: {
           title: 'Date to Text Converter',
-          description: 'Format dates into full written text for official documents and records.'
+          description: 'Format dates into full text for official documents and records.'
         },
         invoiceGenerator: {
           title: 'Simple Invoice Generator',
-          description: 'Create professional invoices and download them as PDFs in minutes.'
+          description: 'Create professional invoices and download them as a PDF in minutes.'
         },
         receiptGenerator: {
           title: 'Payment Receipt Generator',
-          description: 'Create official and quick payment receipts to document financial transactions.'
+          description: 'Create official and quick payment receipts to prove financial transactions.'
         },
         contractClause: {
           title: 'Contract Clause Helper',
-          description: 'Generate legally sound and detailed financial clauses for your contracts.'
+          description: 'Generate legally sound and detailed financial clauses for your contracts and agreements.'
         },
         loanCalculator: {
           title: 'Loan & Installment Calculator',
-          description: 'Plan your loans and personal financing with a clear understanding of installments and interest.'
+          description: 'Plan your personal loans and financing with a clear understanding of installments and interest.'
         },
         currencyConverter: {
-          title: 'Live Currency Converter',
-          description: 'Get real-time exchange rates and convert global currencies with accuracy and speed.'
+            title: 'Live Currency Converter',
+            description: 'Get real-time exchange rates and convert global currencies accurately and quickly.'
         }
       },
       whyUse: {
           title: 'Why Use Financial Formula?',
           p1: 'In the world of business and finance, precision is everything. A small mistake in writing a financial amount can lead to misunderstandings, legal disputes, or financial losses. "Financial Formula" is designed to provide a fast, accurate, and reliable solution for converting numbers to text, ensuring your financial documents are clear and error-free.',
-          p2: 'Whether you are preparing an invoice, writing a check, or drafting a legal contract, our tool ensures that the written text matches the numbers with utmost accuracy, taking into account the complex grammatical rules of the Arabic language.',
-          beneficiariesTitle: 'Who Benefits from Our Service?',
+          p2: 'Whether you are preparing an invoice, writing a check, or drafting a legal contract, our tool ensures that the written text perfectly matches the numbers, taking into account the complex grammatical rules of both English and Arabic.',
+          beneficiariesTitle: 'Who Benefits from Our Services?',
           b1_strong: 'Accountants and Financial Professionals:',
           b1_text: 'To ensure the accuracy of invoices and financial reports.',
           b2_strong: 'Lawyers and Legal Advisors:',
-          b2_text: 'For drafting unambiguous contracts and legal documents.',
+          b2_text: 'To draft unambiguous contracts and legal documents.',
           b3_strong: 'Business Owners and Managers:',
-          b3_text: 'For writing checks and financial orders with confidence.',
+          b3_text: 'To issue checks and financial orders with confidence.',
           b4_strong: 'Anyone Dealing with Financial Documents:',
           b4_text: 'To avoid common errors and ensure clarity.',
           p3: 'Use "Financial Formula" today and enjoy the peace of mind that comes with absolute accuracy.'
       },
     },
     numberConverterPage: {
-        mainTitle: 'Convert Numbers to Words with Ease',
-        subtitle: 'An accurate tool for converting financial amounts from numbers to text in both Arabic and English, perfect for contracts, invoices, and checks.',
+        mainTitle: 'Easily Convert Numbers to Words',
+        subtitle: 'An accurate tool for converting financial amounts from numbers to text in both English and Arabic, perfect for contracts, invoices, and checks.',
     },
     about: {
-        title: 'About Financial Formula',
-        p1: 'Welcome to "Financial Formula," your reliable tool for accurately converting numerical amounts into written text in both Arabic and English.',
-        p2: 'This project was born out of the need for precision in financial transactions and legal documents. We noticed that many professionals face challenges in correctly writing financial amounts in words, especially with the complexities of Arabic grammar.',
-        p3: 'Our goal is to provide a simple and straightforward tool that serves accountants, lawyers, business owners, and anyone who needs to ensure that numbers match words in their important documents.',
-        p4: 'We believe that clarity and accuracy are the foundation of trust in any transaction. Therefore, we have meticulously developed our algorithms to cover various currencies and consider the finest linguistic details.',
-        p5: 'We hope you find our tool useful in your daily work. We are committed to continuous improvement and welcome any feedback from you.',
+      heroTitle: 'About Financial Formula',
+      heroSubtitle: 'Bridging the gap between numbers and words with unparalleled accuracy.',
+      storyTitle: 'Our Story: From an Idea to an Essential Tool',
+      storyP1: '"Financial Formula" was born from the practical challenges professionals face daily. We noticed a critical gap in the world of finance and business: the inherent complexity of converting numerical amounts into correctly written text, especially with the precise grammatical rules of the Arabic language that leave no room for error in official documents.',
+      storyP2: 'The problem was not just a minor inconvenience; it was a potential source of legal and financial risk. A single mistake in a word or letter could alter the meaning of a contract clause or the value of a check. From here, we embarked on a mission to create a solution that is not just a converter, but a digital artisan that crafts financial texts with meticulous precision.',
+      storyP3: 'Our goal was clear: to develop a tool that is smart, intuitive, and completely secure, enabling users to focus on their core business, leaving the task of ensuring linguistic and financial accuracy to us. Today, "Financial Formula" has evolved from a single tool to an integrated suite of tools, all designed to serve this primary objective.',
+      missionVisionTitle: 'Our Mission & Vision',
+      missionTitle: 'Our Mission',
+      missionText: 'To empower professionals and individuals by providing the most accurate, secure, and user-friendly financial tools, eliminating ambiguity and fostering confidence in every transaction.',
+      visionTitle: 'Our Vision',
+      visionText: 'To become the global standard for financial document preparation and verification, integrating smart technology to simplify complexities and enhance professional efficiency.',
+      principlesTitle: 'Our Core Principles',
+      principle1Title: 'Uncompromising Accuracy',
+      principle1Text: 'Every algorithm we develop undergoes rigorous testing to ensure full compliance with accounting and linguistic standards. Accuracy is not a feature; it is the foundation of our existence.',
+      principle2Title: 'Absolute Security',
+      principle2Text: 'We believe that privacy is a fundamental right. All our tools operate entirely on your device. No data you enter is ever sent to or stored on our servers.',
+      principle3Title: 'Elegant Simplicity',
+      principle3Text: 'We translate complex processes into clean, intuitive user interfaces. Our goal is to provide a seamless experience that allows you to complete your tasks quickly and efficiently.',
+      principle4Title: 'Continuous Innovation',
+      principle4Text: 'We listen intently to our users\' feedback and continuously strive to expand our toolkit and develop new features that meet the evolving needs of the business world.',
+      whoWeServeTitle: 'Who We Serve',
+      whoWeServeIntro: 'Our tools are designed to meet the needs of a wide range of users who deal with financial precision:',
+      serve1Title: 'Accountants and Financial Professionals',
+      serve1Text: 'To ensure the accuracy of invoices, financial reports, and payment receipts.',
+      serve2Title: 'Lawyers and Legal Advisors',
+      serve2Text: 'To draft airtight financial clauses in contracts and agreements.',
+      serve3Title: 'Business Owners and Managers',
+      serve3Text: 'To issue checks, financial orders, and plan for loans with confidence.',
+      serve4Title: 'Anyone Dealing with Financial Documents',
+      serve4Text: 'To avoid common errors and ensure clarity in personal transactions.',
+      commitmentTitle: 'Our Commitment to You',
+      commitmentText: 'At "Financial Formula," we are not just a tool provider; we are your partners in precision. We are committed to providing exceptional support and continuous development of our platform. Your feedback is the engine that drives our innovation. Thank you for trusting us.'
     },
     contact: {
         title: 'Contact Us',
         p1: 'We value your feedback and inquiries.',
         p2: 'For any questions, suggestions, or technical support, please contact us via email:',
-        p3: 'We will do our best to get back to you as soon as possible.',
+        p3: 'We will do our best to respond to you as soon as possible.',
     },
     privacy: {
         title: 'Privacy Policy',
-        effectiveDate: 'January 1, 2023',
-        intro: 'At "Financial Formula," we respect your privacy and are committed to protecting it. This Privacy Policy explains how we handle your information.',
+        effectiveDate: 'Effective Date: January 1, 2023',
+        intro: 'At "Financial Formula", we respect your privacy and are committed to protecting it. This Privacy Policy explains how we handle your information.',
         section1: {
             title: 'Information We Collect',
             content: 'We do not collect any personal information from you. The numbers you enter for conversion are processed in your browser and are not sent to or stored on our servers.',
@@ -664,28 +728,28 @@ const translations = {
         intro: 'Please read these Terms of Service carefully before using our website.',
         section1: {
             title: 'Acceptance of Terms',
-            content: 'By using the "Financial Formula" website, you agree to be bound by these Terms.',
+            content: 'By using "Financial Formula", you agree to be bound by these Terms.',
         },
         section2: {
             title: 'Description of Service',
-            content: '"Financial Formula" provides a tool for converting numbers to text. The service is provided "as is" without any warranties.',
+            content: '"Financial Formula" provides a tool to convert numbers to text. The service is provided "as is" without any warranties.',
         },
         section3: {
             title: 'Disclaimer',
-            content: 'Although we strive for accuracy, we do not guarantee that the conversions will be 100% error-free. It is the user\'s responsibility to verify the correctness of the results before using them in any official document.',
+            content: 'While we strive for accuracy, we do not guarantee that the conversions will be 100% error-free. It is the user\'s responsibility to verify the correctness of the results before using them in any official document.',
         },
         section4: {
             title: 'Limitation of Liability',
-            content: 'We will not be liable for any direct or indirect damages arising from the use or inability to use our service.',
+            content: 'We shall not be liable for any direct or indirect damages arising out of the use or inability to use our service.',
         },
         section5: {
             title: 'Changes to Terms',
-            content: 'We reserve the right to modify these terms at any time. Your continued use of the site after any changes constitutes your acceptance of the new terms.',
+            content: 'We reserve the right to modify these terms at any time. Your continued use of the site after any changes constitutes your acceptance of the new Terms.',
         },
     },
     articles: {
       title: 'Helpful Articles',
-      subtitle: 'Delve into the world of numbers and words with our specialized articles.',
+      subtitle: 'Delve into the world of numbers and words with our expert articles.',
       readMore: 'Read More',
     },
     articleDetail: {
@@ -698,51 +762,51 @@ const translations = {
     meta: {
       home: {
         title: "Financial Formula | The Complete Financial Toolkit",
-        description: "A suite of financial tools: Number Converter, Date Converter, Invoice Generator, and Contract Clause Helper."
+        description: "A suite of financial tools: number converter, date converter, invoice generator, and contract clause helper."
       },
       numberConverter: {
         title: "Number to Text Converter | Financial Formula",
-        description: "An accurate tool for converting financial amounts from numbers to text in both Arabic and English, perfect for contracts, invoices, and checks."
+        description: "An accurate tool to convert financial amounts from numbers to text in English and Arabic, perfect for contracts, invoices, and checks."
       },
       dateConverter: {
         title: "Date to Text Converter | Financial Formula",
-        description: "Easily convert dates into fully written text in Arabic and English for official documents and contracts."
+        description: "Easily convert dates to fully written text in English and Arabic for official documents and contracts."
       },
       invoiceGenerator: {
         title: "Invoice Generator | Financial Formula",
         description: "Create professional invoices with ease and download them as a PDF. The perfect tool for freelancers and small businesses."
       },
-       receiptGenerator: {
+      receiptGenerator: {
         title: "Payment Receipt Generator | Financial Formula",
-        description: "Create professional and customizable payment receipts easily. Enter the details and download the receipt as a PDF."
+        description: "Create professional and customizable payment receipts with ease. Enter details and download the receipt as a PDF."
       },
       contractClause: {
         title: "Contract Clause Helper | Financial Formula",
-        description: "Easily create accurate and legally sound financial clauses for your contracts and agreements. Enter the amount and get a ready-to-copy paragraph."
+        description: "Generate accurate and legally sound financial clauses for your contracts and agreements with ease. Enter the amount and get a ready-to-copy paragraph."
       },
       loanCalculator: {
         title: "Loan & Installment Calculator | Financial Formula",
-        description: "A professional tool to calculate monthly loan installments, total interest, and view a full amortization schedule to help with your financial planning."
+        description: "A professional tool to calculate monthly loan installments, total interest, and view the full amortization schedule to help you with financial planning."
       },
       currencyConverter: {
         title: "Live Currency Converter | Financial Formula",
-        description: "A professional tool to convert currencies based on the latest global exchange rates. Fast, accurate, and free."
+        description: "A professional tool for converting currencies based on the latest global exchange rates. Fast, accurate, and free."
       },
       glossary: {
-        title: "Financial Terms | Financial Formula",
-        description: "Search and browse a comprehensive dictionary of financial and accounting terms in Arabic and English for a deeper understanding of the world of finance."
+        title: "Financial Glossary | Financial Formula",
+        description: "Search and browse a comprehensive dictionary of financial and accounting terms in English and Arabic for a deeper understanding of the world of finance."
       },
       articles: {
         title: "Articles | Financial Formula",
-        description: "Specialized articles on writing financial amounts, common mistakes, and legal requirements to ensure the accuracy of your documents."
+        description: "Expert articles on writing financial amounts, common mistakes, and legal requirements to ensure the accuracy of your documents."
       },
       articleDetail: {
         title: "%s | Financial Formula",
         description: "%s"
       },
       about: {
-        title: "About Us | Financial Formula",
-        description: "Learn about the mission and vision of 'Financial Formula', the reliable tool for converting numbers to financial text with accuracy and security."
+        title: "About | Financial Formula",
+        description: "Learn about the mission and vision of 'Financial Formula', the trusted tool for converting numbers into financial text with accuracy and security."
       },
       contact: {
         title: "Contact Us | Financial Formula",
@@ -760,40 +824,45 @@ const translations = {
   }
 };
 
-// Provider component
-export const I18nProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+// FIX: Added the missing I18nProvider component to manage internationalization state.
+// Define the provider component props
+interface I18nProviderProps {
+  children: React.ReactNode;
+}
+
+// Create the provider component
+export const I18nProvider: React.FC<I18nProviderProps> = ({ children }) => {
   const [language, setLanguageState] = useState<'ar' | 'en'>(() => {
-    const savedLang = localStorage.getItem('language');
-    if (savedLang === 'ar' || savedLang === 'en') {
-      return savedLang;
+    if (typeof window !== 'undefined') {
+      const savedLang = localStorage.getItem('language');
+      if (savedLang === 'ar' || savedLang === 'en') {
+        return savedLang;
+      }
+      // Check browser language
+      const browserLang = navigator.language.split('-')[0];
+      if (browserLang === 'ar') {
+        return 'ar';
+      }
     }
-    // Default to English as per the new requirement
-    return 'en';
+    // Default to 'ar'
+    return 'ar';
   });
 
-  const setLanguage = (lang: 'ar' | 'en') => {
-    setLanguageState(lang);
-    localStorage.setItem('language', lang);
-  };
-  
   useEffect(() => {
     document.documentElement.lang = language;
     document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
+    localStorage.setItem('language', language);
   }, [language]);
-  
+
+  const setLanguage = (lang: 'ar' | 'en') => {
+    setLanguageState(lang);
+  };
+
   const t = useCallback((key: string): string => {
     const keys = key.split('.');
     let result: any = translations[language];
     for (const k of keys) {
       result = result?.[k];
-      if (result === undefined) {
-        // Fallback to English if translation is missing
-        let fallbackResult: any = translations['en'];
-        for (const fk of keys) {
-            fallbackResult = fallbackResult?.[fk];
-        }
-        return fallbackResult || key;
-      }
     }
     return result || key;
   }, [language]);

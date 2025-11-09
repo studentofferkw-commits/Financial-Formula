@@ -2,6 +2,7 @@
 export interface NavLinkInfo {
   path: string;
   key: string;
+  children?: NavLinkInfo[];
 }
 
 export interface Article {
