@@ -29,7 +29,7 @@ const InvoiceGenerator: React.FC = () => {
   const [toLogo, setToLogo] = useState<string | null>(null);
 
   const [lineItems, setLineItems] = useState<LineItem[]>([
-    { id: Date.now(), description: '', quantity: '1', rate: '0' },
+    { id: Date.now(), description: '', quantity: '', rate: '' },
   ]);
 
   const selectedCurrency = useMemo(() => CURRENCIES.find(c => c.code === selectedCurrencyCode) || CURRENCIES[0], [selectedCurrencyCode]);
@@ -65,7 +65,7 @@ const InvoiceGenerator: React.FC = () => {
   const addLineItem = () => {
     setLineItems(prevItems => [
       ...prevItems,
-      { id: Date.now(), description: '', quantity: '1', rate: '0' },
+      { id: Date.now(), description: '', quantity: '', rate: '' },
     ]);
   };
 

@@ -25,7 +25,6 @@ const translations = {
         contractClause: 'صياغة البنود',
         loanCalculator: 'حاسبة الأقساط',
         currencyConverter: 'محول العملات',
-        documentChecker: 'مدقق المستندات',
         articles: 'مقالات',
         glossary: 'مصطلحات مالية',
       },
@@ -81,7 +80,7 @@ const translations = {
       date: 'التاريخ',
       item: 'البند',
       quantity: 'الكمية',
-      rate: 'السعر',
+      rate: 'سعر الوحدة',
       amount: 'المبلغ',
       subtotal: 'المجموع الفرعي',
       total: 'المجموع الإجمالي',
@@ -197,26 +196,6 @@ const translations = {
       error: 'حدث خطأ أثناء جلب أسعار الصرف. يرجى المحاولة مرة أخرى.',
       rateUnavailable: 'سعر الصرف المباشر غير متوفر للعملة'
     },
-    documentCheckerPage: {
-      mainTitle: "مدقق المستندات بالذكاء الاصطناعي",
-      subtitle: "استخدم قوة الذكاء الاصطناعي لتحليل مستنداتك المالية، واكتشاف الأخطاء، وتحديد المخاطر المحتملة."
-    },
-    documentChecker: {
-      pasteText: "ألصق نص المستند هنا",
-      or: "أو",
-      uploadPrompt: "ارفع ملف لتحليله",
-      supportedFiles: "الملفات المدعومة: PDF, DOCX, XLSX",
-      unsupportedFile: "نوع الملف غير مدعوم.",
-      fileParseError: "حدث خطأ أثناء قراءة الملف.",
-      fileSelected: "الملف المحدد:",
-      removeFile: "إزالة الملف",
-      analyze: "تحليل الآن",
-      loading: "جاري التحليل...",
-      analyzingFile: "جاري قراءة الملف...",
-      analysisReport: "تقرير التحليل",
-      error: "حدث خطأ أثناء التحليل. يرجى المحاولة مرة أخرى.",
-      disclaimer: "إخلاء مسؤولية: هذه الأداة تستخدم الذكاء الاصطناعي وهي للمساعدة فقط. النتائج قد لا تكون دقيقة 100%. يرجى استشارة خبير متخصص قبل اتخاذ أي قرارات."
-    },
     glossaryPage: {
       mainTitle: 'مصطلحات مالية',
       subtitle: 'دليلك لفهم أهم المصطلحات المالية والمحاسبية المستخدمة في عالم الأعمال.',
@@ -257,10 +236,6 @@ const translations = {
         currencyConverter: {
             title: 'محول العملات المباشر',
             description: 'احصل على أسعار الصرف اللحظية وقم بتحويل العملات العالمية بدقة وسرعة.'
-        },
-        documentChecker: {
-          title: "مدقق المستندات بالذكاء الاصطناعي",
-          description: "حلل العقود والفواتير لاكتشاف الأخطاء والمخاطر المحتملة."
         }
       },
       whyUse: {
@@ -407,10 +382,6 @@ const translations = {
         {
           q: "ما هي العملات التي تدعمها الأداة؟",
           a: "تدعم أداة تحويل الأرقام مجموعة واسعة من العملات العربية والعالمية. يمكنك العثور على قائمة كاملة في القائمة المنسدلة لاختيار العملة. إذا كانت هناك عملة تود إضافتها، فلا تتردد في <a href=\"#/contact\" class=\"text-teal-600 dark:text-teal-400 font-semibold hover:underline\">الاتصال بنا</a>."
-        },
-        {
-          q: "كيف يعمل مدقق المستندات بالذكاء الاصطناعي؟",
-          a: "تستخدم هذه الأداة نماذج لغوية متقدمة (من خلال Gemini API) لتحليل النص الذي تقدمه. يقوم النموذج بمراجعة النص بناءً على تعليمات مخصصة للتدقيق المالي والقانوني، ثم يقدم تقريرًا بالمشاكل المحتملة والتوصيات. تذكر أن هذه الأداة هي للمساعدة فقط ولا تحل محل استشارة خبير بشري."
         }
       ]
     },
@@ -446,10 +417,6 @@ const translations = {
       currencyConverter: {
         title: "محول العملات المباشر | صيغة مالية",
         description: "أداة احترافية لتحويل العملات بناءً على أحدث أسعار الصرف العالمية. سريعة ودقيقة ومجانية."
-      },
-      documentChecker: {
-        title: "مدقق المستندات بالذكاء الاصطناعي | صيغة مالية",
-        description: "استخدم الذكاء الاصطناعي لمراجعة العقود والفواتير والمستندات المالية لاكتشاف الأخطاء والمخاطر المحتملة."
       },
       glossary: {
         title: "مصطلحات مالية | صيغة مالية",
@@ -498,7 +465,6 @@ const translations = {
         contractClause: 'Contract Clause',
         loanCalculator: 'Loan Calculator',
         currencyConverter: 'Currency Converter',
-        documentChecker: 'Document Checker',
         articles: 'Articles',
         glossary: 'Glossary',
       },
@@ -554,7 +520,7 @@ const translations = {
       date: 'Date',
       item: 'Item',
       quantity: 'Quantity',
-      rate: 'Rate',
+      rate: 'Unit Price',
       amount: 'Amount',
       subtotal: 'Subtotal',
       total: 'Total',
@@ -670,26 +636,6 @@ const translations = {
       error: 'An error occurred while fetching exchange rates. Please try again.',
       rateUnavailable: 'Live rate not available for'
     },
-    documentCheckerPage: {
-      mainTitle: "AI Document Checker",
-      subtitle: "Use the power of AI to analyze your financial documents, spot errors, and identify potential risks."
-    },
-    documentChecker: {
-      pasteText: "Paste your document text here",
-      or: "OR",
-      uploadPrompt: "Upload a file to analyze",
-      supportedFiles: "Supported files: PDF, DOCX, XLSX",
-      unsupportedFile: "Unsupported file type.",
-      fileParseError: "An error occurred while parsing the file.",
-      fileSelected: "File selected:",
-      removeFile: "Remove file",
-      analyze: "Analyze Now",
-      loading: "Analyzing...",
-      analyzingFile: "Reading file...",
-      analysisReport: "Analysis Report",
-      error: "An error occurred during analysis. Please try again.",
-      disclaimer: "Disclaimer: This tool uses AI and is for assistance only. Results may not be 100% accurate. Please consult a professional expert before making any decisions."
-    },
     glossaryPage: {
       mainTitle: 'Financial Glossary',
       subtitle: 'Your guide to understanding the most important financial and accounting terms used in the business world.',
@@ -730,10 +676,6 @@ const translations = {
         currencyConverter: {
             title: 'Live Currency Converter',
             description: 'Get real-time exchange rates and convert global currencies accurately and quickly.'
-        },
-        documentChecker: {
-          title: "AI Document Checker",
-          description: "Analyze contracts and invoices to spot errors and potential risks."
         }
       },
       whyUse: {
@@ -880,10 +822,6 @@ const translations = {
         {
           q: "Which currencies does the tool support?",
           a: "The number converter tool supports a wide range of Arab and international currencies. You can find a full list in the currency selection dropdown. If there is a currency you would like us to add, please feel free to <a href=\"#/contact\" class=\"text-teal-600 dark:text-teal-400 font-semibold hover:underline\">contact us</a>."
-        },
-        {
-          q: "How does the AI Document Checker work?",
-          a: "This tool uses advanced language models (via the Gemini API) to analyze the text you provide. The model reviews the text based on custom instructions for financial and legal auditing, then provides a report of potential issues and recommendations. Remember that this tool is for assistance only and does not replace consultation with a human expert."
         }
       ]
     },
@@ -919,10 +857,6 @@ const translations = {
       currencyConverter: {
         title: "Live Currency Converter | Financial Formula",
         description: "A professional tool for converting currencies based on the latest global exchange rates. Fast, accurate, and free."
-      },
-      documentChecker: {
-        title: "AI Document Checker | Financial Formula",
-        description: "Use AI to review your contracts, invoices, and financial documents to find errors and potential risks."
       },
       glossary: {
         title: "Financial Glossary | Financial Formula",
@@ -997,9 +931,13 @@ export const I18nProvider: React.FC<I18nProviderProps> = ({ children }) => {
     const keys = key.split('.');
     let result: any = translations[language];
     for (const k of keys) {
-      result = result?.[k];
+      if (result && typeof result === 'object' && k in result) {
+        result = result[k];
+      } else {
+        return key; // Return the key if translation is not found
+      }
     }
-    return result || key;
+    return result;
   }, [language]);
 
   const value = { language, setLanguage, t };

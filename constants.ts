@@ -9,7 +9,6 @@ export const TOOLS_LINKS: NavLinkInfo[] = [
   { path: '/contract-clause', key: 'contractClause' },
   { path: '/loan-calculator', key: 'loanCalculator' },
   { path: '/currency-converter', key: 'currencyConverter' },
-  { path: '/document-checker', key: 'documentChecker' },
 ];
 
 export const NAV_LINKS: NavLinkInfo[] = [
