@@ -13,24 +13,24 @@ const ArticlesPage: React.FC = () => {
     "@type": "CollectionPage",
     "name": t('meta.articles.title'),
     "description": t('meta.articles.description'),
-    "url": "https://financialformula.app/#/articles",
+    "url": "https://financial-formula.com/articles",
     "mainEntity": {
-        "@type": "ItemList",
-        "itemListElement": ARTICLES.map((article, index) => ({
-            "@type": "ListItem",
-            "position": index + 1,
-            "url": `https://financialformula.app/#/articles/${article.id}`,
-            "name": language === 'ar' ? article.title : article.titleEn
-        }))
+      "@type": "ItemList",
+      "itemListElement": ARTICLES.map((article, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "url": `https://financial-formula.com/articles/${article.id}`,
+        "name": language === 'ar' ? article.title : article.titleEn
+      }))
     }
   };
 
 
   return (
     <>
-      <MetaTags 
-        title={t('meta.articles.title')} 
-        description={t('meta.articles.description')} 
+      <MetaTags
+        title={t('meta.articles.title')}
+        description={t('meta.articles.description')}
       />
       <SchemaInjector schema={schema} id="articles-page-schema" />
       <div className="space-y-8">
