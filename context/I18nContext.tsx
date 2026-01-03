@@ -306,7 +306,7 @@ const translations = {
     },
     privacy: {
       title: 'سياسة الخصوصية',
-      effectiveDate: 'تاريخ السريان: 1 يناير 2023',
+      effectiveDate: 'تاريخ السريان: 4 يناير 2026',
       intro: 'نحن في "صيغة مالية" نحترم خصوصيتك ونلتزم بحمايتها. توضح سياسة الخصوصية هذه كيفية تعاملنا مع معلوماتك.',
       section1: {
         title: 'المعلومات التي نجمعها',
@@ -752,7 +752,7 @@ const translations = {
     },
     privacy: {
       title: 'Privacy Policy',
-      effectiveDate: 'Effective Date: January 1, 2023',
+      effectiveDate: 'Effective Date: January 4, 2026',
       intro: 'At "Financial Formula", we respect your privacy and are committed to protecting it. This Privacy Policy explains how we handle your information.',
       section1: {
         title: 'Information We Collect',
