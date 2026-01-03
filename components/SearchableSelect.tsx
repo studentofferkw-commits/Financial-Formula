@@ -11,9 +11,10 @@ interface SearchableSelectProps {
   value: string;
   onChange: (value: string) => void;
   placeholder?: string;
+  className?: string;
 }
 
-const SearchableSelect: React.FC<SearchableSelectProps> = ({ options, value, onChange, placeholder }) => {
+const SearchableSelect: React.FC<SearchableSelectProps> = ({ options, value, onChange, placeholder, className }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
   const wrapperRef = useRef<HTMLDivElement>(null);
@@ -31,7 +32,7 @@ const SearchableSelect: React.FC<SearchableSelectProps> = ({ options, value, onC
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [wrapperRef]);
-  
+
   const filteredOptions = options.filter(option =>
     option.label.toLowerCase().includes(searchTerm.toLowerCase())
   );
@@ -46,7 +47,7 @@ const SearchableSelect: React.FC<SearchableSelectProps> = ({ options, value, onC
     <div className="relative" ref={wrapperRef}>
       <button
         type="button"
-        className="w-full bg-white dark:bg-slate-700 border border-gray-300 dark:border-slate-600 rounded-md shadow-sm ps-3 pe-10 py-2 text-start focus:outline-none focus:ring-1 focus:ring-teal-500 focus:border-teal-500 sm:text-sm"
+        className={`w-full border border-gray-300 rounded-md shadow-sm ps-3 pe-10 py-2 text-start focus:outline-none focus:ring-1 focus:ring-teal-500 focus:border-teal-500 sm:text-sm ${className || 'bg-white dark:bg-slate-700 dark:border-slate-600'}`}
         onClick={() => setIsOpen(!isOpen)}
       >
         <span className="block truncate">{selectedOption?.label || placeholder}</span>

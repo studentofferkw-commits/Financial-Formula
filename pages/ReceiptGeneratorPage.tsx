@@ -3,26 +3,46 @@ import { Link } from 'react-router-dom';
 import ReceiptGenerator from '../components/ReceiptGenerator';
 import { useTranslation } from '../hooks/useTranslation';
 import MetaTags from '../components/MetaTags';
+import SchemaInjector from '../components/SchemaInjector';
 import { ARTICLES } from '../constants';
 
 const ReceiptGeneratorPage: React.FC = () => {
   const { t, language } = useTranslation();
 
+  const primaryArticle = ARTICLES.find(a => a.id === '9');
+  const content = language === 'ar' ? primaryArticle?.content : primaryArticle?.contentEn;
+
+  const toolSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": t('meta.receiptGenerator.title'),
+    "description": t('meta.receiptGenerator.description'),
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Any",
+    "url": "https://financial-formula.com/receipt-generator",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  };
+
   const relatedTools = [
     { path: '/invoice-generator', key: 'invoiceGenerator' },
     { path: '/number-converter', key: 'numberConverter' },
   ];
-  
+
   const relatedArticleIds = ['9'];
   const relatedArticles = ARTICLES.filter(a => relatedArticleIds.includes(a.id));
 
 
   return (
     <>
-      <MetaTags 
-        title={t('meta.receiptGenerator.title')} 
-        description={t('meta.receiptGenerator.description')} 
+      <MetaTags
+        title={t('meta.receiptGenerator.title')}
+        description={t('meta.receiptGenerator.description')}
       />
+      <SchemaInjector schema={toolSchema} id="webapp-schema" />
       <div className="space-y-12">
         <section className="text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-4">
@@ -36,6 +56,13 @@ const ReceiptGeneratorPage: React.FC = () => {
         <section>
           <ReceiptGenerator />
         </section>
+
+        {/* Rich Content Section */}
+        {content && (
+          <section className="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-md border border-gray-200 dark:border-slate-700 prose prose-lg max-w-none dark:prose-invert">
+            <div dangerouslySetInnerHTML={{ __html: content }} />
+          </section>
+        )}
 
         <section className="bg-white dark:bg-slate-800/50 p-6 sm:p-8 rounded-xl shadow-md border border-gray-200 dark:border-slate-700">
           <h2 className="text-2xl font-bold mb-6 text-center text-gray-800 dark:text-white">{t('relatedContent.title')}</h2>

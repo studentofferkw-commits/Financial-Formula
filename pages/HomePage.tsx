@@ -20,7 +20,7 @@ const FeatureCard: React.FC<{ path: string; icon: React.ReactNode; title: string
 const HomePage: React.FC = () => {
   const { t, language } = useTranslation();
   const textDirectionClass = language === 'ar' ? 'text-right' : 'text-left';
-  
+
   const cardIcons = {
     numberConverter: (
       <svg className="h-8 w-8 text-teal-600 dark:text-teal-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
@@ -38,9 +38,9 @@ const HomePage: React.FC = () => {
       </svg>
     ),
     receiptGenerator: (
-       <svg className="h-8 w-8 text-teal-600 dark:text-teal-400"  fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m5.231 13.481L15 17.25m-4.5-15H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Zm3.75 11.625a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
-        </svg>
+      <svg className="h-8 w-8 text-teal-600 dark:text-teal-400" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m5.231 13.481L15 17.25m-4.5-15H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Zm3.75 11.625a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
+      </svg>
     ),
     contractClause: (
       <svg className="h-8 w-8 text-teal-600 dark:text-teal-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
@@ -63,16 +63,16 @@ const HomePage: React.FC = () => {
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "url": "https://financialformula.app/",
+    "url": "https://financial-formula.com/",
     "name": t('header.title'),
     "description": t('meta.home.description')
   };
 
   return (
     <>
-      <MetaTags 
-        title={t('meta.home.title')} 
-        description={t('meta.home.description')} 
+      <MetaTags
+        title={t('meta.home.title')}
+        description={t('meta.home.description')}
       />
       <SchemaInjector schema={websiteSchema} id="website-schema" />
       <div className="space-y-12">
@@ -87,43 +87,43 @@ const HomePage: React.FC = () => {
 
         <section>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <FeatureCard 
+            <FeatureCard
               path="/number-converter"
               icon={cardIcons.numberConverter}
               title={t('home.cards.numberConverter.title')}
               description={t('home.cards.numberConverter.description')}
             />
-            <FeatureCard 
+            <FeatureCard
               path="/date-converter"
               icon={cardIcons.dateConverter}
               title={t('home.cards.dateConverter.title')}
               description={t('home.cards.dateConverter.description')}
             />
-            <FeatureCard 
+            <FeatureCard
               path="/invoice-generator"
               icon={cardIcons.invoiceGenerator}
               title={t('home.cards.invoiceGenerator.title')}
               description={t('home.cards.invoiceGenerator.description')}
             />
-            <FeatureCard 
+            <FeatureCard
               path="/receipt-generator"
               icon={cardIcons.receiptGenerator}
               title={t('home.cards.receiptGenerator.title')}
               description={t('home.cards.receiptGenerator.description')}
             />
-            <FeatureCard 
+            <FeatureCard
               path="/contract-clause"
               icon={cardIcons.contractClause}
               title={t('home.cards.contractClause.title')}
               description={t('home.cards.contractClause.description')}
             />
-             <FeatureCard 
+            <FeatureCard
               path="/loan-calculator"
               icon={cardIcons.loanCalculator}
               title={t('home.cards.loanCalculator.title')}
               description={t('home.cards.loanCalculator.description')}
             />
-             <FeatureCard 
+            <FeatureCard
               path="/currency-converter"
               icon={cardIcons.currencyConverter}
               title={t('home.cards.currencyConverter.title')}
@@ -131,26 +131,26 @@ const HomePage: React.FC = () => {
             />
           </div>
         </section>
-        
+
         <section className="bg-white dark:bg-slate-800/50 p-8 rounded-xl shadow-md border border-gray-200 dark:border-slate-700">
           <h2 className="text-3xl font-bold text-teal-700 dark:text-teal-400 mb-6 text-center">{t('home.whyUse.title')}</h2>
           <div className={`prose prose-lg max-w-none text-gray-700 dark:text-gray-300 dark:prose-invert leading-relaxed ${textDirectionClass}`}>
-              <p>
-                {t('home.whyUse.p1')}
-              </p>
-              <p>
-                {t('home.whyUse.p2')}
-              </p>
-              <h3 className="font-bold text-xl mt-6">{t('home.whyUse.beneficiariesTitle')}</h3>
-              <ul className="list-disc ps-5">
-                  <li><strong>{t('home.whyUse.b1_strong')}</strong> {t('home.whyUse.b1_text')}</li>
-                  <li><strong>{t('home.whyUse.b2_strong')}</strong> {t('home.whyUse.b2_text')}</li>
-                  <li><strong>{t('home.whyUse.b3_strong')}</strong> {t('home.whyUse.b3_text')}</li>
-                  <li><strong>{t('home.whyUse.b4_strong')}</strong> {t('home.whyUse.b4_text')}</li>
-              </ul>
-              <p>
-                  {t('home.whyUse.p3')}
-              </p>
+            <p>
+              {t('home.whyUse.p1')}
+            </p>
+            <p>
+              {t('home.whyUse.p2')}
+            </p>
+            <h3 className="font-bold text-xl mt-6">{t('home.whyUse.beneficiariesTitle')}</h3>
+            <ul className="list-disc ps-5">
+              <li><strong>{t('home.whyUse.b1_strong')}</strong> {t('home.whyUse.b1_text')}</li>
+              <li><strong>{t('home.whyUse.b2_strong')}</strong> {t('home.whyUse.b2_text')}</li>
+              <li><strong>{t('home.whyUse.b3_strong')}</strong> {t('home.whyUse.b3_text')}</li>
+              <li><strong>{t('home.whyUse.b4_strong')}</strong> {t('home.whyUse.b4_text')}</li>
+            </ul>
+            <p>
+              {t('home.whyUse.p3')}
+            </p>
           </div>
         </section>
 

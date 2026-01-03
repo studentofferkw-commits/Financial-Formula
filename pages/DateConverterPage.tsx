@@ -13,9 +13,11 @@ const DateConverterPage: React.FC = () => {
     { path: '/contract-clause', key: 'contractClause' },
     { path: '/invoice-generator', key: 'invoiceGenerator' },
   ];
-  
+
   const relatedArticleIds = ['4'];
   const relatedArticles = ARTICLES.filter(a => relatedArticleIds.includes(a.id));
+
+  const content = t('dateConverterPage.content');
 
   const toolSchema = {
     "@context": "https://schema.org",
@@ -24,18 +26,19 @@ const DateConverterPage: React.FC = () => {
     "description": t('meta.dateConverter.description'),
     "applicationCategory": "Utilities",
     "operatingSystem": "Any",
-    "url": "https://financialformula.app/#/date-converter",
+    "url": "https://financial-formula.com/date-converter",
     "offers": {
       "@type": "Offer",
-      "price": "0"
+      "price": "0",
+      "priceCurrency": "USD"
     }
   };
 
   return (
     <>
-      <MetaTags 
-        title={t('meta.dateConverter.title')} 
-        description={t('meta.dateConverter.description')} 
+      <MetaTags
+        title={t('meta.dateConverter.title')}
+        description={t('meta.dateConverter.description')}
       />
       <SchemaInjector schema={toolSchema} id="webapp-schema" />
       <div className="space-y-12">
@@ -51,6 +54,13 @@ const DateConverterPage: React.FC = () => {
         <section>
           <DateConverter />
         </section>
+
+        {/* Rich Content Section */}
+        {content && content !== 'dateConverterPage.content' && (
+          <section className="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-md border border-gray-200 dark:border-slate-700 prose prose-lg max-w-none dark:prose-invert">
+            <div dangerouslySetInnerHTML={{ __html: content }} />
+          </section>
+        )}
 
         <section className="bg-white dark:bg-slate-800/50 p-6 sm:p-8 rounded-xl shadow-md border border-gray-200 dark:border-slate-700">
           <h2 className="text-2xl font-bold mb-6 text-center text-gray-800 dark:text-white">{t('relatedContent.title')}</h2>

@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useRef } from 'react';
+import React, { useState, useMemo, useRef, useEffect } from 'react';
 import { useTranslation } from '../hooks/useTranslation';
 import { CURRENCIES } from '../constants';
 import { numberToText } from '../services/numberToTextService';
@@ -20,8 +20,34 @@ const InvoiceGenerator: React.FC = () => {
   const [fromAddress, setFromAddress] = useState('');
   const [toName, setToName] = useState('');
   const [toAddress, setToAddress] = useState('');
+  // Date logic
+  const [date, setDate] = useState(''); // Empty initial state
+  const [displayDate, setDisplayDate] = useState(''); // Empty initial display state
+  const hiddenDateInputRef = useRef<HTMLInputElement>(null);
+
+  // Sync displayDate if date changes externally only if it wasn't triggered by typing (this is tricky, so we rely on explicit handlers)
+
+  // Update date from the hidden native picker
+  const handleNativeDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const val = e.target.value; // YYYY-MM-DD
+    if (val) {
+      setDate(val);
+      const [y, m, d] = val.split('-');
+      setDisplayDate(`${d}/${m}/${y}`);
+    }
+  };
+
+  const openDatePicker = () => {
+    if (hiddenDateInputRef.current) {
+      hiddenDateInputRef.current.showPicker ? hiddenDateInputRef.current.showPicker() : hiddenDateInputRef.current.click();
+    }
+  };
+
+  // ... (rest of states)
+
+  // ... (rest of code)
+
   const [invoiceNumber, setInvoiceNumber] = useState('');
-  const [date, setDate] = useState(new Date().toISOString().split('T')[0]);
   const [notes, setNotes] = useState('');
   const [selectedCurrencyCode, setSelectedCurrencyCode] = useState<string>(CURRENCIES.find(c => c.code === 'SAR')?.code || CURRENCIES[0].code);
 
@@ -38,17 +64,17 @@ const InvoiceGenerator: React.FC = () => {
     value: c.code,
     label: language === 'ar' ? `${c.nameAr} (${c.code})` : `${c.name} (${c.code})`
   })), [language]);
-  
+
   const handleLogoChange = (e: React.ChangeEvent<HTMLInputElement>, setLogo: React.Dispatch<React.SetStateAction<string | null>>) => {
     const file = e.target.files?.[0];
     if (file && file.type.startsWith('image/')) {
-        const reader = new FileReader();
-        reader.onloadend = () => {
-            setLogo(reader.result as string);
-        };
-        reader.readAsDataURL(file);
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setLogo(reader.result as string);
+      };
+      reader.readAsDataURL(file);
     } else {
-        setLogo(null);
+      setLogo(null);
     }
     // Reset file input value to allow re-uploading the same file
     e.target.value = '';
@@ -80,7 +106,7 @@ const InvoiceGenerator: React.FC = () => {
       return total + quantity * rate;
     }, 0);
   }, [lineItems]);
-  
+
   const total = subtotal; // For now, total is same as subtotal. Can add tax later.
 
   const totalInWords = useMemo(() => {
@@ -105,7 +131,7 @@ const InvoiceGenerator: React.FC = () => {
     // Temporarily set theme to light for PDF generation to ensure consistent look
     const originalTheme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
     document.documentElement.classList.remove('dark');
-    
+
     // Allow rtl styles to be computed before rendering canvas
     await new Promise(resolve => setTimeout(resolve, 100));
 
@@ -118,12 +144,12 @@ const InvoiceGenerator: React.FC = () => {
       onclone: (document: Document) => {
         // Force LTR on the cloned document for html2canvas rendering to fix RTL alignment issues in PDF
         if (language === 'ar') {
-           document.documentElement.dir = 'ltr';
-           // Find the specific element and force its direction
-           const element = document.getElementById('invoice-template');
-           if(element) {
-              element.dir = 'rtl';
-           }
+          document.documentElement.dir = 'ltr';
+          // Find the specific element and force its direction
+          const element = document.getElementById('invoice-template');
+          if (element) {
+            element.dir = 'rtl';
+          }
         }
       }
     }).then((canvas: HTMLCanvasElement) => {
@@ -139,12 +165,12 @@ const InvoiceGenerator: React.FC = () => {
       const canvasHeight = canvas.height;
       const ratio = canvasWidth / pdfWidth;
       const imgHeight = canvasHeight / ratio;
-      
+
       let height = imgHeight;
       if (height > pdfHeight - 40) { // check if it exceeds page height with some margin
         height = pdfHeight - 40;
       }
-      
+
       pdf.addImage(imgData, 'PNG', 20, 20, pdfWidth - 40, height);
       pdf.save(`invoice-${invoiceNumber || 'download'}.pdf`);
 
@@ -215,7 +241,67 @@ const InvoiceGenerator: React.FC = () => {
           </div>
           <div>
             <label className="block text-sm font-medium mb-1">{t('invoiceGenerator.date')}</label>
-            <input type="date" value={date} onChange={e => setDate(e.target.value)} className="w-full input-style" style={{ colorScheme: 'dark' }} />
+            <input
+              type="text"
+              inputMode="numeric"
+              placeholder={language === 'ar' ? 'يوم/شهر/سنة' : 'dd/mm/yyyy'}
+              value={displayDate}
+              onChange={(e) => {
+                let value = e.target.value.replace(/\D/g, ''); // Remove non-digits
+
+                // Auto-insert slashes
+                if (value.length > 2) {
+                  value = value.substring(0, 2) + '/' + value.substring(2);
+                }
+                if (value.length > 5) {
+                  value = value.substring(0, 5) + '/' + value.substring(5, 9); // Limit year to 4 chars
+                }
+
+                // Limit total length to 10 (DD/MM/YYYY)
+                if (value.length > 10) {
+                  value = value.substring(0, 10);
+                }
+
+                setDisplayDate(value);
+
+                // If valid length, try to parse and set date
+                if (value.length === 10) {
+                  const parts = value.split('/');
+                  const d = parseInt(parts[0], 10);
+                  const m = parseInt(parts[1], 10);
+                  const y = parseInt(parts[2], 10);
+
+                  // Basic validation
+                  if (d > 0 && d <= 31 && m > 0 && m <= 12 && y > 1900) {
+                    const isoDate = `${y}-${String(m).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
+                    setDate(isoDate);
+                  }
+                } else if (value === '') {
+                  setDate('');
+                }
+              }}
+              className={`w-full input-style ${language === 'ar' ? 'text-right' : 'text-left'} bg-white text-gray-900 dark:bg-white dark:text-gray-900 pr-10 rtl:pr-3 rtl:pl-10`}
+              dir="ltr"
+            />
+            <button
+              type="button"
+              onClick={openDatePicker}
+              className={`absolute top-1/2 -translate-y-1/2 text-gray-400 hover:text-teal-600 ${language === 'ar' ? 'left-3' : 'right-3'}`}
+              aria-label={t('dateConverter.selectDate')}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+            </button>
+            <input
+              type="date"
+              ref={hiddenDateInputRef}
+              onChange={handleNativeDateChange}
+              className="absolute opacity-0 pointer-events-none top-0 left-0 w-full h-full"
+              style={{ visibility: 'hidden', position: 'absolute' }}
+              tabIndex={-1}
+              lang="ar"
+            />
           </div>
         </div>
 
@@ -231,10 +317,10 @@ const InvoiceGenerator: React.FC = () => {
           ))}
           <button onClick={addLineItem} className="mt-2 text-sm text-teal-600 dark:text-teal-400 font-semibold hover:text-teal-700 dark:hover:text-teal-300">+ {t('invoiceGenerator.addItem')}</button>
         </div>
-        
+
         <div>
-           <label className="block text-sm font-medium mb-1">{t('invoiceGenerator.notes')}</label>
-           <textarea placeholder={t('invoiceGenerator.notesPlaceholder')} value={notes} onChange={e => setNotes(e.target.value)} rows={2} className="w-full input-style"></textarea>
+          <label className="block text-sm font-medium mb-1">{t('invoiceGenerator.notes')}</label>
+          <textarea placeholder={t('invoiceGenerator.notesPlaceholder')} value={notes} onChange={e => setNotes(e.target.value)} rows={2} className="w-full input-style"></textarea>
         </div>
 
 
@@ -246,7 +332,7 @@ const InvoiceGenerator: React.FC = () => {
       {/* Preview Section */}
       <div className="bg-white dark:bg-slate-800 p-2 rounded-xl shadow-lg border border-gray-200 dark:border-slate-700">
         <div className="overflow-auto max-h-[500px] md:max-h-[80vh]">
-           <InvoiceTemplate ref={invoiceTemplateRef} {...invoiceData} />
+          <InvoiceTemplate ref={invoiceTemplateRef} {...invoiceData} />
         </div>
       </div>
     </div>

@@ -28,23 +28,23 @@ const AboutPage: React.FC = () => {
     "@type": "AboutPage",
     "name": t('meta.about.title'),
     "description": t('meta.about.description'),
-    "url": "https://financialformula.app/#/about",
+    "url": "https://financial-formula.com/about",
     "isPartOf": {
       "@type": "WebSite",
-      "url": "https://financialformula.app/",
+      "url": "https://financial-formula.com/",
       "name": t('header.title')
     }
   };
 
   return (
     <>
-      <MetaTags 
-        title={t('meta.about.title')} 
-        description={t('meta.about.description')} 
+      <MetaTags
+        title={t('meta.about.title')}
+        description={t('meta.about.description')}
       />
       <SchemaInjector schema={schema} id="about-page-schema" />
       <div className={`bg-white dark:bg-slate-800 p-8 rounded-xl shadow-md border border-gray-200 dark:border-slate-700 ${textDirectionClass}`}>
-        
+
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-extrabold text-gray-800 dark:text-white mb-4">{t('about.heroTitle')}</h1>
@@ -57,7 +57,7 @@ const AboutPage: React.FC = () => {
           <p>{t('about.storyP2')}</p>
           <p>{t('about.storyP3')}</p>
         </Section>
-        
+
         {/* Mission & Vision */}
         <Section title={t('about.missionVisionTitle')}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -89,7 +89,7 @@ const AboutPage: React.FC = () => {
             </PrincipleCard>
           </div>
         </Section>
-        
+
         {/* Who We Serve */}
         <Section title={t('about.whoWeServeTitle')}>
           <p>{t('about.whoWeServeIntro')}</p>

@@ -4,23 +4,43 @@ import LoanCalculator from '../components/LoanCalculator';
 import { useTranslation } from '../hooks/useTranslation';
 import MetaTags from '../components/MetaTags';
 import { ARTICLES } from '../constants';
+import SchemaInjector from '../components/SchemaInjector';
 
 const LoanCalculatorPage: React.FC = () => {
   const { t, language } = useTranslation();
 
+  const primaryArticle = ARTICLES.find(a => a.id === '8');
+  const content = language === 'ar' ? primaryArticle?.content : primaryArticle?.contentEn;
+
   const relatedTools = [
     { path: '/contract-clause', key: 'contractClause' },
   ];
-  
+
   const relatedArticleIds = ['8'];
   const relatedArticles = ARTICLES.filter(a => relatedArticleIds.includes(a.id));
 
+  const toolSchema = {
+    "@context": "https://schema.org",
+    "@type": "FinancialProduct",
+    "name": t('meta.loanCalculator.title'),
+    "description": t('meta.loanCalculator.description'),
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Any",
+    "url": "https://financial-formula.com/loan-calculator",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  };
+
   return (
     <>
-      <MetaTags 
-        title={t('meta.loanCalculator.title')} 
-        description={t('meta.loanCalculator.description')} 
+      <MetaTags
+        title={t('meta.loanCalculator.title')}
+        description={t('meta.loanCalculator.description')}
       />
+      <SchemaInjector schema={toolSchema} id="webapp-schema" />
       <div className="space-y-12">
         <section className="text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-4">
@@ -34,6 +54,13 @@ const LoanCalculatorPage: React.FC = () => {
         <section>
           <LoanCalculator />
         </section>
+
+        {/* Rich Content Section */}
+        {content && (
+          <section className="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-md border border-gray-200 dark:border-slate-700 prose prose-lg max-w-none dark:prose-invert">
+            <div dangerouslySetInnerHTML={{ __html: content }} />
+          </section>
+        )}
 
         <section className="bg-white dark:bg-slate-800/50 p-6 sm:p-8 rounded-xl shadow-md border border-gray-200 dark:border-slate-700">
           <h2 className="text-2xl font-bold mb-6 text-center text-gray-800 dark:text-white">{t('relatedContent.title')}</h2>

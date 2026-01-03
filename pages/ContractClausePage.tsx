@@ -3,26 +3,46 @@ import { Link } from 'react-router-dom';
 import ContractClauseGenerator from '../components/ContractClauseGenerator';
 import { useTranslation } from '../hooks/useTranslation';
 import MetaTags from '../components/MetaTags';
+import SchemaInjector from '../components/SchemaInjector'; // Added SchemaInjector import
 import { ARTICLES } from '../constants';
 
 const ContractClausePage: React.FC = () => {
   const { t, language } = useTranslation();
-  
+
+  const primaryArticle = ARTICLES.find(a => a.id === '7');
+  const content = language === 'ar' ? primaryArticle?.content : primaryArticle?.contentEn;
+
+  const toolSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": t('meta.contractClause.title'),
+    "description": t('meta.contractClause.description'),
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Any",
+    "url": "https://financial-formula.com/contract-clause",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  };
+
   const relatedTools = [
     { path: '/number-converter', key: 'numberConverter' },
     { path: '/date-converter', key: 'dateConverter' },
     { path: '/invoice-generator', key: 'invoiceGenerator' },
   ];
-  
+
   const relatedArticleIds = ['7'];
   const relatedArticles = ARTICLES.filter(a => relatedArticleIds.includes(a.id));
 
   return (
     <>
-      <MetaTags 
-        title={t('meta.contractClause.title')} 
-        description={t('meta.contractClause.description')} 
+      <MetaTags
+        title={t('meta.contractClause.title')}
+        description={t('meta.contractClause.description')}
       />
+      <SchemaInjector schema={toolSchema} id="webapp-schema" />
       <div className="space-y-12">
         <section className="text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-4">
@@ -36,6 +56,13 @@ const ContractClausePage: React.FC = () => {
         <section>
           <ContractClauseGenerator />
         </section>
+
+        {/* Rich Content Section */}
+        {content && (
+          <section className="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-md border border-gray-200 dark:border-slate-700 prose prose-lg max-w-none dark:prose-invert">
+            <div dangerouslySetInnerHTML={{ __html: content }} />
+          </section>
+        )}
 
         <section className="bg-white dark:bg-slate-800/50 p-6 sm:p-8 rounded-xl shadow-md border border-gray-200 dark:border-slate-700">
           <h2 className="text-2xl font-bold mb-6 text-center text-gray-800 dark:text-white">{t('relatedContent.title')}</h2>

@@ -4,21 +4,52 @@ import { dateToText } from '../services/dateToTextService';
 
 const DateConverter: React.FC = () => {
   const { t, language } = useTranslation();
-  const [selectedDate, setSelectedDate] = useState('');
+  const [displayDate, setDisplayDate] = useState('');
   const [outputText, setOutputText] = useState('');
   const [copyStatus, setCopyStatus] = useState<'idle' | 'success' | 'fail'>('idle');
 
-  useEffect(() => {
-    if (selectedDate) {
-      const text = dateToText(selectedDate, language);
-      setOutputText(text);
-    } else {
-      setOutputText('');
-    }
-  }, [selectedDate, language]);
-
   const handleDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSelectedDate(e.target.value);
+    let value = e.target.value.replace(/\D/g, ''); // Remove non-digits
+
+    // Auto-insert slashes
+    if (value.length > 2) {
+      value = value.substring(0, 2) + '/' + value.substring(2);
+    }
+    if (value.length > 5) {
+      value = value.substring(0, 5) + '/' + value.substring(5, 9); // Limit year to 4 chars
+    }
+
+    // Limit total length to 10 (DD/MM/YYYY)
+    if (value.length > 10) {
+      value = value.substring(0, 10);
+    }
+
+    setDisplayDate(value);
+
+    // Validate and Convert
+    if (value.length === 10) {
+      const parts = value.split('/');
+      const day = parseInt(parts[0], 10);
+      const month = parseInt(parts[1], 10);
+      const year = parseInt(parts[2], 10);
+
+      // Check for valid calendar date
+      const dateObj = new Date(year, month - 1, day);
+      if (
+        dateObj.getFullYear() === year &&
+        dateObj.getMonth() === month - 1 &&
+        dateObj.getDate() === day
+      ) {
+        // Construct YYYY-MM-DD for the service
+        const isoDate = `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+        const text = dateToText(isoDate, language);
+        setOutputText(text);
+      } else {
+        setOutputText(''); // Invalid date
+      }
+    } else {
+      setOutputText(''); // Incomplete date
+    }
   };
 
   const handleCopy = () => {
@@ -37,7 +68,7 @@ const DateConverter: React.FC = () => {
     if (copyStatus === 'fail') return t('converter.copyFail');
     return t('converter.copy');
   };
-  
+
   const getCopyButtonClasses = () => {
     switch (copyStatus) {
       case 'success':
@@ -56,20 +87,23 @@ const DateConverter: React.FC = () => {
           {t('dateConverter.selectDate')}
         </label>
         <input
-          type="date"
+          type="text"
           id="date-input"
-          className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-teal-500 focus:border-teal-500 sm:text-sm bg-white dark:bg-slate-700 dark:border-slate-600 dark:text-white dark:placeholder-gray-400"
-          value={selectedDate}
+          inputMode="numeric"
+          placeholder={t('dateConverter.placeholder')}
+          className={`w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-teal-500 focus:border-teal-500 sm:text-sm bg-white dark:bg-slate-700 dark:border-slate-600 dark:text-white dark:placeholder-gray-400 text-lg tracking-wider ${language === 'ar' ? 'text-right' : 'text-left'}`}
+          value={displayDate}
           onChange={handleDateChange}
-          style={{ colorScheme: 'dark' }} 
+          dir="ltr"
         />
+        {/* Force LTR for the date input even in Arabic so DD/MM/YYYY aligns correctly */}
       </div>
       <div>
         <div className="flex justify-between items-center mb-1">
           <label htmlFor="text-output" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
             {t('dateConverter.result')}
           </label>
-           <button
+          <button
             onClick={handleCopy}
             disabled={!outputText}
             className={`px-3 py-1 text-sm font-medium rounded-md transition-colors ${getCopyButtonClasses()}`}

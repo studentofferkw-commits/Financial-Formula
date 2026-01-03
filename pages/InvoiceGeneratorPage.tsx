@@ -14,9 +14,9 @@ const InvoiceGeneratorPage: React.FC = () => {
     { path: '/receipt-generator', key: 'receiptGenerator' },
     { path: '/contract-clause', key: 'contractClause' },
   ];
-  
-  const relatedArticleIds = ['6'];
-  const relatedArticles = ARTICLES.filter(a => relatedArticleIds.includes(a.id));
+
+  const primaryArticle = ARTICLES.find(a => a.id === '6');
+  const content = language === 'ar' ? primaryArticle?.content : primaryArticle?.contentEn;
 
   const toolSchema = {
     "@context": "https://schema.org",
@@ -25,18 +25,19 @@ const InvoiceGeneratorPage: React.FC = () => {
     "description": t('meta.invoiceGenerator.description'),
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "Any",
-    "url": "https://financialformula.app/#/invoice-generator",
+    "url": "https://financial-formula.com/invoice-generator",
     "offers": {
       "@type": "Offer",
-      "price": "0"
+      "price": "0",
+      "priceCurrency": "USD"
     }
   };
 
   return (
     <>
-      <MetaTags 
-        title={t('meta.invoiceGenerator.title')} 
-        description={t('meta.invoiceGenerator.description')} 
+      <MetaTags
+        title={t('meta.invoiceGenerator.title')}
+        description={t('meta.invoiceGenerator.description')}
       />
       <SchemaInjector schema={toolSchema} id="webapp-schema" />
       <div className="space-y-12">
@@ -53,25 +54,22 @@ const InvoiceGeneratorPage: React.FC = () => {
           <InvoiceGenerator />
         </section>
 
-         <section className="bg-white dark:bg-slate-800/50 p-6 sm:p-8 rounded-xl shadow-md border border-gray-200 dark:border-slate-700">
+        {/* Rich Content Section */}
+        {content && (
+          <section className="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-md border border-gray-200 dark:border-slate-700 prose prose-lg max-w-none dark:prose-invert">
+            <div dangerouslySetInnerHTML={{ __html: content }} />
+          </section>
+        )}
+
+        <section className="bg-white dark:bg-slate-800/50 p-6 sm:p-8 rounded-xl shadow-md border border-gray-200 dark:border-slate-700">
           <h2 className="text-2xl font-bold mb-6 text-center text-gray-800 dark:text-white">{t('relatedContent.title')}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 gap-8">
             <div>
               <h3 className="text-xl font-semibold mb-4 text-teal-600 dark:text-teal-400">{t('relatedContent.tools')}</h3>
               <div className="space-y-3">
                 {relatedTools.map(tool => (
                   <Link key={tool.key} to={tool.path} className="block p-4 rounded-lg bg-gray-50 dark:bg-slate-900/50 hover:bg-teal-50 dark:hover:bg-slate-700/50 border border-gray-200 dark:border-slate-700 transition-colors transform hover:scale-105">
                     <span className="font-semibold text-teal-700 dark:text-teal-400">{t(`header.nav.${tool.key}`)}</span>
-                  </Link>
-                ))}
-              </div>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold mb-4 text-teal-600 dark:text-teal-400">{t('relatedContent.articles')}</h3>
-              <div className="space-y-3">
-                {relatedArticles.map(article => (
-                  <Link key={article.id} to={`/articles/${article.id}`} className="block p-4 rounded-lg bg-gray-50 dark:bg-slate-900/50 hover:bg-teal-50 dark:hover:bg-slate-700/50 border border-gray-200 dark:border-slate-700 transition-colors transform hover:scale-105">
-                    <span className="font-semibold text-gray-700 dark:text-gray-300">{language === 'ar' ? article.title : article.titleEn}</span>
                   </Link>
                 ))}
               </div>

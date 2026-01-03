@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
@@ -19,12 +19,13 @@ import LoanCalculatorPage from './pages/LoanCalculatorPage';
 import ReceiptGeneratorPage from './pages/ReceiptGeneratorPage';
 import CurrencyConverterPage from './pages/CurrencyConverterPage';
 import FaqPage from './pages/FaqPage';
+import CookieConsent from './components/CookieConsent';
 
 const App: React.FC = () => {
   return (
     <ThemeProvider>
       <I18nProvider>
-        <HashRouter>
+        <BrowserRouter>
           <Layout>
             <Routes>
               <Route path="/" element={<HomePage />} />
@@ -44,8 +45,9 @@ const App: React.FC = () => {
               <Route path="/articles" element={<ArticlesPage />} />
               <Route path="/articles/:id" element={<ArticleDetailPage />} />
             </Routes>
+            <CookieConsent />
           </Layout>
-        </HashRouter>
+        </BrowserRouter>
       </I18nProvider>
     </ThemeProvider>
   );

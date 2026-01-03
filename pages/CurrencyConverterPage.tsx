@@ -3,25 +3,45 @@ import { Link } from 'react-router-dom';
 import CurrencyConverter from '../components/CurrencyConverter';
 import { useTranslation } from '../hooks/useTranslation';
 import MetaTags from '../components/MetaTags';
+import SchemaInjector from '../components/SchemaInjector';
 import { ARTICLES } from '../constants';
 
 const CurrencyConverterPage: React.FC = () => {
   const { t, language } = useTranslation();
 
+  const primaryArticle = ARTICLES.find(a => a.id === '10');
+  const content = language === 'ar' ? primaryArticle?.content : primaryArticle?.contentEn;
+
   const relatedTools = [
     { path: '/invoice-generator', key: 'invoiceGenerator' },
     { path: '/number-converter', key: 'numberConverter' },
   ];
-  
+
   const relatedArticleIds = ['10'];
   const relatedArticles = ARTICLES.filter(a => relatedArticleIds.includes(a.id));
 
+  const toolSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": t('meta.currencyConverter.title'),
+    "description": t('meta.currencyConverter.description'),
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Any",
+    "url": "https://financial-formula.com/currency-converter",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  };
+
   return (
     <>
-      <MetaTags 
-        title={t('meta.currencyConverter.title')} 
-        description={t('meta.currencyConverter.description')} 
+      <MetaTags
+        title={t('meta.currencyConverter.title')}
+        description={t('meta.currencyConverter.description')}
       />
+      <SchemaInjector schema={toolSchema} id="webapp-schema" />
       <div className="space-y-12">
         <section className="text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-4">
@@ -35,7 +55,14 @@ const CurrencyConverterPage: React.FC = () => {
         <section>
           <CurrencyConverter />
         </section>
-        
+
+        {/* Rich Content Section */}
+        {content && (
+          <section className="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-md border border-gray-200 dark:border-slate-700 prose prose-lg max-w-none dark:prose-invert">
+            <div dangerouslySetInnerHTML={{ __html: content }} />
+          </section>
+        )}
+
         <section className="bg-white dark:bg-slate-800/50 p-6 sm:p-8 rounded-xl shadow-md border border-gray-200 dark:border-slate-700">
           <h2 className="text-2xl font-bold mb-6 text-center text-gray-800 dark:text-white">{t('relatedContent.title')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

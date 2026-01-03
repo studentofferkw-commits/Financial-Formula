@@ -40,29 +40,35 @@ const translations = {
         terms: 'شروط الخدمة',
       }
     },
+    cookieConsent: {
+      message: "نستخدم ملفات تعريف الارتباط لضمان الحصول على أفضل تجربة على موقعنا.",
+      learnMore: "معرفة المزيد",
+      accept: "موافق"
+    },
     relatedContent: {
       title: 'محتوى ذو صلة',
       tools: 'أدوات أخرى قد تهمك',
       articles: 'مقالات ذات صلة'
     },
     converter: {
-        enterNumber: 'أدخل المبلغ بالأرقام',
-        selectCurrency: 'اختر العملة',
-        placeholder: 'مثال: 1234.56',
-        result: 'المبلغ بالحروف',
-        copy: 'نسخ',
-        copySuccess: 'تم النسخ!',
-        copyFail: 'فشل النسخ',
-        outputPlaceholder: 'النتيجة ستظهر هنا...',
+      enterNumber: 'أدخل المبلغ بالأرقام',
+      selectCurrency: 'اختر العملة',
+      placeholder: 'مثال: 1234.56',
+      result: 'المبلغ بالحروف',
+      copy: 'نسخ',
+      copySuccess: 'تم النسخ!',
+      copyFail: 'فشل النسخ',
+      outputPlaceholder: 'النتيجة ستظهر هنا...',
     },
     dateConverterPage: {
-        mainTitle: 'تحويل التاريخ إلى نص',
-        subtitle: 'أداة لتحويل التواريخ من صيغة رقمية إلى نص مكتوب بالكامل، مثالية للمستندات الرسمية والعقود.',
+      mainTitle: 'تحويل التاريخ إلى نص',
+      subtitle: 'أداة لتحويل التواريخ من صيغة رقمية إلى نص مكتوب بالكامل، مثالية للمستندات الرسمية والعقود.',
     },
     dateConverter: {
-        selectDate: 'اختر التاريخ',
-        result: 'التاريخ نصًا',
-        outputPlaceholder: 'النتيجة ستظهر هنا...',
+      selectDate: 'اختر التاريخ',
+      result: 'التاريخ نصًا',
+      placeholder: 'يوم/شهر/سنة',
+      outputPlaceholder: 'النتيجة ستظهر هنا...',
     },
     invoiceGeneratorPage: {
       mainTitle: 'مولد الفواتير السريع',
@@ -234,29 +240,29 @@ const translations = {
           description: 'خطط لقروضك وتمويلك الشخصي بفهم واضح للأقساط والفوائد.'
         },
         currencyConverter: {
-            title: 'محول العملات المباشر',
-            description: 'احصل على أسعار الصرف اللحظية وقم بتحويل العملات العالمية بدقة وسرعة.'
+          title: 'محول العملات المباشر',
+          description: 'احصل على أسعار الصرف اللحظية وقم بتحويل العملات العالمية بدقة وسرعة.'
         }
       },
       whyUse: {
-          title: 'لماذا تستخدم صيغة مالية؟',
-          p1: 'في عالم الأعمال والمال، الدقة هي كل شيء. خطأ صغير في كتابة مبلغ مالي يمكن أن يؤدي إلى سوء فهم، نزاعات قانونية، أو خسائر مالية. تم تصميم "صيغة مالية" لتوفير حل سريع، دقيق، وموثوق لتحويل الأرقام إلى نصوص، مما يضمن أن مستنداتك المالية واضحة وخالية من الأخطاء.',
-          p2: 'سواء كنت تقوم بإعداد فاتورة، تحرير شيك، أو صياغة عقد قانوني، فإن أداتنا تضمن تطابق النص المكتوب مع الأرقام بدقة متناهية، مع مراعاة القواعد النحوية المعقدة للغة العربية.',
-          beneficiariesTitle: 'من يستفيد من خدماتنا؟',
-          b1_strong: 'المحاسبون والمهنيون الماليون:',
-          b1_text: 'لضمان دقة الفواتير والتقارير المالية.',
-          b2_strong: 'المحامون والمستشارون القانونيون:',
-          b2_text: 'لصياغة عقود ووثائق قانونية لا لبس فيها.',
-          b3_strong: 'أصحاب الأعمال والمديرون:',
-          b3_text: 'لتحرير الشيكات والأوامر المالية بثقة.',
-          b4_strong: 'أي شخص يتعامل مع المستندات المالية:',
-          b4_text: 'لتجنب الأخطاء الشائعة وضمان الوضوح.',
-          p3: 'استخدم "صيغة مالية" اليوم وانعم براحة البال التي تأتي مع الدقة المطلقة.'
+        title: 'لماذا تستخدم صيغة مالية؟',
+        p1: 'في عالم الأعمال والمال، الدقة هي كل شيء. خطأ صغير في كتابة مبلغ مالي يمكن أن يؤدي إلى سوء فهم، نزاعات قانونية، أو خسائر مالية. تم تصميم "صيغة مالية" لتوفير حل سريع، دقيق، وموثوق لتحويل الأرقام إلى نصوص، مما يضمن أن مستنداتك المالية واضحة وخالية من الأخطاء.',
+        p2: 'سواء كنت تقوم بإعداد فاتورة، تحرير شيك، أو صياغة عقد قانوني، فإن أداتنا تضمن تطابق النص المكتوب مع الأرقام بدقة متناهية، مع مراعاة القواعد النحوية المعقدة للغة العربية.',
+        beneficiariesTitle: 'من يستفيد من خدماتنا؟',
+        b1_strong: 'المحاسبون والمهنيون الماليون:',
+        b1_text: 'لضمان دقة الفواتير والتقارير المالية.',
+        b2_strong: 'المحامون والمستشارون القانونيون:',
+        b2_text: 'لصياغة عقود ووثائق قانونية لا لبس فيها.',
+        b3_strong: 'أصحاب الأعمال والمديرون:',
+        b3_text: 'لتحرير الشيكات والأوامر المالية بثقة.',
+        b4_strong: 'أي شخص يتعامل مع المستندات المالية:',
+        b4_text: 'لتجنب الأخطاء الشائعة وضمان الوضوح.',
+        p3: 'استخدم "صيغة مالية" اليوم وانعم براحة البال التي تأتي مع الدقة المطلقة.'
       },
     },
     numberConverterPage: {
-        mainTitle: 'تحويل الأرقام إلى كلمات بسهولة',
-        subtitle: 'أداة دقيقة لتحويل المبالغ المالية من أرقام إلى نصوص باللغتين العربية والإنجليزية، مثالية للعقود والفواتير والشيكات.',
+      mainTitle: 'تحويل الأرقام إلى كلمات بسهولة',
+      subtitle: 'أداة دقيقة لتحويل المبالغ المالية من أرقام إلى نصوص باللغتين العربية والإنجليزية، مثالية للعقود والفواتير والشيكات.',
     },
     about: {
       heroTitle: 'عن صيغة مالية',
@@ -293,56 +299,56 @@ const translations = {
       commitmentText: 'نحن في "صيغة مالية" لسنا مجرد مزود للأدوات؛ نحن شركاؤك في الدقة. نحن ملتزمون بتقديم دعم استثنائي وتطوير مستمر لمنصتنا. ملاحظاتك هي المحرك الذي يدفعنا للابتكار. شكرًا لثقتك بنا.'
     },
     contact: {
-        title: 'اتصل بنا',
-        p1: 'نحن نقدر ملاحظاتك واستفساراتك.',
-        p2: 'لأي أسئلة أو اقتراحات أو دعم فني، يرجى التواصل معنا عبر البريد الإلكتروني:',
-        p3: 'سنبذل قصارى جهدنا للرد عليك في أقرب وقت ممكن.',
+      title: 'اتصل بنا',
+      p1: 'نحن نقدر ملاحظاتك واستفساراتك.',
+      p2: 'لأي أسئلة أو اقتراحات أو دعم فني، يرجى التواصل معنا عبر البريد الإلكتروني:',
+      p3: 'سنبذل قصارى جهدنا للرد عليك في أقرب وقت ممكن.',
     },
     privacy: {
-        title: 'سياسة الخصوصية',
-        effectiveDate: 'تاريخ السريان: 1 يناير 2023',
-        intro: 'نحن في "صيغة مالية" نحترم خصوصيتك ونلتزم بحمايتها. توضح سياسة الخصوصية هذه كيفية تعاملنا مع معلوماتك.',
-        section1: {
-            title: 'المعلومات التي نجمعها',
-            content: 'نحن لا نجمع أي معلومات شخصية منك. الأرقام التي تدخلها لتحويلها تتم معالجتها في متصفحك ولا يتم إرسالها أو تخزينها على خوادمنا.',
-        },
-        section2: {
-            title: 'استخدام المعلومات',
-            content: 'بما أننا لا نجمع أي معلومات، فلا نستخدمها لأي غرض.',
-        },
-        section3: {
-            title: 'ملفات تعريف الارتباط (Cookies)',
-            content: 'نحن لا نستخدم ملفات تعريف الارتباط لتتبع المستخدمين.',
-        },
-        section4: {
-            title: 'التغييرات على سياسة الخصوصية',
-            content: 'قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر. سنقوم بنشر أي تغييرات على هذه الصفحة.',
-        },
-        contact: 'إذا كانت لديك أي أسئلة حول سياسة الخصوصية هذه، يرجى الاتصال بنا.',
+      title: 'سياسة الخصوصية',
+      effectiveDate: 'تاريخ السريان: 1 يناير 2023',
+      intro: 'نحن في "صيغة مالية" نحترم خصوصيتك ونلتزم بحمايتها. توضح سياسة الخصوصية هذه كيفية تعاملنا مع معلوماتك.',
+      section1: {
+        title: 'المعلومات التي نجمعها',
+        content: 'نحن لا نجمع أي معلومات شخصية منك. الأرقام التي تدخلها لتحويلها تتم معالجتها في متصفحك ولا يتم إرسالها أو تخزينها على خوادمنا.',
+      },
+      section2: {
+        title: 'استخدام المعلومات',
+        content: 'بما أننا لا نجمع أي معلومات، فلا نستخدمها لأي غرض.',
+      },
+      section3: {
+        title: 'ملفات تعريف الارتباط (Cookies)',
+        content: 'نحن لا نستخدم ملفات تعريف الارتباط لتتبع المستخدمين.',
+      },
+      section4: {
+        title: 'التغييرات على سياسة الخصوصية',
+        content: 'قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر. سنقوم بنشر أي تغييرات على هذه الصفحة.',
+      },
+      contact: 'إذا كانت لديك أي أسئلة حول سياسة الخصوصية هذه، يرجى الاتصال بنا.',
     },
     terms: {
-        title: 'شروط الخدمة',
-        intro: 'يرجى قراءة شروط الخدمة هذه بعناية قبل استخدام موقعنا.',
-        section1: {
-            title: 'قبول الشروط',
-            content: 'باستخدامك لموقع "صيغة مالية"، فإنك توافق على الالتزام بهذه الشروط.',
-        },
-        section2: {
-            title: 'وصف الخدمة',
-            content: 'توفر "صيغة مالية" أداة لتحويل الأرقام إلى نصوص. يتم توفير الخدمة "كما هي" دون أي ضمانات.',
-        },
-        section3: {
-            title: 'إخلاء المسؤولية',
-            content: 'على الرغم من أننا نسعى جاهدين لتحقيق الدقة، إلا أننا لا نضمن أن تكون التحويلات خالية من الأخطاء بنسبة 100%. تقع على عاتق المستخدم مسؤولية التحقق من صحة النتائج قبل استخدامها في أي مستند رسمي.',
-        },
-        section4: {
-            title: 'تحديد المسؤولية',
-            content: 'لن نكون مسؤولين عن أي أضرار مباشرة أو غير مباشرة تنشأ عن استخدام أو عدم القدرة على استخدام خدمتنا.',
-        },
-        section5: {
-            title: 'التغييرات على الشروط',
-            content: 'نحتفظ بالحق في تعديل هذه الشروط في أي وقت. استمرارك في استخدام الموقع بعد أي تغييرات يعني موافقتك على الشروط الجديدة.',
-        },
+      title: 'شروط الخدمة',
+      intro: 'يرجى قراءة شروط الخدمة هذه بعناية قبل استخدام موقعنا.',
+      section1: {
+        title: 'قبول الشروط',
+        content: 'باستخدامك لموقع "صيغة مالية"، فإنك توافق على الالتزام بهذه الشروط.',
+      },
+      section2: {
+        title: 'وصف الخدمة',
+        content: 'توفر "صيغة مالية" أداة لتحويل الأرقام إلى نصوص. يتم توفير الخدمة "كما هي" دون أي ضمانات.',
+      },
+      section3: {
+        title: 'إخلاء المسؤولية',
+        content: 'على الرغم من أننا نسعى جاهدين لتحقيق الدقة، إلا أننا لا نضمن أن تكون التحويلات خالية من الأخطاء بنسبة 100%. تقع على عاتق المستخدم مسؤولية التحقق من صحة النتائج قبل استخدامها في أي مستند رسمي.',
+      },
+      section4: {
+        title: 'تحديد المسؤولية',
+        content: 'لن نكون مسؤولين عن أي أضرار مباشرة أو غير مباشرة تنشأ عن استخدام أو عدم القدرة على استخدام خدمتنا.',
+      },
+      section5: {
+        title: 'التغييرات على الشروط',
+        content: 'نحتفظ بالحق في تعديل هذه الشروط في أي وقت. استمرارك في استخدام الموقع بعد أي تغييرات يعني موافقتك على الشروط الجديدة.',
+      },
     },
     articles: {
       title: 'مقالات مفيدة',
@@ -350,14 +356,14 @@ const translations = {
       readMore: 'اقرأ المزيد',
     },
     articleDetail: {
-        notFound: {
-            title: 'المقالة غير موجودة',
-            message: 'عذراً، لم نتمكن من العثور على المقالة التي تبحث عنها.',
-        },
-        backLink: 'العودة إلى المقالات',
-        shareTitle: 'شارك هذا المقال',
-        copyLink: 'نسخ الرابط',
-        copyLinkSuccess: 'تم نسخ الرابط!',
+      notFound: {
+        title: 'المقالة غير موجودة',
+        message: 'عذراً، لم نتمكن من العثور على المقالة التي تبحث عنها.',
+      },
+      backLink: 'العودة إلى المقالات',
+      shareTitle: 'شارك هذا المقال',
+      copyLink: 'نسخ الرابط',
+      copyLinkSuccess: 'تم نسخ الرابط!',
     },
     faqPage: {
       title: "الأسئلة الشائعة",
@@ -480,29 +486,35 @@ const translations = {
         terms: 'Terms of Service',
       }
     },
+    cookieConsent: {
+      message: "We use cookies to ensure you get the best experience on our website.",
+      learnMore: "Learn More",
+      accept: "Got it!"
+    },
     relatedContent: {
       title: 'Related Content',
       tools: 'Other Useful Tools',
       articles: 'Related Articles'
     },
     converter: {
-        enterNumber: 'Enter amount in numbers',
-        selectCurrency: 'Select currency',
-        placeholder: 'e.g., 1234.56',
-        result: 'Amount in words',
-        copy: 'Copy',
-        copySuccess: 'Copied!',
-        copyFail: 'Copy failed',
-        outputPlaceholder: 'Result will appear here...',
+      enterNumber: 'Enter amount in numbers',
+      selectCurrency: 'Select currency',
+      placeholder: 'e.g., 1234.56',
+      result: 'Amount in words',
+      copy: 'Copy',
+      copySuccess: 'Copied!',
+      copyFail: 'Copy failed',
+      outputPlaceholder: 'Result will appear here...',
     },
     dateConverterPage: {
-        mainTitle: 'Date to Text Converter',
-        subtitle: 'A tool to convert dates from a numerical format to fully written text, perfect for official documents and contracts.',
+      mainTitle: 'Date to Text Converter',
+      subtitle: 'A tool to convert dates from a numerical format to fully written text, perfect for official documents and contracts.',
     },
     dateConverter: {
-        selectDate: 'Select a Date',
-        result: 'Date in Words',
-        outputPlaceholder: 'Result will appear here...',
+      selectDate: 'Select a Date',
+      result: 'Date in Words',
+      placeholder: 'dd/mm/yyyy',
+      outputPlaceholder: 'Result will appear here...',
     },
     invoiceGeneratorPage: {
       mainTitle: 'Simple Invoice Generator',
@@ -674,29 +686,29 @@ const translations = {
           description: 'Plan your personal loans and financing with a clear understanding of installments and interest.'
         },
         currencyConverter: {
-            title: 'Live Currency Converter',
-            description: 'Get real-time exchange rates and convert global currencies accurately and quickly.'
+          title: 'Live Currency Converter',
+          description: 'Get real-time exchange rates and convert global currencies accurately and quickly.'
         }
       },
       whyUse: {
-          title: 'Why Use Financial Formula?',
-          p1: 'In the world of business and finance, precision is everything. A small mistake in writing a financial amount can lead to misunderstandings, legal disputes, or financial losses. "Financial Formula" is designed to provide a fast, accurate, and reliable solution for converting numbers to text, ensuring your financial documents are clear and error-free.',
-          p2: 'Whether you are preparing an invoice, writing a check, or drafting a legal contract, our tool ensures that the written text perfectly matches the numbers, taking into account the complex grammatical rules of both English and Arabic.',
-          beneficiariesTitle: 'Who Benefits from Our Services?',
-          b1_strong: 'Accountants and Financial Professionals:',
-          b1_text: 'To ensure the accuracy of invoices and financial reports.',
-          b2_strong: 'Lawyers and Legal Advisors:',
-          b2_text: 'To draft unambiguous contracts and legal documents.',
-          b3_strong: 'Business Owners and Managers:',
-          b3_text: 'To issue checks and financial orders with confidence.',
-          b4_strong: 'Anyone Dealing with Financial Documents:',
-          b4_text: 'To avoid common errors and ensure clarity.',
-          p3: 'Use "Financial Formula" today and enjoy the peace of mind that comes with absolute accuracy.'
+        title: 'Why Use Financial Formula?',
+        p1: 'In the world of business and finance, precision is everything. A small mistake in writing a financial amount can lead to misunderstandings, legal disputes, or financial losses. "Financial Formula" is designed to provide a fast, accurate, and reliable solution for converting numbers to text, ensuring your financial documents are clear and error-free.',
+        p2: 'Whether you are preparing an invoice, writing a check, or drafting a legal contract, our tool ensures that the written text perfectly matches the numbers, taking into account the complex grammatical rules of both English and Arabic.',
+        beneficiariesTitle: 'Who Benefits from Our Services?',
+        b1_strong: 'Accountants and Financial Professionals:',
+        b1_text: 'To ensure the accuracy of invoices and financial reports.',
+        b2_strong: 'Lawyers and Legal Advisors:',
+        b2_text: 'To draft unambiguous contracts and legal documents.',
+        b3_strong: 'Business Owners and Managers:',
+        b3_text: 'To issue checks and financial orders with confidence.',
+        b4_strong: 'Anyone Dealing with Financial Documents:',
+        b4_text: 'To avoid common errors and ensure clarity.',
+        p3: 'Use "Financial Formula" today and enjoy the peace of mind that comes with absolute accuracy.'
       },
     },
     numberConverterPage: {
-        mainTitle: 'Easily Convert Numbers to Words',
-        subtitle: 'An accurate tool for converting financial amounts from numbers to text in both English and Arabic, perfect for contracts, invoices, and checks.',
+      mainTitle: 'Easily Convert Numbers to Words',
+      subtitle: 'An accurate tool for converting financial amounts from numbers to text in both English and Arabic, perfect for contracts, invoices, and checks.',
     },
     about: {
       heroTitle: 'About Financial Formula',
@@ -733,56 +745,56 @@ const translations = {
       commitmentText: 'At "Financial Formula," we are not just a tool provider; we are your partners in precision. We are committed to providing exceptional support and continuous development of our platform. Your feedback is the engine that drives our innovation. Thank you for trusting us.'
     },
     contact: {
-        title: 'Contact Us',
-        p1: 'We value your feedback and inquiries.',
-        p2: 'For any questions, suggestions, or technical support, please contact us via email:',
-        p3: 'We will do our best to respond to you as soon as possible.',
+      title: 'Contact Us',
+      p1: 'We value your feedback and inquiries.',
+      p2: 'For any questions, suggestions, or technical support, please contact us via email:',
+      p3: 'We will do our best to respond to you as soon as possible.',
     },
     privacy: {
-        title: 'Privacy Policy',
-        effectiveDate: 'Effective Date: January 1, 2023',
-        intro: 'At "Financial Formula", we respect your privacy and are committed to protecting it. This Privacy Policy explains how we handle your information.',
-        section1: {
-            title: 'Information We Collect',
-            content: 'We do not collect any personal information from you. The numbers you enter for conversion are processed in your browser and are not sent to or stored on our servers.',
-        },
-        section2: {
-            title: 'Use of Information',
-            content: 'Since we do not collect any information, we do not use it for any purpose.',
-        },
-        section3: {
-            title: 'Cookies',
-            content: 'We do not use cookies to track users.',
-        },
-        section4: {
-            title: 'Changes to This Privacy Policy',
-            content: 'We may update this Privacy Policy from time to time. We will post any changes on this page.',
-        },
-        contact: 'If you have any questions about this Privacy Policy, please contact us.',
+      title: 'Privacy Policy',
+      effectiveDate: 'Effective Date: January 1, 2023',
+      intro: 'At "Financial Formula", we respect your privacy and are committed to protecting it. This Privacy Policy explains how we handle your information.',
+      section1: {
+        title: 'Information We Collect',
+        content: 'We do not collect any personal information from you. The numbers you enter for conversion are processed in your browser and are not sent to or stored on our servers.',
+      },
+      section2: {
+        title: 'Use of Information',
+        content: 'Since we do not collect any information, we do not use it for any purpose.',
+      },
+      section3: {
+        title: 'Cookies',
+        content: 'We do not use cookies to track users.',
+      },
+      section4: {
+        title: 'Changes to This Privacy Policy',
+        content: 'We may update this Privacy Policy from time to time. We will post any changes on this page.',
+      },
+      contact: 'If you have any questions about this Privacy Policy, please contact us.',
     },
     terms: {
-        title: 'Terms of Service',
-        intro: 'Please read these Terms of Service carefully before using our website.',
-        section1: {
-            title: 'Acceptance of Terms',
-            content: 'By using "Financial Formula", you agree to be bound by these Terms.',
-        },
-        section2: {
-            title: 'Description of Service',
-            content: '"Financial Formula" provides a tool to convert numbers to text. The service is provided "as is" without any warranties.',
-        },
-        section3: {
-            title: 'Disclaimer',
-            content: 'While we strive for accuracy, we do not guarantee that the conversions will be 100% error-free. It is the user\'s responsibility to verify the correctness of the results before using them in any official document.',
-        },
-        section4: {
-            title: 'Limitation of Liability',
-            content: 'We shall not be liable for any direct or indirect damages arising out of the use or inability to use our service.',
-        },
-        section5: {
-            title: 'Changes to Terms',
-            content: 'We reserve the right to modify these terms at any time. Your continued use of the site after any changes constitutes your acceptance of the new Terms.',
-        },
+      title: 'Terms of Service',
+      intro: 'Please read these Terms of Service carefully before using our website.',
+      section1: {
+        title: 'Acceptance of Terms',
+        content: 'By using "Financial Formula", you agree to be bound by these Terms.',
+      },
+      section2: {
+        title: 'Description of Service',
+        content: '"Financial Formula" provides a tool to convert numbers to text. The service is provided "as is" without any warranties.',
+      },
+      section3: {
+        title: 'Disclaimer',
+        content: 'While we strive for accuracy, we do not guarantee that the conversions will be 100% error-free. It is the user\'s responsibility to verify the correctness of the results before using them in any official document.',
+      },
+      section4: {
+        title: 'Limitation of Liability',
+        content: 'We shall not be liable for any direct or indirect damages arising out of the use or inability to use our service.',
+      },
+      section5: {
+        title: 'Changes to Terms',
+        content: 'We reserve the right to modify these terms at any time. Your continued use of the site after any changes constitutes your acceptance of the new Terms.',
+      },
     },
     articles: {
       title: 'Helpful Articles',
@@ -790,14 +802,14 @@ const translations = {
       readMore: 'Read More',
     },
     articleDetail: {
-        notFound: {
-            title: 'Article Not Found',
-            message: 'Sorry, we couldn\'t find the article you are looking for.',
-        },
-        backLink: 'Back to Articles',
-        shareTitle: 'Share this article',
-        copyLink: 'Copy link',
-        copyLinkSuccess: 'Link copied!',
+      notFound: {
+        title: 'Article Not Found',
+        message: 'Sorry, we couldn\'t find the article you are looking for.',
+      },
+      backLink: 'Back to Articles',
+      shareTitle: 'Share this article',
+      copyLink: 'Copy link',
+      copyLinkSuccess: 'Link copied!',
     },
     faqPage: {
       title: "Frequently Asked Questions",
@@ -913,8 +925,8 @@ export const I18nProvider: React.FC<I18nProviderProps> = ({ children }) => {
         return 'ar';
       }
     }
-    // Default to 'ar'
-    return 'ar';
+    // Default to 'en' if not Arabic
+    return 'en';
   });
 
   useEffect(() => {

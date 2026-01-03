@@ -30,9 +30,9 @@ const CurrencyConverter: React.FC = () => {
         }
         setRates(data.rates);
         const updateDate = new Date(data.time_last_update_utc).toLocaleDateString(language === 'ar' ? 'ar-EG' : 'en-CA', {
-            year: 'numeric',
-            month: '2-digit',
-            day: '2-digit',
+          year: 'numeric',
+          month: '2-digit',
+          day: '2-digit',
         });
         setLastUpdated(updateDate);
       } catch (err) {
@@ -53,11 +53,11 @@ const CurrencyConverter: React.FC = () => {
       }))
       .sort((a, b) => a.label.localeCompare(b.label));
   }, [language]);
-  
+
   const convertedAmount = useMemo(() => {
     setConversionError(null);
     if (!rates || !amount) return null;
-    
+
     const numericAmount = parseFloat(amount);
     if (isNaN(numericAmount)) return null;
 
@@ -72,12 +72,12 @@ const CurrencyConverter: React.FC = () => {
       setConversionError(`${t('currencyConverter.rateUnavailable')} ${toCurrency}`);
       return null;
     }
-    
+
     // API base is USD.
     const amountInUSD = numericAmount / fromRate;
     return amountInUSD * toRate;
   }, [amount, fromCurrency, toCurrency, rates, t]);
-  
+
   const toCurrencyObject = useMemo(() => CURRENCIES.find(c => c.code === toCurrency), [toCurrency]);
 
 
@@ -87,7 +87,7 @@ const CurrencyConverter: React.FC = () => {
       setAmount(value);
     }
   };
-  
+
   const handleSwap = () => {
     const temp = fromCurrency;
     setFromCurrency(toCurrency);
@@ -107,71 +107,81 @@ const CurrencyConverter: React.FC = () => {
   }, [rates, fromCurrency, toCurrency, isLoading, conversionError]);
 
   return (
-    <div className="bg-slate-800/50 p-6 sm:p-8 rounded-xl shadow-lg border border-slate-700 w-full max-w-3xl mx-auto">
+    <div className="bg-slate-500 p-6 sm:p-8 rounded-xl shadow-lg w-full max-w-3xl mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 items-center">
         {/* Left Column for selectors and swap */}
         <div className="space-y-4">
-            <div>
-                <label className="block text-sm font-medium text-gray-300 mb-1">{t('currencyConverter.from')}</label>
-                <SearchableSelect options={currencyOptions} value={fromCurrency} onChange={setFromCurrency} />
-            </div>
+          <div>
+            <label className="block text-sm font-medium text-white mb-2 text-end">{t('currencyConverter.from')}</label>
+            <SearchableSelect
+              options={currencyOptions}
+              value={fromCurrency}
+              onChange={setFromCurrency}
+              className="bg-white text-gray-900"
+            />
+          </div>
 
-            <div className="text-center">
-                <button onClick={handleSwap} className="p-2 rounded-full hover:bg-slate-700" aria-label={t('currencyConverter.swap')}>
-                    <svg className="h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M3 7.5L7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5" />
-                    </svg>
-                </button>
-            </div>
+          <div className="text-center">
+            <button onClick={handleSwap} className="p-2 rounded-full hover:bg-slate-400/50 transition-colors" aria-label={t('currencyConverter.swap')}>
+              <svg className="h-6 w-6 text-slate-300 hover:text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3 7.5L7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5" />
+              </svg>
+            </button>
+          </div>
 
-            <div>
-                <label className="block text-sm font-medium text-gray-300 mb-1">{t('currencyConverter.to')}</label>
-                <SearchableSelect options={currencyOptions} value={toCurrency} onChange={setToCurrency} />
-            </div>
+          <div>
+            <label className="block text-sm font-medium text-white mb-2 text-end">{t('currencyConverter.to')}</label>
+            <SearchableSelect
+              options={currencyOptions}
+              value={toCurrency}
+              onChange={setToCurrency}
+              className="bg-white text-gray-900"
+            />
+          </div>
         </div>
 
         {/* Right Column for amount */}
         <div>
-            <label className="block text-sm font-medium text-gray-300 mb-1">{t('currencyConverter.amount')}</label>
-            <input
-                type="text"
-                inputMode="decimal"
-                value={amount}
-                onChange={handleAmountChange}
-                className="w-full input-style text-lg"
-            />
+          <label className="block text-sm font-medium text-white mb-2 text-end">{t('currencyConverter.amount')}</label>
+          <input
+            type="text"
+            inputMode="decimal"
+            value={amount}
+            onChange={handleAmountChange}
+            className="w-full input-style text-lg bg-white text-gray-900 border-gray-300 focus:ring-teal-500 focus:border-teal-500"
+          />
         </div>
       </div>
-      
-      <div className="pt-6 mt-6 border-t border-slate-700">
+
+      <div className="pt-6 mt-6 border-t border-slate-400/50">
         {isLoading ? (
-          <div className="text-center text-gray-400">{t('currencyConverter.loading')}</div>
+          <div className="text-center text-white/70">{t('currencyConverter.loading')}</div>
         ) : error ? (
-          <div className="text-center text-red-500">{error}</div>
+          <div className="text-center text-red-200">{error}</div>
         ) : conversionError ? (
-          <div className="text-center text-red-500 font-semibold">{conversionError}</div>
+          <div className="text-center text-red-200 font-semibold">{conversionError}</div>
         ) : (
           <div className="text-center">
-             <p className="text-4xl font-bold text-white">
-                {convertedAmount !== null ? (
-                    <>
-                        <span className="text-3xl font-light text-gray-400 align-baseline me-2">{toCurrencyObject?.symbol}</span>
-                        {convertedAmount.toLocaleString(undefined, { maximumFractionDigits: 4, minimumFractionDigits: 2 })}
-                    </>
-                ) : '...'}
+            <p className="text-4xl font-bold text-white mb-2">
+              {convertedAmount !== null ? (
+                <>
+                  <span className="text-3xl font-light text-white/70 align-baseline me-2">{toCurrencyObject?.symbol}</span>
+                  {convertedAmount.toLocaleString(undefined, { maximumFractionDigits: 4, minimumFractionDigits: 2 })}
+                </>
+              ) : '...'}
             </p>
-            <div className="text-sm text-gray-400 mt-2 font-mono space-y-1">
-                <p>{exchangeRateText}</p>
-                {lastUpdated && 
-                    <p className="text-xs text-gray-500">
-                        {t('currencyConverter.lastUpdated')}: {lastUpdated}
-                    </p>
-                }
+            <div className="text-sm text-white/80 font-mono space-y-1">
+              <p>{exchangeRateText}</p>
+              {lastUpdated &&
+                <p className="text-xs text-white/50">
+                  {t('currencyConverter.lastUpdated')}: {lastUpdated}
+                </p>
+              }
             </div>
           </div>
         )}
       </div>
-       <InputStyle />
+      <InputStyle />
     </div>
   );
 };
@@ -184,13 +194,9 @@ const InputStyle: React.FC = () => (
       box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); transition: all 0.2s;
     }
     .input-style:focus {
-      --tw-ring-color: #14b8a6; border-color: #14b8a6;
-      box-shadow: 0 0 0 1px #14b8a6; outline: none;
+      outline: none;
+      box-shadow: 0 0 0 1px #14b8a6;
     }
-    .dark .input-style {
-      background-color: #334155; border-color: #475569; color: white;
-    }
-    .dark .input-style::placeholder { color: #94a3b8; }
   `}</style>
 );
 

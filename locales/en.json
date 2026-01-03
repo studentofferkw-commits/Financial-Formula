@@ -24,6 +24,12 @@
     "copySuccess": "Copied successfully!",
     "copyFail": "Copy failed."
   },
+  "dateConverter": {
+    "selectDate": "Select Date",
+    "result": "Date in Text",
+    "placeholder": "dd/mm/yyyy",
+    "outputPlaceholder": "The result will appear here..."
+  },
   "home": {
     "mainTitle": "Financial Number to Text Converter",
     "subtitle": "An accurate and reliable tool to convert numerical amounts into proper written text, ideal for checks, contracts, and official documents.",
@@ -103,6 +109,43 @@
       "content": "We reserve the right to modify these terms at any time. Your continued use of the site after any such changes constitutes your acceptance of the new terms."
     }
   },
+  "numberConverterPage": {
+    "mainTitle": "Number to Text Converter",
+    "subtitle": "Convert any number to written text (Tafqeet) in Arabic or English with 100% accuracy, supporting all currencies and decimals."
+  },
+  "dateConverterPage": {
+    "mainTitle": "Hijri and Gregorian Date Converter",
+    "subtitle": "Accurate tool to convert between Hijri and Gregorian calendars, displaying day and month names.",
+    "content": "<p>Date is an essential part of our daily lives. Whether you need to know your birth date in Hijri, plan for a religious occasion, or convert a formal contract date, our <strong>Date Converter</strong> provides the accuracy you need. Our tool is based on the Umm Al-Qura calendar, ensuring completely reliable results.</p><h3 class='text-xl font-bold mt-4'>Key Features:</h3><ul class='list-disc ps-5 mt-2'><li>Instant conversion between Hijri and Gregorian.</li><li>Display day and month names.</li><li>Accurate leap year calculation.</li></ul>"
+  },
+  "invoiceGeneratorPage": {
+    "mainTitle": "Professional Invoice Generator",
+    "subtitle": "Design commercial and tax invoices compliant with legal requirements in seconds. Automatic text conversion for amounts included."
+  },
+  "receiptGeneratorPage": {
+    "mainTitle": "Receipt Generator",
+    "subtitle": "Create cash receipts or check vouchers with official documents protecting your rights. Ready to print or save as PDF."
+  },
+  "contractClausePage": {
+    "mainTitle": "Contract Clause Helper",
+    "subtitle": "Get tight legal drafting for financial clauses in your contracts, ensuring clarity and protecting you from loopholes."
+  },
+  "loanCalculatorPage": {
+    "mainTitle": "Loan and Installment Calculator",
+    "subtitle": "Plan your next loan smartly. Calculate monthly installments, total interest, and view detailed amortization schedule."
+  },
+  "currencyConverterPage": {
+    "mainTitle": "Live Currency Rates",
+    "subtitle": "Track global exchange rates moment by moment and convert currencies accurately. Based on live market data."
+  },
+  "glossaryPage": {
+    "mainTitle": "Financial Glossary",
+    "subtitle": "Comprehensive dictionary for key financial, accounting, and economic terms."
+  },
+  "articlesPage": {
+    "mainTitle": "Articles",
+    "subtitle": "Financial tips and information that matters to you"
+  },
   "articles": {
     "title": "Specialized Articles",
     "subtitle": "Articles to increase your knowledge of the importance of accuracy in financial and legal documents.",
@@ -143,6 +186,34 @@
     "terms": {
       "title": "Terms of Service | Financial Formula",
       "description": "Review the terms and conditions for using the 'Financial Formula' tool. Your use of the site constitutes your agreement to these terms."
+    },
+    "numberConverter": {
+      "title": "Number Converter | Financial Formula",
+      "description": "Convert numbers to text in Arabic and English with perfect accuracy. Ideal for invoices, checks, and contracts."
+    },
+    "dateConverter": {
+      "title": "Date Converter | Financial Formula",
+      "description": "Convert between Hijri and Gregorian dates accurately. Display dates in various formats."
+    },
+    "invoiceGenerator": {
+      "title": "Invoice Generator | Financial Formula",
+      "description": "Create professional invoices ready for print with automatic number-to-text conversion."
+    },
+    "receiptGenerator": {
+      "title": "Receipt Generator | Financial Formula",
+      "description": "Create official payment receipts in seconds. Automatic number conversion included."
+    },
+    "contractClause": {
+      "title": "Contract Clauses | Financial Formula",
+      "description": "Helper tool to draft financial clauses in contracts with legal precision to avoid disputes."
+    },
+    "loanCalculator": {
+      "title": "Loan Calculator | Financial Formula",
+      "description": "Calculate monthly installments, interest, and amortization schedule for your loan."
+    },
+    "currencyConverter": {
+      "title": "Currency Converter | Financial Formula",
+      "description": "Live exchange rates and conversion between all global currencies."
     }
   }
 }
