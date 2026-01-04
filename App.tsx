@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
@@ -25,7 +26,7 @@ const App: React.FC = () => {
   return (
     <ThemeProvider>
       <I18nProvider>
-        <BrowserRouter>
+        <HashRouter>
           <Layout>
             <Routes>
               <Route path="/" element={<HomePage />} />
@@ -47,7 +48,7 @@ const App: React.FC = () => {
             </Routes>
             <CookieConsent />
           </Layout>
-        </BrowserRouter>
+        </HashRouter>
       </I18nProvider>
     </ThemeProvider>
   );
