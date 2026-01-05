@@ -1,19 +1,46 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import Converter from '../components/Converter';
 import { useTranslation } from '../hooks/useTranslation';
 import MetaTags from '../components/MetaTags';
-import { ARTICLES } from '../constants';
+import { ARTICLES, CURRENCIES } from '../constants';
 import SchemaInjector from '../components/SchemaInjector';
 
 const NumberConverterPage: React.FC = () => {
   const { t, language } = useTranslation();
+  const { currencyCode } = useParams<{ currencyCode?: string }>();
+
+  // Determine the selected currency from URL or default to SAR
+  const currentCurrency = CURRENCIES.find(c => c.code.toLowerCase() === currencyCode?.toLowerCase()) ||
+    CURRENCIES.find(c => c.code === 'SAR') ||
+    CURRENCIES[0];
+
+  const isSpecificCurrency = !!currencyCode;
+
+  // SEO Titles and Descriptions
+  const pageTitle = isSpecificCurrency
+    ? t(`meta.numberConverter.title${currentCurrency.code}`)
+    : t('meta.numberConverter.title');
+
+  const pageDescription = isSpecificCurrency
+    ? t(`meta.numberConverter.description${currentCurrency.code}`)
+    : t('meta.numberConverter.description');
+
+  const mainH1 = isSpecificCurrency
+    ? t(`numberConverterPage.tafqit${currentCurrency.code}`)
+    : t('numberConverterPage.mainTitle');
 
   const relatedTools = [
     { path: '/invoice-generator', key: 'invoiceGenerator' },
     { path: '/receipt-generator', key: 'receiptGenerator' },
     { path: '/contract-clause', key: 'contractClause' },
   ];
+
+  const popularCurrencies = [
+    { code: 'SAR', key: 'tafqitSAR' },
+    { code: 'EGP', key: 'tafqitEGP' },
+    { code: 'KWD', key: 'tafqitKWD' },
+  ].filter(c => c.code.toLowerCase() !== currencyCode?.toLowerCase());
 
   const relatedArticleIds = ['1', '2', '3', '4', '5'];
   const relatedArticles = ARTICLES.filter(a => relatedArticleIds.includes(a.id));
@@ -24,11 +51,11 @@ const NumberConverterPage: React.FC = () => {
   const toolSchema = {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": t('meta.numberConverter.title'),
-    "description": t('meta.numberConverter.description'),
+    "name": pageTitle,
+    "description": pageDescription,
     "applicationCategory": "FinanceApplication",
     "operatingSystem": "Any",
-    "url": "https://financial-formula.com/number-converter",
+    "url": `https://financial-formula.com${currencyCode ? `/tafqit/${currencyCode.toLowerCase()}` : '/number-converter'}`,
     "offers": {
       "@type": "Offer",
       "price": "0",
@@ -39,14 +66,14 @@ const NumberConverterPage: React.FC = () => {
   return (
     <>
       <MetaTags
-        title={t('meta.numberConverter.title')}
-        description={t('meta.numberConverter.description')}
+        title={pageTitle}
+        description={pageDescription}
       />
       <SchemaInjector schema={toolSchema} id="number-converter-schema" />
       <div className="space-y-12">
         <section className="text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-4">
-            {t('numberConverterPage.mainTitle')}
+            {mainH1}
           </h1>
           <p className="max-w-3xl mx-auto text-lg text-gray-600 dark:text-gray-400">
             {t('numberConverterPage.subtitle')}
@@ -54,7 +81,20 @@ const NumberConverterPage: React.FC = () => {
         </section>
 
         <section>
-          <Converter />
+          <Converter initialCurrency={currentCurrency.code} />
+        </section>
+
+        {/* Popular Currencies Quick Links */}
+        <section className="flex flex-wrap justify-center gap-4">
+          {popularCurrencies.map(curr => (
+            <Link
+              key={curr.code}
+              to={`/tafqit/${curr.code.toLowerCase()}`}
+              className="px-4 py-2 rounded-full border border-teal-500/30 bg-teal-50/50 dark:bg-teal-900/20 text-teal-700 dark:text-teal-300 hover:bg-teal-500 hover:text-white transition-colors text-sm font-medium"
+            >
+              {t(`numberConverterPage.${curr.key}`)}
+            </Link>
+          ))}
         </section>
 
         {/* Rich Content Section */}

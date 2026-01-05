@@ -1,15 +1,24 @@
 // FIX: Implemented the main Converter component for the home page.
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useTranslation } from '../hooks/useTranslation';
 import { CURRENCIES } from '../constants';
 import { numberToText } from '../services/numberToTextService';
 import SearchableSelect from './SearchableSelect';
 
-const Converter: React.FC = () => {
+interface ConverterProps {
+  initialCurrency?: string;
+  onCurrencyChange?: (currencyCode: string) => void;
+}
+
+const Converter: React.FC<ConverterProps> = ({ initialCurrency, onCurrencyChange }) => {
+  const navigate = useNavigate();
   const { t, language } = useTranslation();
   const [inputNumber, setInputNumber] = useState('');
   const [outputText, setOutputText] = useState('');
-  const [selectedCurrencyCode, setSelectedCurrencyCode] = useState<string>(CURRENCIES.find(c => c.code === 'SAR')?.code || CURRENCIES[0].code);
+  const [selectedCurrencyCode, setSelectedCurrencyCode] = useState<string>(
+    initialCurrency || CURRENCIES.find(c => c.code === 'SAR')?.code || CURRENCIES[0].code
+  );
   const [copyStatus, setCopyStatus] = useState<'idle' | 'success' | 'fail'>('idle');
 
   const selectedCurrency = CURRENCIES.find(c => c.code === selectedCurrencyCode) || CURRENCIES[0];
@@ -27,6 +36,21 @@ const Converter: React.FC = () => {
       setOutputText('');
     }
   }, [inputNumber, selectedCurrency, language]);
+
+  useEffect(() => {
+    if (initialCurrency && initialCurrency !== selectedCurrencyCode) {
+      setSelectedCurrencyCode(initialCurrency);
+    }
+  }, [initialCurrency]);
+
+  const handleCurrencyChange = (code: string) => {
+    setSelectedCurrencyCode(code);
+    if (onCurrencyChange) onCurrencyChange(code);
+    // Optionally update URL if we are on a /tafqit page
+    if (window.location.pathname.startsWith('/tafqit')) {
+      navigate(`/tafqit/${code.toLowerCase()}`);
+    }
+  };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
@@ -52,7 +76,7 @@ const Converter: React.FC = () => {
     if (copyStatus === 'fail') return t('converter.copyFail');
     return t('converter.copy');
   };
-  
+
   const getCopyButtonClasses = () => {
     switch (copyStatus) {
       case 'success':
@@ -88,7 +112,7 @@ const Converter: React.FC = () => {
           <SearchableSelect
             options={currencyOptions}
             value={selectedCurrencyCode}
-            onChange={setSelectedCurrencyCode}
+            onChange={handleCurrencyChange}
             placeholder={t('converter.selectCurrency')}
           />
         </div>
@@ -98,7 +122,7 @@ const Converter: React.FC = () => {
           <label htmlFor="text-output" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
             {t('converter.result')}
           </label>
-           <button
+          <button
             onClick={handleCopy}
             disabled={!outputText}
             className={`px-3 py-1 text-sm font-medium rounded-md transition-colors ${getCopyButtonClasses()}`}

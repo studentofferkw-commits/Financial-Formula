@@ -55,7 +55,7 @@ export const ARTICLES: Article[] = [
       <p>لحماية معاملاتك، اتبع هذه الممارسات الأساسية:</p>
       <ol class="list-decimal ps-5 space-y-2">
         <li><strong>مبدأ المراجعة المزدوجة:</strong> اطلب دائمًا من شخص ثانٍ مراجعة أي مستند مالي مهم قبل إصداره. غالبًا ما تكتشف عين جديدة الأخطاء التي أغفلتها.</li>
-        <li><strong>استخدام التكنولوجيا:</strong> كتابة المبالغ يدويًا بالحروف عرضة للخطأ. استخدم أداة رقمية موثوقة مثل <a href="#/number-converter" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">أداة تحويل الأرقام</a> لإنشاء نص دقيق وموحد لأي رقم، مما يضمن التطابق التام بين الأرقام والكلمات.</li>
+        <li><strong>استخدام التكنولوجيا:</strong> كتابة المبالغ يدويًا بالحروف عرضة للخطأ. استخدم أداة رقمية موثوقة مثل <a href="/number-converter" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">أداة تحويل الأرقام</a> لإنشاء نص دقيق وموحد لأي رقم، مما يضمن التطابق التام بين الأرقام والكلمات.</li>
         <li><strong>كن واضحًا بشأن العملة:</strong> حدد العملة دائمًا بوضوح (على سبيل المثال، "دولار أمريكي"، "ريال سعودي") لتجنب الغموض في المعاملات الدولية.</li>
         <li><strong>حافظ على الوضوح:</strong> عند الكتابة اليدوية، تأكد من أن كل رقم وكلمة مقروءة تمامًا. تجنب الاختصارات أو المصطلحات التي يمكن إساءة تفسيرها.</li>
         <li><strong>تأمين المبلغ:</strong> اختتم المبلغ المكتوب بعبارة "فقط لا غير" لمنع أي إضافات أو تعديلات احتيالية.</li>
@@ -85,7 +85,7 @@ export const ARTICLES: Article[] = [
       <p>To safeguard your transactions, adopt these fundamental practices:</p>
       <ol class="list-decimal ps-5 space-y-2">
         <li><strong>The Four-Eyes Principle:</strong> Always have a second person review any important financial document before it is finalized or sent. A fresh pair of eyes can often catch mistakes you've overlooked.</li>
-        <li><strong>Leverage Technology:</strong> Manually writing amounts in words is prone to error. Use a reliable digital tool like our <a href="#/number-converter" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">Number Converter</a> to generate accurate, standardized text for any number, ensuring perfect consistency between numerals and words.</li>
+        <li><strong>Leverage Technology:</strong> Manually writing amounts in words is prone to error. Use a reliable digital tool like our <a href="/number-converter" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">Number Converter</a> to generate accurate, standardized text for any number, ensuring perfect consistency between numerals and words.</li>
         <li><strong>Be Explicit with Currency:</strong> Always specify the currency clearly (e.g., "US Dollars," "Saudi Riyals") to avoid ambiguity in international transactions.</li>
         <li><strong>Maintain Clarity:</strong> When writing by hand, ensure every number and word is perfectly legible. Avoid abbreviations or jargon that could be misinterpreted.</li>
         <li><strong>Secure the Amount:</strong> End the written amount with the word "Only" (or its equivalent, "فقط لا غير" in Arabic) to prevent fraudulent additions or alterations.</li>
@@ -150,7 +150,7 @@ export const ARTICLES: Article[] = [
         </tbody>
       </table>
 
-      <p class="mt-6">هذه الفروق الدقيقة هي السبب في أن التحويل اليدوي للأرقام باللغة العربية يمكن أن يكون تحديًا كبيرًا. أدوات مثل <a href="#/number-converter" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">صيغة مالية</a> مصممة خصيصًا للتعامل مع هذه التعقيدات النحوية تلقائيًا، مما يضمن الدقة والموثوقية في جميع مستنداتك المالية.</p>
+      <p class="mt-6">هذه الفروق الدقيقة هي السبب في أن التحويل اليدوي للأرقام باللغة العربية يمكن أن يكون تحديًا كبيرًا. أدوات مثل <a href="/number-converter" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">صيغة مالية</a> مصممة خصيصًا للتعامل مع هذه التعقيدات النحوية تلقائيًا، مما يضمن الدقة والموثوقية في جميع مستنداتك المالية.</p>
     `,
     contentEn: `
       <p>The rules for writing numbers vary significantly between languages, and the differences between English and Arabic are a prime example of this complexity. While English follows a relatively straightforward system, Arabic boasts a rich grammatical structure that depends on the number, the item being counted, and its gender.</p>
@@ -202,7 +202,7 @@ export const ARTICLES: Article[] = [
         </tbody>
       </table>
 
-      <p class="mt-6">These nuances are why manually converting numbers in Arabic can be a significant challenge. Tools like <a href="#/number-converter" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">Financial Formula</a> are specifically designed to handle these grammatical complexities automatically, ensuring accuracy and reliability in all your financial documents.</p>
+      <p class="mt-6">These nuances are why manually converting numbers in Arabic can be a significant challenge. Tools like <a href="/number-converter" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">Financial Formula</a> are specifically designed to handle these grammatical complexities automatically, ensuring accuracy and reliability in all your financial documents.</p>
     `,
   },
   {
@@ -219,7 +219,7 @@ export const ARTICLES: Article[] = [
         <div>
           <h4 class="font-semibold">1. عدم تطابق الأرقام مع الكلمات:</h4>
           <p>هذا هو الخطأ الأكثر شيوعًا وخطورة. قد تكتب "1,550" بالأرقام، ولكن "ألف وخمسمائة" بالكلمات. في معظم الأنظمة القانونية، يتم الاعتداد بالمبلغ المكتوب بالكلمات عند وجود تعارض. هذا الخطأ يمكن أن يؤدي إلى خسارة مالية مباشرة.</p>
-          <p class="text-sm text-teal-600 dark:text-teal-400 mt-1"><strong>الحل:</strong> استخدم <a href="#/number-converter" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">أداة تحويل آلية</a> لضمان التطابق بنسبة 100%.</p>
+          <p class="text-sm text-teal-600 dark:text-teal-400 mt-1"><strong>الحل:</strong> استخدم <a href="/number-converter" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">أداة تحويل آلية</a> لضمان التطابق بنسبة 100%.</p>
         </div>
         <div>
           <h4 class="font-semibold">2. إهمال الكسور أو كتابتها بشكل خاطئ:</h4>
@@ -252,7 +252,7 @@ export const ARTICLES: Article[] = [
         <div>
           <h4 class="font-semibold">1. Mismatched Numbers and Words:</h4>
           <p>This is the most common and dangerous error. You might write "1,550" in figures but "One thousand five hundred" in words. In most legal systems, the amount written in words prevails in case of a discrepancy. This error can lead to direct financial loss.</p>
-          <p class="text-sm text-teal-600 dark:text-teal-400 mt-1"><strong>Solution:</strong> Use an <a href="#/number-converter" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">automated conversion tool</a> to ensure 100% consistency.</p>
+          <p class="text-sm text-teal-600 dark:text-teal-400 mt-1"><strong>Solution:</strong> Use an <a href="/number-converter" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">automated conversion tool</a> to ensure 100% consistency.</p>
         </div>
         <div>
           <h4 class="font-semibold">2. Neglecting or Incorrectly Writing Fractions:</h4>
@@ -301,12 +301,12 @@ export const ARTICLES: Article[] = [
       <p>لتحصين مستنداتك قانونيًا، اتبع هذه الإرشادات:</p>
       <ul class="list-disc ps-5 space-y-2">
         <li><strong>اكتب المبلغ دائمًا بالطريقتين:</strong> لا تكتفِ بكتابة المبلغ بالأرقام فقط. قم دائمًا بتضمين الصيغة النصية الكاملة.</li>
-        <li><strong>ضمان التطابق التام:</strong> استخدم أداة موثوقة مثل <a href="#/number-converter" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">صيغة مالية</a> لضمان عدم وجود أي اختلاف بين الصيغتين الرقمية والنصية.</li>
+        <li><strong>ضمان التطابق التام:</strong> استخدم أداة موثوقة مثل <a href="/number-converter" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">صيغة مالية</a> لضمان عدم وجود أي اختلاف بين الصيغتين الرقمية والنصية.</li>
         <li><strong>كن محددًا بشأن العملة:</strong> حدد اسم العملة ورمزها (على سبيل المثال، "ريال سعودي (SAR)") لتجنب أي التباس حول العملة المقصودة.</li>
         <li><strong>استخدم لغة واضحة:</strong> تجنب الاختصارات أو المصطلحات غير الشائعة التي يمكن أن يساء تفسيرها. الوضوح هو أفضل حماية لك.</li>
         <li><strong>إضافة عبارات الحماية:</strong> استخدم عبارات مثل "فقط لا غير" لإغلاق أي ثغرات محتملة للتلاعب بالنص.</li>
       </ul>
-      <p class="mt-4">إن الالتزام بهذه الممارسات لا يجعل عقودك أكثر احترافية فحسب، بل يوفر لك أيضًا حماية قانونية قوية. استخدام <a href="#/contract-clause" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">أدوات صياغة البنود</a> يضمن أنك تتبع هذه المعايير بسهولة ودقة.</p>
+      <p class="mt-4">إن الالتزام بهذه الممارسات لا يجعل عقودك أكثر احترافية فحسب، بل يوفر لك أيضًا حماية قانونية قوية. استخدام <a href="/contract-clause" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">أدوات صياغة البنود</a> يضمن أنك تتبع هذه المعايير بسهولة ودقة.</p>
     `,
     contentEn: `
       <p>In the legal world, clarity is king. Contracts are legally binding documents, and any ambiguity within them can lead to costly disputes. This is why legal systems worldwide place extreme importance on the way financial amounts are written, as they are often the core of a contractual obligation.</p>
@@ -325,12 +325,12 @@ export const ARTICLES: Article[] = [
       <p>To legally fortify your documents, follow these guidelines:</p>
       <ul class="list-disc ps-5 space-y-2">
         <li><strong>Always Write the Amount Both Ways:</strong> Never settle for just writing the amount in figures. Always include the full text version.</li>
-        <li><strong>Ensure Perfect Consistency:</strong> Use a reliable tool like our <a href="#/number-converter" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">Number Converter</a> to ensure there is zero discrepancy between the numerical and text versions.</li>
+        <li><strong>Ensure Perfect Consistency:</strong> Use a reliable tool like our <a href="/number-converter" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">Number Converter</a> to ensure there is zero discrepancy between the numerical and text versions.</li>
         <li><strong>Be Specific About the Currency:</strong> State the currency name and code (e.g., "Saudi Riyal (SAR)") to avoid any confusion about the intended currency.</li>
         <li><strong>Use Clear Language:</strong> Avoid abbreviations or uncommon terms that could be misinterpreted. Clarity is your best defense.</li>
         <li><strong>Add Protective Phrases:</strong> Use phrases like "Only" at the end of the amount to close any potential loopholes for tampering.</li>
       </ul>
-      <p class="mt-4">Adhering to these practices not only makes your contracts more professional but also provides you with strong legal protection. Using our <a href="#/contract-clause" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">Clause Helper</a> ensures you follow these standards with ease and accuracy.</p>
+      <p class="mt-4">Adhering to these practices not only makes your contracts more professional but also provides you with strong legal protection. Using our <a href="/contract-clause" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">Clause Helper</a> ensures you follow these standards with ease and accuracy.</p>
     `,
   },
   {
@@ -340,7 +340,7 @@ export const ARTICLES: Article[] = [
     summary: 'دليل خطوة بخطوة للاستفادة من دعم الأداة متعدد العملات، مع أمثلة توضح الفروق الدقيقة في كل لغة.',
     summaryEn: 'A step-by-step guide to leveraging the tool\'s multi-currency support, with examples showing the nuances for each language.',
     content: `
-      <p>تم تصميم <a href="#/number-converter" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">أداة تحويل الأرقام</a> لتكون أداة عالمية، قادرة على التعامل مع مجموعة واسعة من العملات وقواعدها النحوية الفريدة باللغة العربية. الاستفادة من هذه الميزة أمر بسيط ومباشر، مما يوفر عليك الوقت والجهد ويضمن الدقة بغض النظر عن العملة التي تتعامل بها.</p>
+      <p>تم تصميم <a href="/number-converter" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">أداة تحويل الأرقام</a> لتكون أداة عالمية، قادرة على التعامل مع مجموعة واسعة من العملات وقواعدها النحوية الفريدة باللغة العربية. الاستفادة من هذه الميزة أمر بسيط ومباشر، مما يوفر عليك الوقت والجهد ويضمن الدقة بغض النظر عن العملة التي تتعامل بها.</p>
 
       <h3 class="font-bold text-xl mt-6">دليل الاستخدام خطوة بخطوة:</h3>
       <ol class="list-decimal ps-5 space-y-2">
@@ -370,7 +370,7 @@ export const ARTICLES: Article[] = [
       <p class="mt-4">هذه القدرة على التكيف التلقائي هي ما يجعل "صيغة مالية" أداة قوية. لم تعد بحاجة إلى حفظ أسماء الوحدات الفرعية أو القواعد النحوية المعقدة لكل عملة؛ فالأداة تقوم بكل العمل الشاق نيابة عنك، مما يضمن دقة مستنداتك بغض النظر عن السوق الذي تعمل فيه.</p>
     `,
     contentEn: `
-      <p>Our <a href="#/number-converter" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">Number Converter</a> is designed to be a global tool, capable of handling a wide range of currencies and their unique grammatical rules. Leveraging this feature is simple and straightforward, saving you time and effort while ensuring accuracy regardless of the currency you are dealing with.</p>
+      <p>Our <a href="/number-converter" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">Number Converter</a> is designed to be a global tool, capable of handling a wide range of currencies and their unique grammatical rules. Leveraging this feature is simple and straightforward, saving you time and effort while ensuring accuracy regardless of the currency you are dealing with.</p>
       
       <h3 class="font-bold text-xl mt-6">Step-by-Step Guide:</h3>
       <ol class="list-decimal ps-5 space-y-2">
@@ -406,7 +406,7 @@ export const ARTICLES: Article[] = [
     summary: 'تعلم كيفية استخدام مولد الفواتير لإنشاء مستندات مالية واضحة واحترافية تعكس جودة عملك.',
     summaryEn: 'Learn how to use the invoice generator to create clear, professional financial documents that reflect the quality of your work.',
     content: `
-      <p>الفاتورة ليست مجرد طلب للدفع؛ إنها وثيقة تمثل علامتك التجارية واحترافيتك. فاتورة جيدة التنظيم وواضحة تترك انطباعًا إيجابيًا لدى العملاء، وتسهل عملية الدفع، وتعمل كسجل قانوني للمعاملة. إليك كيف يساعدك <a href="#/invoice-generator" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">مولد الفواتير</a> الخاص بنا على تحقيق ذلك بفعالية.</p>
+      <p>الفاتورة ليست مجرد طلب للدفع؛ إنها وثيقة تمثل علامتك التجارية واحترافيتك. فاتورة جيدة التنظيم وواضحة تترك انطباعًا إيجابيًا لدى العملاء، وتسهل عملية الدفع، وتعمل كسجل قانوني للمعاملة. إليك كيف يساعدك <a href="/invoice-generator" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">مولد الفواتير</a> الخاص بنا على تحقيق ذلك بفعالية.</p>
       
       <h3 class="font-bold text-xl mt-6">عناصر الفاتورة المثالية:</h3>
       <p>لإنشاء فاتورة لا تترك مجالاً للشك، تأكد من تضمين هذه العناصر الأساسية:</p>
@@ -414,7 +414,7 @@ export const ARTICLES: Article[] = [
         <li><strong>بيانات واضحة للطرفين:</strong> تأكد من أن اسمك التجاري وعنوانك وبيانات الاتصال الخاصة بك، بالإضافة إلى بيانات العميل، مكتوبة بالكامل وبشكل صحيح. استخدام شعار شركتك يضيف لمسة من المصداقية والاحترافية.</li>
         <li><strong>تحديد فريد:</strong> يجب أن تحتوي كل فاتورة على رقم فريد (مثل INV-001) وتاريخ إصدار واضح. هذا ضروري للتتبع، والمحاسبة، وفي حالة وجود أي نزاعات مستقبلية.</li>
         <li><strong>بنود مفصلة وشفافة:</strong> بدلاً من مبلغ إجمالي واحد، قم بتقسيم الخدمات أو المنتجات إلى بنود منفصلة. لكل بند، حدد الوصف، والكمية، وسعر الوحدة، والمبلغ الإجمالي للبند. هذا يعزز الشفافية ويجيب على أسئلة العميل قبل أن يسألها.</li>
-        <li><strong>المبلغ الإجمالي كتابةً:</strong> هذه ميزة فريدة في أداتنا. يتم تحويل المبلغ الإجمالي إلى نص تلقائيًا باستخدام <a href="#/number-converter" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">محول الأرقام</a> المدمج ووضعه في الفاتورة. هذا يضيف طبقة من الحماية القانونية ويمنع الأخطاء.</li>
+        <li><strong>المبلغ الإجمالي كتابةً:</strong> هذه ميزة فريدة في أداتنا. يتم تحويل المبلغ الإجمالي إلى نص تلقائيًا باستخدام <a href="/number-converter" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">محول الأرقام</a> المدمج ووضعه في الفاتورة. هذا يضيف طبقة من الحماية القانونية ويمنع الأخطاء.</li>
         <li><strong>شروط دفع واضحة:</strong> حدد بوضوح الموعد النهائي للدفع (على سبيل المثال، "يستحق خلال 30 يومًا") وطرق الدفع المقبولة. هذا يمنع التأخير في السداد.</li>
       </ul>
       
@@ -425,10 +425,10 @@ export const ARTICLES: Article[] = [
         <p class="italic"><strong>نصيحة احترافية:</strong> قم بتنزيل الفاتورة بصيغة PDF وأرسلها كمرفق في بريد إلكتروني. هذا يبدو أكثر احترافية من إرسال فاتورة في نص البريد الإلكتروني نفسه ويصعب تعديله.</p>
       </blockquote>
       
-      <p class="mt-4">باستخدام <a href="#/invoice-generator" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">مولد الفواتير</a>، يمكنك إنشاء مستندات تفي بكل هذه المعايير في دقائق. ابدأ في ترك انطباع رائع لدى عملائك وتبسيط عملياتك المالية اليوم!</p>
+      <p class="mt-4">باستخدام <a href="/invoice-generator" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">مولد الفواتير</a>، يمكنك إنشاء مستندات تفي بكل هذه المعايير في دقائق. ابدأ في ترك انطباع رائع لدى عملائك وتبسيط عملياتك المالية اليوم!</p>
     `,
     contentEn: `
-      <p>An invoice is more than just a request for payment; it's a document that represents your brand and professionalism. A well-organized, clear invoice leaves a positive impression on clients, facilitates a smooth payment process, and serves as a legal record of the transaction. Here’s how our <a href="#/invoice-generator" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">invoice generator</a> helps you achieve that effectively.</p>
+      <p>An invoice is more than just a request for payment; it's a document that represents your brand and professionalism. A well-organized, clear invoice leaves a positive impression on clients, facilitates a smooth payment process, and serves as a legal record of the transaction. Here’s how our <a href="/invoice-generator" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">invoice generator</a> helps you achieve that effectively.</p>
       
       <h3 class="font-bold text-xl mt-6">Elements of a Perfect Invoice:</h3>
       <p>To create an invoice that leaves no room for doubt, ensure it includes these essential elements:</p>
@@ -436,7 +436,7 @@ export const ARTICLES: Article[] = [
         <li><strong>Clear Party Information:</strong> Ensure your business name, address, and contact details, as well as the client's information, are fully and correctly stated. Using your company logo adds a touch of credibility and professionalism.</li>
         <li><strong>Unique Identification:</strong> Every invoice must have a unique number (e.g., INV-001) and a clear issue date. This is crucial for tracking, accounting, and in case of any future disputes.</li>
         <li><strong>Itemized and Transparent List:</strong> Instead of a single total amount, break down services or products into separate line items. For each item, specify the description, quantity, rate per unit, and the total amount for that line. This enhances transparency and answers client questions before they're asked.</li>
-        <li><strong>Total Amount in Words:</strong> This is a standout feature of our tool. The total amount is automatically converted to text using the integrated <a href="#/number-converter" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">Number Converter</a> and placed on the invoice. This adds a layer of legal protection and prevents errors.</li>
+        <li><strong>Total Amount in Words:</strong> This is a standout feature of our tool. The total amount is automatically converted to text using the integrated <a href="/number-converter" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">Number Converter</a> and placed on the invoice. This adds a layer of legal protection and prevents errors.</li>
         <li><strong>Clear Payment Terms:</strong> Clearly state the payment due date (e.g., "Due within 30 days") and the accepted payment methods. This prevents payment delays.</li>
       </ul>
 
@@ -447,7 +447,7 @@ export const ARTICLES: Article[] = [
         <p class="italic"><strong>Pro Tip:</strong> Download the invoice as a PDF and send it as an email attachment. This looks more professional than sending an invoice in the body of an email and is harder to alter.</p>
       </blockquote>
       
-      <p class="mt-4">Using the <a href="#/invoice-generator" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">invoice generator</a>, you can create documents that meet all these criteria in minutes. Start making a great impression on your clients and streamlining your financial operations today!</p>
+      <p class="mt-4">Using the <a href="/invoice-generator" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">invoice generator</a>, you can create documents that meet all these criteria in minutes. Start making a great impression on your clients and streamlining your financial operations today!</p>
     `,
   },
   {
@@ -457,7 +457,7 @@ export const ARTICLES: Article[] = [
     summary: 'اكتشف كيف يمكن لمساعد صياغة البنود المالية أن يحول الطريقة التي تكتب بها العقود، مما يضيف الدقة والحماية القانونية.',
     summaryEn: 'Discover how the contract clause helper can transform the way you write contracts, adding precision and legal protection.',
     content: `
-      <p>البند المالي هو قلب أي عقد تجاري. أي غموض أو نقص في هذا البند يمكن أن يؤدي إلى نزاعات طويلة ومكلفة. تم تصميم <a href="#/contract-clause" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">مساعد صياغة البنود المالية</a> لتزويدك بصياغات قوية ومفصلة تقلل من المخاطر وتزيد من الوضوح، وتحول جملة بسيطة إلى فقرة قانونية محكمة.</p>
+      <p>البند المالي هو قلب أي عقد تجاري. أي غموض أو نقص في هذا البند يمكن أن يؤدي إلى نزاعات طويلة ومكلفة. تم تصميم <a href="/contract-clause" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">مساعد صياغة البنود المالية</a> لتزويدك بصياغات قوية ومفصلة تقلل من المخاطر وتزيد من الوضوح، وتحول جملة بسيطة إلى فقرة قانونية محكمة.</p>
       
       <h3 class="font-bold text-xl mt-6">من الغموض إلى الوضوح: مثال عملي</h3>
       <p>لنأخذ مثالاً بسيطًا. بدلاً من كتابة بند غامض مثل:</p>
@@ -477,10 +477,10 @@ export const ARTICLES: Article[] = [
         <li><strong>الحماية القانونية:</strong> في حالة النزاع، سيعتمد القاضي على النص المكتوب. كلما كان النص أكثر تفصيلاً ووضوحًا، كان موقفك أقوى.</li>
       </ul>
       
-      <p class="mt-4">أداتنا المتقدمة تأخذ في الاعتبار متغيرات مثل الضرائب وهيكل الدفع لتزويدك ببنود جاهزة للنسخ. لا تترك أهم جزء في عقدك للصدفة؛ استخدم <a href="#/contract-clause" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">أداتنا</a> لضمان صياغة محكمة ودقيقة تحمي حقوقك.</p>
+      <p class="mt-4">أداتنا المتقدمة تأخذ في الاعتبار متغيرات مثل الضرائب وهيكل الدفع لتزويدك ببنود جاهزة للنسخ. لا تترك أهم جزء في عقدك للصدفة؛ استخدم <a href="/contract-clause" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">أداتنا</a> لضمان صياغة محكمة ودقيقة تحمي حقوقك.</p>
     `,
     contentEn: `
-      <p>The financial clause is the heart of any commercial contract. Any ambiguity or omission in this clause can lead to long and costly disputes. The <a href="#/contract-clause" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">Contract Clause Helper</a> is designed to provide you with robust, detailed phrasing that minimizes risk, increases clarity, and transforms a simple sentence into an airtight legal paragraph.</p>
+      <p>The financial clause is the heart of any commercial contract. Any ambiguity or omission in this clause can lead to long and costly disputes. The <a href="/contract-clause" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">Contract Clause Helper</a> is designed to provide you with robust, detailed phrasing that minimizes risk, increases clarity, and transforms a simple sentence into an airtight legal paragraph.</p>
       
       <h3 class="font-bold text-xl mt-6">From Ambiguity to Clarity: A Practical Example</h3>
       <p>Let's take a simple example. Instead of writing a vague clause like:</p>
@@ -500,7 +500,7 @@ export const ARTICLES: Article[] = [
         <li><strong>Legal Protection:</strong> In case of a dispute, a judge will rely on the written text. The more detailed and clear the text, the stronger your position.</li>
       </ul>
       
-      <p class="mt-4">Our advanced tool considers variables like taxes and payment structure to provide you with ready-to-copy clauses. Don't leave the most important part of your contract to chance; use our <a href="#/contract-clause" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">tool</a> to ensure airtight and accurate phrasing that protects your rights.</p>
+      <p class="mt-4">Our advanced tool considers variables like taxes and payment structure to provide you with ready-to-copy clauses. Don't leave the most important part of your contract to chance; use our <a href="/contract-clause" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">tool</a> to ensure airtight and accurate phrasing that protects your rights.</p>
     `,
   },
   {
@@ -510,7 +510,7 @@ export const ARTICLES: Article[] = [
     summary: 'خطط لتمويلك بثقة. تعلم كيف تساعدك حاسبتنا الجديدة على فهم دفعاتك الشهرية، إجمالي الفائدة، وجدول السداد الكامل.',
     summaryEn: 'Plan your finances with confidence. Learn how our new calculator helps you understand your monthly payments, total interest, and the full amortization schedule.',
     content: `
-      <p>يعد التخطيط المالي السليم حجر الزاوية في اتخاذ القرارات الهامة، سواء كنت تفكر في شراء سيارة، أو منزل، أو الحصول على تمويل شخصي. <a href="#/loan-calculator" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">حاسبة الأقساط والتمويل</a> الجديدة لدينا هي أداة قوية مصممة لإزالة الغموض عن القروض ومساعدتك على فهم التزاماتك المالية بوضوح تام.</p>
+      <p>يعد التخطيط المالي السليم حجر الزاوية في اتخاذ القرارات الهامة، سواء كنت تفكر في شراء سيارة، أو منزل، أو الحصول على تمويل شخصي. <a href="/loan-calculator" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">حاسبة الأقساط والتمويل</a> الجديدة لدينا هي أداة قوية مصممة لإزالة الغموض عن القروض ومساعدتك على فهم التزاماتك المالية بوضوح تام.</p>
       
       <h3 class="font-bold text-xl mt-6">كيف تعمل الحاسبة؟</h3>
       <p>تعتمد الحاسبة على معادلة مالية قياسية لحساب القسط الشهري، مع الأخذ في الاعتبار ثلاثة مدخلات رئيسية:</p>
@@ -535,10 +535,10 @@ export const ARTICLES: Article[] = [
           <li><strong>جرّب سيناريوهات مختلفة:</strong> ماذا لو قمت بزيادة الدفعة الأولى؟ أو تقليل مدة التمويل؟ تتيح لك الحاسبة رؤية التأثير المباشر لهذه التغييرات على إجمالي ما ستدفعه.</li>
           <li><strong>خطط لميزانيتك:</strong> بمعرفة قسطك الشهري بدقة، يمكنك التخطيط لميزانيتك الشهرية بثقة، مع التأكد من قدرتك على تحمل الالتزام المالي.</li>
       </ul>
-      <p class="mt-4">استخدم <a href="#/loan-calculator" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">حاسبتنا</a> اليوم لاتخاذ قرارات مالية مستنيرة وتخطيط مستقبلك بثقة!</p>
+      <p class="mt-4">استخدم <a href="/loan-calculator" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">حاسبتنا</a> اليوم لاتخاذ قرارات مالية مستنيرة وتخطيط مستقبلك بثقة!</p>
     `,
     contentEn: `
-      <p>Sound financial planning is the cornerstone of making important decisions, whether you're considering buying a car, a house, or taking out a personal loan. Our new <a href="#/loan-calculator" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">Loan & Installment Calculator</a> is a powerful tool designed to demystify loans and help you understand your financial commitments with complete clarity.</p>
+      <p>Sound financial planning is the cornerstone of making important decisions, whether you're considering buying a car, a house, or taking out a personal loan. Our new <a href="/loan-calculator" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">Loan & Installment Calculator</a> is a powerful tool designed to demystify loans and help you understand your financial commitments with complete clarity.</p>
       
       <h3 class="font-bold text-xl mt-6">How Does the Calculator Work?</h3>
       <p>The calculator uses a standard financial formula to compute the monthly installment, taking into account three key inputs:</p>
@@ -563,7 +563,7 @@ export const ARTICLES: Article[] = [
         <li><strong>Experiment with Scenarios:</strong> What if you increase the down payment? Or shorten the loan term? The calculator lets you see the direct impact of these changes on the total amount you will pay.</li>
         <li><strong>Plan Your Budget:</strong> By knowing your exact monthly payment, you can plan your monthly budget with confidence, ensuring you can comfortably afford the financial commitment.</li>
       </ul>
-      <p class="mt-4">Use our <a href="#/loan-calculator" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">calculator</a> today to make informed financial decisions and plan your future with confidence!</p>
+      <p class="mt-4">Use our <a href="/loan-calculator" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">calculator</a> today to make informed financial decisions and plan your future with confidence!</p>
     `,
   },
   {
@@ -576,7 +576,7 @@ export const ARTICLES: Article[] = [
       <p>إيصال الدفع هو وثيقة حاسمة تثبت إتمام معاملة مالية. إنه ليس مجرد ورقة، بل هو حماية قانونية لكل من الدافع والمستلم، وسجل أساسي للمحاسبة الدقيقة. سواء كنت تدير شركة صغيرة، أو تعمل كمستقل، أو حتى في معاملاتك الشخصية، فإن إصدار واستلام إيصال واضح هو ممارسة تجارية سليمة.</p>
       
       <h3 class="font-bold text-xl mt-6">الفاتورة مقابل الإيصال: ما الفرق؟</h3>
-      <p>من المهم التمييز بين الفاتورة والإيصال. يمكنك استخدام <a href="#/invoice-generator" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">مولد الفواتير</a> لطلب الدفع، ثم <a href="#/receipt-generator" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">مولد الإيصالات</a> لإثباته:</p>
+      <p>من المهم التمييز بين الفاتورة والإيصال. يمكنك استخدام <a href="/invoice-generator" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">مولد الفواتير</a> لطلب الدفع، ثم <a href="/receipt-generator" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">مولد الإيصالات</a> لإثباته:</p>
       <ul class="list-disc ps-5 space-y-2">
         <li><strong>الفاتورة (Invoice):</strong> هي طلب للدفع. يتم إصدارها <em>قبل</em> الدفع، وتوضح تفاصيل السلع أو الخدمات والمبلغ المستحق.</li>
         <li><strong>الإيصال (Receipt):</strong> هو إثبات للدفع. يتم إصداره <em>بعد</em> استلام الدفع، ويؤكد أن المبلغ قد تم سداده.</li>
@@ -596,19 +596,19 @@ export const ARTICLES: Article[] = [
         <li><strong>عنوان واضح:</strong> "إيصال استلام" أو "إيصال دفع".</li>
         <li><strong>بيانات المستلم:</strong> اسم الشخص أو الشركة التي استلمت المبلغ.</li>
         <li><strong>بيانات الدافع:</strong> اسم الشخص أو الشركة التي قامت بالدفع.</li>
-        <li><strong>المبلغ:</strong> يجب كتابته بالأرقام والحروف لزيادة الوضوح ومنع التلاعب. استخدم <a href="#/number-converter" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">محول الأرقام</a> لضمان الدقة.</li>
+        <li><strong>المبلغ:</strong> يجب كتابته بالأرقام والحروف لزيادة الوضوح ومنع التلاعب. استخدم <a href="/number-converter" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">محول الأرقام</a> لضمان الدقة.</li>
         <li><strong>تاريخ الدفع:</strong> اليوم الذي تم فيه استلام المبلغ.</li>
         <li><strong>الغرض من الدفع:</strong> وصف موجز للخدمة أو المنتج الذي تم الدفع مقابله (مثال: "دفعة أولى من عقد تصميم الموقع").</li>
         <li><strong>طريقة الدفع:</strong> (نقداً، شيك، تحويل بنكي، إلخ).</li>
         <li><strong>توقيع المستلم:</strong> لإضفاء الطابع الرسمي على الوثيقة.</li>
       </ol>
-      <p class="mt-4">تم تصميم <a href="#/receipt-generator" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">مولد إيصالات الدفع</a> الجديد لدينا ليجعل هذه العملية سهلة وسريعة. يمكنك إدخال جميع التفاصيل اللازمة، وسيقوم النظام بإنشاء إيصال احترافي جاهز للطباعة أو التنزيل كملف PDF. ابدأ في توثيق معاملاتك المالية باحترافية اليوم!</p>
+      <p class="mt-4">تم تصميم <a href="/receipt-generator" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">مولد إيصالات الدفع</a> الجديد لدينا ليجعل هذه العملية سهلة وسريعة. يمكنك إدخال جميع التفاصيل اللازمة، وسيقوم النظام بإنشاء إيصال احترافي جاهز للطباعة أو التنزيل كملف PDF. ابدأ في توثيق معاملاتك المالية باحترافية اليوم!</p>
     `,
     contentEn: `
       <p>A payment receipt is a crucial document that proves a financial transaction has been completed. It's not just a piece of paper; it's legal protection for both the payer and the recipient, and an essential record for accurate accounting. Whether you're running a small business, working as a freelancer, or even in your personal dealings, issuing and receiving a clear receipt is a sound business practice.</p>
       
       <h3 class="font-bold text-xl mt-6">Invoice vs. Receipt: What's the Difference?</h3>
-      <p>It's important to distinguish between an invoice and a receipt. You can use our <a href="#/invoice-generator" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">Invoice Generator</a> to request payment, and our <a href="#/receipt-generator" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">Receipt Generator</a> to prove it:</p>
+      <p>It's important to distinguish between an invoice and a receipt. You can use our <a href="/invoice-generator" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">Invoice Generator</a> to request payment, and our <a href="/receipt-generator" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">Receipt Generator</a> to prove it:</p>
       <ul class="list-disc ps-5 space-y-2">
         <li><strong>Invoice:</strong> A request for payment. It is issued <em>before</em> payment, detailing the goods or services and the amount due.</li>
         <li><strong>Receipt:</strong> A proof of payment. It is issued <em>after</em> payment has been received, confirming that the amount has been paid.</li>
@@ -628,13 +628,13 @@ export const ARTICLES: Article[] = [
         <li><strong>A Clear Title:</strong> "Payment Receipt" or "Receipt Voucher".</li>
         <li><strong>Recipient's Information:</strong> The name of the person or company that received the money.</li>
         <li><strong>Payer's Information:</strong> The name of the person or company that made the payment.</li>
-        <li><strong>The Amount:</strong> It should be written in both figures and words to increase clarity and prevent tampering. Use our <a href="#/number-converter" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">Number Converter</a> for accuracy.</li>
+        <li><strong>The Amount:</strong> It should be written in both figures and words to increase clarity and prevent tampering. Use our <a href="/number-converter" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">Number Converter</a> for accuracy.</li>
         <li><strong>Date of Payment:</strong> The day the payment was received.</li>
         <li><strong>Purpose of Payment:</strong> A brief description of the service or product for which the payment was made (e.g., "Down payment for website design contract").</li>
         <li><strong>Payment Method:</strong> (Cash, Check, Bank Transfer, etc.).</li>
         <li><strong>Recipient's Signature:</strong> To formalize the document.</li>
       </ol>
-      <p class="mt-4">Our new <a href="#/receipt-generator" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">Payment Receipt Generator</a> is designed to make this process quick and easy. You can enter all the necessary details, and the system will generate a professional receipt ready for printing or downloading as a PDF. Start documenting your financial transactions professionally today!</p>
+      <p class="mt-4">Our new <a href="/receipt-generator" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">Payment Receipt Generator</a> is designed to make this process quick and easy. You can enter all the necessary details, and the system will generate a professional receipt ready for printing or downloading as a PDF. Start documenting your financial transactions professionally today!</p>
     `,
   },
   {
@@ -644,7 +644,7 @@ export const ARTICLES: Article[] = [
     summary: 'اكتشف التقنية وراء أسعار الصرف اللحظية وكيف يمكنك استخدام أداتنا الجديدة لاتخاذ قرارات مالية مستنيرة عند التعامل مع عملات متعددة.',
     summaryEn: 'Discover the technology behind real-time exchange rates and how you can use our new tool to make informed financial decisions when dealing with multiple currencies.',
     content: `
-      <p>في عالم مترابط ماليًا، أصبحت القدرة على تحويل العملات بسرعة ودقة أمرًا ضروريًا للمسافرين والمستثمرين والشركات على حد سواء. <a href="#/currency-converter" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">أداة تحويل العملات المباشرة</a> الجديدة لدينا مصممة لتوفير هذه الخدمة لك، معتمدة على بيانات أسعار الصرف اللحظية.</p>
+      <p>في عالم مترابط ماليًا، أصبحت القدرة على تحويل العملات بسرعة ودقة أمرًا ضروريًا للمسافرين والمستثمرين والشركات على حد سواء. <a href="/currency-converter" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">أداة تحويل العملات المباشرة</a> الجديدة لدينا مصممة لتوفير هذه الخدمة لك، معتمدة على بيانات أسعار الصرف اللحظية.</p>
       
       <h3 class="font-bold text-xl mt-6">من أين تأتي البيانات؟</h3>
       <p>تعتمد أداتنا على واجهة برمجة تطبيقات (API) موثوقة تقوم بجمع أسعار الصرف من مصادر مالية عالمية، مثل البنوك المركزية وأسواق الصرف الأجنبي. يتم تحديث هذه البيانات بانتظام (عادة يوميًا) لتعكس أحدث التغيرات في السوق. هذا يضمن أنك تحصل على سعر قريب جدًا من السعر الفعلي الذي ستتعامل به في معاملة حقيقية.</p>
@@ -663,16 +663,16 @@ export const ARTICLES: Article[] = [
       </blockquote>
 
       <h3 class="font-bold text-xl mt-6">نصائح لاستخدام الأداة:</h3>
-      <p>بعد التحويل، قد تحتاج إلى استخدام المبلغ في مستند رسمي. يمكنك استخدام <a href="#/invoice-generator" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">مولد الفواتير</a> أو <a href="#/number-converter" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">محول الأرقام</a> لهذا الغرض.</p>
+      <p>بعد التحويل، قد تحتاج إلى استخدام المبلغ في مستند رسمي. يمكنك استخدام <a href="/invoice-generator" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">مولد الفواتير</a> أو <a href="/number-converter" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">محول الأرقام</a> لهذا الغرض.</p>
       <ul class="list-disc ps-5 space-y-2 mt-2">
         <li><strong>تحقق دائمًا من تاريخ آخر تحديث:</strong> توفر أداتنا تاريخ آخر تحديث للبيانات لتكون على دراية بمدى حداثة السعر.</li>
         <li><strong>استخدمها للتخطيط:</strong> الأداة مثالية لتقدير التكاليف عند التخطيط للسفر، أو حساب قيمة الاستثمارات الأجنبية، أو تحديد أسعار المنتجات للأسواق الدولية.</li>
         <li><strong>ضع في اعتبارك الرسوم:</strong> عند إجراء تحويل فعلي، تذكر أن هناك رسوم تحويل وهوامش ربح قد تنطبق.</li>
       </ul>
-      <p class="mt-4">استخدم <a href="#/currency-converter" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">أداة تحويل العملات المباشرة</a> لتبقى على اطلاع دائم بأسواق الصرف العالمية وتتخذ قراراتك المالية بثقة أكبر.</p>
+      <p class="mt-4">استخدم <a href="/currency-converter" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">أداة تحويل العملات المباشرة</a> لتبقى على اطلاع دائم بأسواق الصرف العالمية وتتخذ قراراتك المالية بثقة أكبر.</p>
     `,
     contentEn: `
-      <p>In a financially interconnected world, the ability to convert currencies quickly and accurately has become essential for travelers, investors, and businesses alike. Our new <a href="#/currency-converter" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">live currency converter tool</a> is designed to provide you with this service, relying on real-time exchange rate data.</p>
+      <p>In a financially interconnected world, the ability to convert currencies quickly and accurately has become essential for travelers, investors, and businesses alike. Our new <a href="/currency-converter" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">live currency converter tool</a> is designed to provide you with this service, relying on real-time exchange rate data.</p>
       
       <h3 class="font-bold text-xl mt-6">Where Does the Data Come From?</h3>
       <p>Our tool relies on a trusted Application Programming Interface (API) that aggregates exchange rates from global financial sources, such as central banks and foreign exchange markets. This data is updated regularly (usually daily) to reflect the latest market changes. This ensures you get a rate that is very close to the actual rate you would encounter in a real transaction.</p>
@@ -691,13 +691,45 @@ export const ARTICLES: Article[] = [
       </blockquote>
 
       <h3 class="font-bold text-xl mt-6">Tips for Using the Tool:</h3>
-      <p>After converting, you may need to use the amount in an official document. You can use our <a href="#/invoice-generator" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">Invoice Generator</a> or <a href="#/number-converter" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">Number Converter</a> for this purpose.</p>
+      <p>After converting, you may need to use the amount in an official document. You can use our <a href="/invoice-generator" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">Invoice Generator</a> or <a href="/number-converter" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">Number Converter</a> for this purpose.</p>
       <ul class="list-disc ps-5 space-y-2 mt-2">
         <li><strong>Always check the last updated date:</strong> Our tool provides the date of the last data update so you are aware of how current the rate is.</li>
         <li><strong>Use it for planning:</strong> The tool is perfect for estimating costs when planning travel, calculating the value of foreign investments, or setting product prices for international markets.</li>
         <li><strong>Factor in Fees:</strong> When making an actual transaction, remember that conversion fees and profit margins may apply.</li>
       </ul>
-      <p class="mt-4">Use the <a href="#/currency-converter" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">live currency converter</a> to stay informed about global exchange markets and make your financial decisions with greater confidence.</p>
+      <p class="mt-4">Use the <a href="/currency-converter" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">live currency converter</a> to stay informed about global exchange markets and make your financial decisions with greater confidence.</p>
+    `,
+  },
+  {
+    id: '6',
+    title: 'ما هو التفقيط؟ وكيف يستخدم في المعاملات المالية؟',
+    titleEn: 'What is Tafqit? And how is it used in financial transactions?',
+    summary: 'تعرف على مفهوم التفقيط وأهميته في حماية الفواتير والشيكات من التزوير، وكيفية كتابة الأرقام بالكلمات بشكل صحيح.',
+    summaryEn: 'Learn about the concept of Tafqit and its importance in protecting invoices and checks from fraud.',
+    content: `
+      <p>كلمة <strong>"تفقيط"</strong> مشتقة من كلمة "فقط"، وهي عملية كتابة الأرقام والكسور بالكلمات بدلاً من الأرقام. تهدف هذه العملية بشكل أساسي إلى منع التلاعب أو التزوير في المستندات المالية الرسمية مثل الشيكات والعقود والفواتير.</p>
+      <h3 class="text-xl font-bold mt-6 mb-3">لماذا نستخدم التفقيط؟</h3>
+      <p>يعتبر التفقيط "صمام أمان" في عالم المال. فبينما يمكن تعديل الأرقام بسهولة (مثلاً إضافة صفر لتحويل 100 إلى 1000)، يصعب جداً تعديل الكلمات المكتوبة بخط اليد أو المطبوعة دون أن يظهر ذلك بشكل واضح.</p>
+      <ul class="list-disc ps-5 mt-4 space-y-2">
+        <li><strong>منع التزوير:</strong> يصعب التعديل على الجمل المكتوبة مقارنة بالأرقام.</li>
+        <li><strong>الدقة القانونية:</strong> في حال وجود اختلاف بين الرقم والكلمة في العقود، تعتمد المحاكم غالباً الكلمة المكتوبة (التفقيط).</li>
+        <li><strong>الاحترافية:</strong> تعطي المستندات المالية طابعاً رسمياً واحترافياً.</li>
+      </ul>
+      <h3 class="text-xl font-bold mt-6 mb-3">كيفية التفقيط بشكل صحيح</h3>
+      <p>عند استخدام أداة <a href="/number-converter" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">التفقيط</a>، تأكد من اختيار العملة المناسبة. التفقيط لا يقتصر فقط على تحويل الأرقام، بل يشمل أيضاً تعريف الوحدة المالية (مثل ريال، جنيه، دولار) وأجزائها (مثل هللة، قرش، سنت).</p>
+      <p class="mt-4">نحن في "صيغة مالية" نوفر أداة تفقيط ذكية تدعم جميع اللغات والعملات، مع مراعاة القواعد اللغوية المعقدة في اللغة العربية مثل التذكير والتأنيث وجمع التكسير.</p>
+    `,
+    contentEn: `
+      <p>The term <strong>"Tafqit"</strong> (Arabic: تفقيط) refers to the process of writing numerical amounts in words instead of figures. It is derived from the Arabic word "Faqat" (meaning "only"), which is often added at the end of written amounts to prevent any further additions.</p>
+      <h3 class="text-xl font-bold mt-6 mb-3">Why is Tafqit Essential?</h3>
+      <p>Tafqit serves as a primary security measure in official, financial, and legal documents. While numerical digits can be easily altered (e.g., adding a zero to turn 1,000 into 10,000), modifying written words is significantly more difficult and obvious.</p>
+      <ul class="list-disc ps-5 mt-4 space-y-2">
+        <li><strong>Fraud Prevention:</strong> Written sentences are harder to manipulate than digits.</li>
+        <li><strong>Legal Accuracy:</strong> In many jurisdictions, if there is a discrepancy between the numbers and the words on a contract or check, the words take precedence.</li>
+        <li><strong>Professionalism:</strong> It provides a standard, official look to financial documents.</li>
+      </ul>
+      <h3 class="text-xl font-bold mt-6 mb-3">How to Use Our Tafqit Tool</h3>
+      <p>Using our <a href="/number-converter" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">Number to Words tool</a> is simple. Enter the amount, select your currency, and the tool will instantly generate the correct wording in Arabic or English, following proper linguistic rules.</p>
     `,
   },
 ];

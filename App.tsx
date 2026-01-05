@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/Layout';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
@@ -26,11 +26,13 @@ const App: React.FC = () => {
   return (
     <ThemeProvider>
       <I18nProvider>
-        <HashRouter>
+        <BrowserRouter>
           <Layout>
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/number-converter" element={<NumberConverterPage />} />
+              <Route path="/tafqit/:currencyCode?" element={<NumberConverterPage />} />
+              <Route path="/date-converter" element={<DateConverterPage />} />
               <Route path="/date-converter" element={<DateConverterPage />} />
               <Route path="/invoice-generator" element={<InvoiceGeneratorPage />} />
               <Route path="/contract-clause" element={<ContractClausePage />} />
@@ -45,10 +47,13 @@ const App: React.FC = () => {
               <Route path="/terms-of-service" element={<TermsOfServicePage />} />
               <Route path="/articles" element={<ArticlesPage />} />
               <Route path="/articles/:id" element={<ArticleDetailPage />} />
+              <Route path="/glossary" element={<GlossaryPage />} />
+              <Route path="/glossary/:termId" element={<GlossaryPage />} />
+              <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
             <CookieConsent />
           </Layout>
-        </HashRouter>
+        </BrowserRouter>
       </I18nProvider>
     </ThemeProvider>
   );

@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { useTranslation } from '../hooks/useTranslation';
 import { GLOSSARY_TERMS } from '../constants';
+import { Link } from 'react-router-dom';
 
 const Glossary: React.FC = () => {
   const { t, language } = useTranslation();
@@ -10,11 +11,11 @@ const Glossary: React.FC = () => {
   const groupedAndFilteredTerms = useMemo(() => {
     const filtered = searchTerm
       ? GLOSSARY_TERMS.filter(term =>
-          term.termAr.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          term.termEn.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          term.abbreviationEn?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          term.abbreviationAr?.toLowerCase().includes(searchTerm.toLowerCase())
-        )
+        term.termAr.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        term.termEn.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        term.abbreviationEn?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        term.abbreviationAr?.toLowerCase().includes(searchTerm.toLowerCase())
+      )
       : GLOSSARY_TERMS;
 
     return filtered.reduce((acc, term) => {
@@ -26,8 +27,8 @@ const Glossary: React.FC = () => {
       return acc;
     }, {} as Record<string, typeof GLOSSARY_TERMS>);
   }, [searchTerm, language]);
-  
-  const sortedGroupKeys = Object.keys(groupedAndFilteredTerms).sort((a,b) => a.localeCompare(b, language === 'ar' ? 'ar' : 'en'));
+
+  const sortedGroupKeys = Object.keys(groupedAndFilteredTerms).sort((a, b) => a.localeCompare(b, language === 'ar' ? 'ar' : 'en'));
 
   const toggleItem = (id: string) => {
     setOpenItemId(prevId => (prevId === id ? null : id));
@@ -56,7 +57,7 @@ const Glossary: React.FC = () => {
                   const termText = language === 'ar' ? term.termAr : term.termEn;
                   const abbreviation = language === 'ar' ? term.abbreviationAr : term.abbreviationEn;
                   const example = language === 'ar' ? term.exampleAr : term.exampleEn;
-                  
+
                   return (
                     <div key={term.id} className="border border-gray-200 dark:border-slate-700 rounded-lg overflow-hidden">
                       <button
@@ -66,12 +67,12 @@ const Glossary: React.FC = () => {
                         aria-controls={`content-${term.id}`}
                       >
                         <div className="flex items-baseline gap-2">
-                            <span className="font-bold text-lg text-teal-700 dark:text-teal-400">
-                               {termText}
-                            </span>
-                             {abbreviation && (
-                                <span className="text-sm font-mono text-gray-500 dark:text-gray-400">({abbreviation})</span>
-                            )}
+                          <Link to={`/glossary/${term.id}`} className="font-bold text-lg text-teal-700 dark:text-teal-400 hover:underline">
+                            {termText}
+                          </Link>
+                          {abbreviation && (
+                            <span className="text-sm font-mono text-gray-500 dark:text-gray-400">({abbreviation})</span>
+                          )}
                         </div>
                         <svg
                           className={`w-6 h-6 transform transition-transform text-gray-500 ${isOpen ? 'rotate-180' : ''}`}
@@ -84,16 +85,16 @@ const Glossary: React.FC = () => {
                         id={`content-${term.id}`}
                         className={`transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden`}
                       >
-                          <div className="px-4 pt-2 pb-4 bg-white dark:bg-slate-800/20 text-gray-700 dark:text-gray-300">
-                            <p className="prose dark:prose-invert max-w-none mb-3">
-                                {language === 'ar' ? term.definitionAr : term.definitionEn}
-                            </p>
-                            {example && (
-                                <div className="p-3 border-s-4 border-teal-500 bg-teal-50 dark:bg-teal-900/30">
-                                    <p className="prose prose-sm dark:prose-invert max-w-none italic"><strong className="not-italic">{t('glossary.example')}:</strong> {example}</p>
-                                </div>
-                            )}
-                          </div>
+                        <div className="px-4 pt-2 pb-4 bg-white dark:bg-slate-800/20 text-gray-700 dark:text-gray-300">
+                          <p className="prose dark:prose-invert max-w-none mb-3">
+                            {language === 'ar' ? term.definitionAr : term.definitionEn}
+                          </p>
+                          {example && (
+                            <div className="p-3 border-s-4 border-teal-500 bg-teal-50 dark:bg-teal-900/30">
+                              <p className="prose prose-sm dark:prose-invert max-w-none italic"><strong className="not-italic">{t('glossary.example')}:</strong> {example}</p>
+                            </div>
+                          )}
+                        </div>
                       </div>
                     </div>
                   );

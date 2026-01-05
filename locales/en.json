@@ -4,15 +4,34 @@
     "openMenu": "Open main menu",
     "nav": {
       "home": "Home",
+      "tools": "Tools",
       "articles": "Articles",
+      "glossary": "Glossary",
       "about": "About Us",
-      "contact": "Contact Us"
+      "contact": "Contact Us",
+      "numberConverter": "Number Converter",
+      "dateConverter": "Date Converter",
+      "invoiceGenerator": "Invoice Generator",
+      "receiptGenerator": "Receipt Generator",
+      "contractClause": "Contract Clause",
+      "loanCalculator": "Loan Calculator",
+      "currencyConverter": "Currency Converter"
     }
   },
   "footer": {
     "copyright": "Financial Formula. All rights reserved.",
-    "privacy": "Privacy Policy",
-    "terms": "Terms of Service"
+    "nav": {
+      "about": "About Us",
+      "contact": "Contact Us",
+      "faq": "FAQ",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    }
+  },
+  "cookieConsent": {
+    "message": "We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.",
+    "learnMore": "Learn more",
+    "accept": "Accept"
   },
   "converter": {
     "enterNumber": "Enter Number",
@@ -24,6 +43,11 @@
     "copySuccess": "Copied successfully!",
     "copyFail": "Copy failed."
   },
+  "glossary": {
+    "searchPlaceholder": "Search for a term (e.g., Asset, Budget, ROI)...",
+    "example": "Example",
+    "noResults": "No terms found matching your search."
+  },
   "dateConverter": {
     "selectDate": "Select Date",
     "result": "Date in Text",
@@ -33,6 +57,36 @@
   "home": {
     "mainTitle": "Financial Number to Text Converter",
     "subtitle": "An accurate and reliable tool to convert numerical amounts into proper written text, ideal for checks, contracts, and official documents.",
+    "cards": {
+      "numberConverter": {
+        "title": "Number Converter (Tafqit)",
+        "description": "Convert financial amounts from numbers to words accurately and professionally in Arabic and English."
+      },
+      "dateConverter": {
+        "title": "Date Converter",
+        "description": "Convert dates into full text format for Hijri and Gregorian to use in official contracts."
+      },
+      "invoiceGenerator": {
+        "title": "Invoice Generator",
+        "description": "Create professional and tax invoices ready for print with automatic text conversion for amounts."
+      },
+      "receiptGenerator": {
+        "title": "Receipt Generator",
+        "description": "Design official cash receipts and check vouchers that protect your rights and document your transactions."
+      },
+      "contractClause": {
+        "title": "Contract Clause Helper",
+        "description": "Get tight legal drafting for financial clauses in your contracts to ensure complete clarity."
+      },
+      "loanCalculator": {
+        "title": "Loan Calculator",
+        "description": "Calculate your monthly installments, total interest, and view a detailed amortization schedule for your loan."
+      },
+      "currencyConverter": {
+        "title": "Currency Converter",
+        "description": "Track global exchange rates moment by moment and convert currencies with live market data."
+      }
+    },
     "whyUse": {
       "title": "Why Use Financial Formula?",
       "p1": "In the world of financial and legal transactions, accuracy is everything. A small mistake in writing a number can lead to significant complications. 'Financial Formula' is designed to be your digital assistant that ensures you write financial amounts in words 100% correctly, giving you confidence and security in all your documents.",
@@ -50,12 +104,38 @@
     }
   },
   "about": {
-    "title": "About Us",
-    "p1": "Welcome to 'Financial Formula'. We are a team of developers and financial experts who noticed the need for a simple and reliable tool to convert numbers into words for financial and legal purposes.",
-    "p2": "Our goal is to provide a free, easy-to-use, and completely secure tool that helps professionals and individuals alike avoid common mistakes in writing amounts, which can have serious consequences.",
-    "p3": "We believe that accuracy and clarity are the foundation of any successful transaction. Therefore, we have developed our conversion algorithm with great care to ensure it meets the linguistic and accounting standards adopted in official documents.",
-    "p4": "Our main distinguishing feature is our commitment to privacy. 'Financial Formula' is a tool that operates entirely on the client-side, meaning that any data you enter is not sent to or stored on any servers. Your financial security and privacy are our top priority.",
-    "p5": "We hope you find this tool useful in your work and daily life."
+    "heroTitle": "About Financial Formula",
+    "heroSubtitle": "Your trusted platform for accuracy and professionalism in financial and legal transactions.",
+    "storyTitle": "Our Story",
+    "storyP1": "Financial Formula started with a simple vision: to bridge the gap between numbers and text in official documents. We noticed that many professionals struggle with drafting accurate financial amounts linguistically, which can lead to misunderstandings or legal risks.",
+    "storyP2": "Since our launch, we have focused on building tools that combine extreme ease of use with high linguistic and mathematical accuracy, with a firm commitment to protecting user privacy.",
+    "storyP3": "Today, the site has evolved into a comprehensive destination providing smart solutions for individuals and businesses in the MENA region, making it easier for them to manage their daily financial documents.",
+    "missionVisionTitle": "Mission & Vision",
+    "missionTitle": "Our Mission",
+    "missionText": "To empower everyone with access to professional, easy-to-use financial tools that ensure complete accuracy and maintain privacy and transparency in every transaction.",
+    "visionTitle": "Our Vision",
+    "visionText": "To be the primary and trusted reference for anyone seeking accuracy in financial and contractual documents in Arabic and English, through continuous innovation in digital tools.",
+    "principlesTitle": "Our Core Principles",
+    "principle1Title": "Extreme Accuracy",
+    "principle1Text": "We pay close attention to every linguistic and mathematical detail to ensure error-free results.",
+    "principle2Title": "Privacy First",
+    "principle2Text": "Your data is not sent to any server; everything happens on your browser to ensure the highest levels of security.",
+    "principle3Title": "Accessibility",
+    "principle3Text": "Our tools are free and available to everyone at any time from anywhere without technical complexity.",
+    "principle4Title": "Continuous Innovation",
+    "principle4Text": "We are always working on developing new tools that meet the changing needs of users in the financial market.",
+    "whoWeServeTitle": "Who We Serve?",
+    "whoWeServeIntro": "Our platform is designed to meet the needs of diverse user groups:",
+    "serve1Title": "Accountants & Financial Professionals",
+    "serve1Text": "To automate the conversion process and ensure the correctness of invoices and receipts.",
+    "serve2Title": "Legal Professionals & Lawyers",
+    "serve2Text": "To obtain precise legal drafting for amounts and clauses in contracts.",
+    "serve3Title": "Business Owners & Freelancers",
+    "serve3Text": "To create professional commercial documents that reflect the credibility of their business.",
+    "serve4Title": "Individuals",
+    "serve4Text": "When writing checks or signing personal sale and purchase contracts.",
+    "commitmentTitle": "Our Commitment",
+    "commitmentText": "We are committed to remaining a free, secure, and easy-to-use platform, and we will continue to improve our services based on your feedback and needs."
   },
   "contact": {
     "title": "Contact Us",
@@ -110,37 +190,169 @@
     }
   },
   "numberConverterPage": {
-    "mainTitle": "Number to Text Converter",
-    "subtitle": "Convert any number to written text (Tafqeet) in Arabic or English with 100% accuracy, supporting all currencies and decimals."
+    "mainTitle": "Tafqit Tool: Number to Words Converter",
+    "subtitle": "The best Tafqit tool to convert financial amounts from numbers to words accurately. Supports all currencies.",
+    "tafqitSAR": "Tafqit for Saudi Riyal (SAR)",
+    "tafqitEGP": "Tafqit for Egyptian Pound (EGP)",
+    "tafqitKWD": "Tafqit for Kuwaiti Dinar (KWD)"
   },
   "dateConverterPage": {
     "mainTitle": "Hijri and Gregorian Date Converter",
     "subtitle": "Accurate tool to convert between Hijri and Gregorian calendars, displaying day and month names.",
     "content": "<p>Date is an essential part of our daily lives. Whether you need to know your birth date in Hijri, plan for a religious occasion, or convert a formal contract date, our <strong>Date Converter</strong> provides the accuracy you need. Our tool is based on the Umm Al-Qura calendar, ensuring completely reliable results.</p><h3 class='text-xl font-bold mt-4'>Key Features:</h3><ul class='list-disc ps-5 mt-2'><li>Instant conversion between Hijri and Gregorian.</li><li>Display day and month names.</li><li>Accurate leap year calculation.</li></ul>"
   },
+  "invoiceGenerator": {
+    "from": "From:",
+    "yourName": "Your Name or Company",
+    "yourAddress": "Your Address and Contact Info",
+    "uploadLogo": "Upload Logo",
+    "removeLogo": "Remove Logo",
+    "billTo": "Bill To:",
+    "clientName": "Client Name",
+    "clientAddress": "Client Address",
+    "invoiceNumber": "Invoice Number",
+    "date": "Date",
+    "item": "Item Description",
+    "quantity": "Quantity",
+    "rate": "Rate",
+    "amount": "Amount",
+    "addItem": "Add Item",
+    "notes": "Notes",
+    "notesPlaceholder": "Payment terms or additional notes...",
+    "downloadPdf": "Download Invoice (PDF)",
+    "invoice": "Invoice",
+    "amountInWords": "Amount in Words",
+    "total": "Total"
+  },
   "invoiceGeneratorPage": {
     "mainTitle": "Professional Invoice Generator",
     "subtitle": "Design commercial and tax invoices compliant with legal requirements in seconds. Automatic text conversion for amounts included."
   },
+  "receiptGenerator": {
+    "receiptType": "Voucher Type",
+    "receiptVoucher": "Receipt Voucher",
+    "paymentVoucher": "Payment Voucher",
+    "recipientInfo": "Issuer Information",
+    "yourName": "Issuer Name",
+    "uploadLogo": "Upload Logo",
+    "removeLogo": "Remove Logo",
+    "payerInfo": "Other Party Information",
+    "payerName": "Received from Mr./Messrs.",
+    "recipientNameForForm": "Paid to Mr./Messrs.",
+    "receiptNo": "Receipt No.",
+    "date": "Date",
+    "amount": "Amount",
+    "purposeOfPayment": "Purpose / For",
+    "paymentMethod": "Payment Method",
+    "cash": "Cash",
+    "check": "Check",
+    "bankTransfer": "Bank Transfer",
+    "creditCard": "Credit Card",
+    "downloadPdf": "Download Receipt (PDF)",
+    "receivedFrom": "Received From",
+    "paidTo": "Paid To",
+    "amountInWords": "Amount in Words",
+    "paymentFor": "For",
+    "signature": "Signature",
+    "stamp": "Stamp"
+  },
   "receiptGeneratorPage": {
-    "mainTitle": "Receipt Generator",
-    "subtitle": "Create cash receipts or check vouchers with official documents protecting your rights. Ready to print or save as PDF."
+    "mainTitle": "Receipt & Payment Voucher Generator",
+    "subtitle": "Create official cash receipts or payment vouchers to protect your rights and document financial transactions."
+  },
+  "contractClause": {
+    "outputPlaceholder": "Legal text will appear here...",
+    "configuration": "Clause Configuration",
+    "parties": "Contract Parties",
+    "payer": "First Party (Payer)",
+    "payerPlaceholder": "e.g., Supply Co.",
+    "payee": "Second Party (Payee)",
+    "payeePlaceholder": "e.g., Construction Est.",
+    "enterAmount": "Enter Amount",
+    "paymentStructure": "Payment Structure",
+    "oneTime": "One-time Payment",
+    "installments": "Installments",
+    "installmentDetails": "Installment Details",
+    "numberOfInstallments": "Number of Installments",
+    "downPayment": "Down Payment",
+    "paymentFrequency": "Payment Frequency",
+    "monthly": "Monthly",
+    "quarterly": "Quarterly",
+    "annually": "Annually",
+    "taxInfo": "Tax Information",
+    "inclusive": "Amount Inclusive of Tax",
+    "exclusive": "Amount Exclusive of Tax",
+    "taxRate": "Tax Rate (%)",
+    "taxRatePlaceholder": "15",
+    "generatedClauses": "Generated Clauses",
+    "standardClause": "Standard Clause",
+    "detailedClause": "Detailed Clause",
+    "paymentSchedule": "Payment Schedule"
   },
   "contractClausePage": {
-    "mainTitle": "Contract Clause Helper",
-    "subtitle": "Get tight legal drafting for financial clauses in your contracts, ensuring clarity and protecting you from loopholes."
+    "mainTitle": "Financial Clause Assistant",
+    "subtitle": "Get professionally drafted financial clauses for your contracts to ensure clarity and prevent disputes."
+  },
+  "loanCalculator": {
+    "loanAmount": "Loan Amount",
+    "interestRate": "Annual Interest Rate (%)",
+    "loanTerm": "Loan Term (Years)",
+    "calculate": "Calculate",
+    "results": "Calculation Results",
+    "monthlyPayment": "Monthly Payment",
+    "principal": "Principal",
+    "totalInterest": "Total Interest",
+    "totalPayment": "Total Payment",
+    "interest": "Interest",
+    "hideSchedule": "Hide Amortization Schedule",
+    "showSchedule": "Show Amortization Schedule",
+    "month": "Month",
+    "payment": "Payment",
+    "remainingBalance": "Remaining Balance"
   },
   "loanCalculatorPage": {
-    "mainTitle": "Loan and Installment Calculator",
-    "subtitle": "Plan your next loan smartly. Calculate monthly installments, total interest, and view detailed amortization schedule."
+    "mainTitle": "Loan & Finance Calculator",
+    "subtitle": "Plan your financing smartly. Calculate monthly payments and view detailed amortization schedule and total interest."
+  },
+  "currencyConverter": {
+    "from": "From",
+    "to": "To",
+    "amount": "Amount",
+    "swap": "Swap Currencies",
+    "loading": "Loading...",
+    "error": "Error fetching exchange rates.",
+    "rateUnavailable": "Rate unavailable for",
+    "lastUpdated": "Last Updated"
   },
   "currencyConverterPage": {
-    "mainTitle": "Live Currency Rates",
-    "subtitle": "Track global exchange rates moment by moment and convert currencies accurately. Based on live market data."
+    "mainTitle": "Live Currency Converter",
+    "subtitle": "Instant conversion between global currencies with live and accurate exchange rates updated in real-time."
+  },
+  "documentChecker": {
+    "pasteText": "Paste document text here",
+    "or": "OR",
+    "fileSelected": "File selected",
+    "removeFile": "Remove file",
+    "uploadPrompt": "Drag and drop a file here or click to select",
+    "supportedFiles": "Supports PDF, DOCX, XLSX",
+    "analyze": "Analyze Document with AI",
+    "loading": "Analyzing...",
+    "analysisReport": "Analysis Report",
+    "analyzingFile": "Reading and analyzing file...",
+    "unsupportedFile": "Unsupported file type.",
+    "fileParseError": "Failed to read file content.",
+    "error": "An error occurred during analysis. Please try again.",
+    "disclaimer": "Disclaimer: This AI-powered analysis is for guidance only and does not replace professional legal or accounting advice."
+  },
+  "relatedContent": {
+    "title": "Related Content",
+    "tools": "Suggested Tools",
+    "articles": "Related Articles"
   },
   "glossaryPage": {
-    "mainTitle": "Financial Glossary",
-    "subtitle": "Comprehensive dictionary for key financial, accounting, and economic terms."
+    "mainTitle": "Financial & Accounting Glossary",
+    "subtitle": "A comprehensive guide explaining key financial and accounting terms in Arabic and English. Your trusted reference for business language.",
+    "backToList": "Back to Glossary List"
   },
   "articlesPage": {
     "mainTitle": "Articles",
@@ -153,15 +365,44 @@
   },
   "articleDetail": {
     "backLink": "Back to Articles List",
+    "shareTitle": "Share this article",
+    "copyLink": "Copy link",
+    "copyLinkSuccess": "Link copied!",
     "notFound": {
       "title": "Article Not Found",
       "message": "Sorry, we couldn't find the article you are looking for."
     }
   },
+  "faqPage": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Answers to the most common inquiries about our tools and services.",
+    "questions": [
+      {
+        "q": "Is it safe to use 'Financial Formula' tools?",
+        "a": "Yes, completely safe. All our tools operate entirely within your browser (Client-Side). This means that any data you enter never leaves your device and is not sent to or stored on our servers. Your privacy and data security are our top priority."
+      },
+      {
+        "q": "Are the tools free?",
+        "a": "Yes, all our current tools are available for use completely free of charge. Our goal is to provide accurate and reliable tools to help as many professionals and individuals as possible."
+      },
+      {
+        "q": "How accurate is the number conversion tool?",
+        "a": "The tool is highly accurate. Our algorithm has been meticulously designed to comply with the complex grammatical rules of both Arabic and English, considering singular, dual, and plural forms, as well as the gender agreement between numbers and nouns. However, we always recommend reviewing the results before using them in final official documents."
+      },
+      {
+        "q": "Can I use the invoice generator for my business?",
+        "a": "Absolutely. The invoice generator is designed to be a practical tool for freelancers and small businesses. You can create professional invoices and download them as a PDF. We always advise checking the legal requirements for invoices in your country."
+      },
+      {
+        "q": "Which currencies does the tool support?",
+        "a": "The number converter tool supports a wide range of Arab and international currencies. You can find a full list in the currency selection dropdown. If there is a currency you would like us to add, please feel free to <a href=\"/contact\" class=\"text-teal-600 dark:text-teal-400 font-semibold hover:underline\">contact us</a>."
+      }
+    ]
+  },
   "meta": {
     "home": {
-      "title": "Financial Formula | Number to Financial Text Converter",
-      "description": "An accurate tool for converting financial amounts from numbers to text in both Arabic and English, perfect for contracts, invoices, and checks."
+      "title": "Financial Formula: Professional Financial & Accounting Tools",
+      "description": "Financial Formula offers a suite of accounting tools: Number to words, invoice generator, loan calculator, and financial glossary. High precision and easy to use."
     },
     "articles": {
       "title": "Articles | Financial Formula",
@@ -170,6 +411,10 @@
     "articleDetail": {
       "title": "%s | Financial Formula",
       "description": "%s"
+    },
+    "faq": {
+      "title": "FAQ | Financial Formula",
+      "description": "Find answers to frequently asked questions about our tools, privacy, data accuracy, and how to get the most out of 'Financial Formula'."
     },
     "about": {
       "title": "About Us | Financial Formula",
@@ -188,8 +433,14 @@
       "description": "Review the terms and conditions for using the 'Financial Formula' tool. Your use of the site constitutes your agreement to these terms."
     },
     "numberConverter": {
-      "title": "Number Converter | Financial Formula",
-      "description": "Convert numbers to text in Arabic and English with perfect accuracy. Ideal for invoices, checks, and contracts."
+      "title": "Tafqit Tool: Number to Words Converter (SAR, EGP, USD)",
+      "description": "The best Tafqit tool to convert financial amounts from numbers to words accurately. Supports SAR, EGP, and all currencies. Perfect for checks and contracts.",
+      "titleSAR": "Tafqit for Saudi Riyal | Number to Words Converter",
+      "descriptionSAR": "Use the Tafqit tool to convert Saudi Riyal amounts into accurate Arabic and English text. Ideal for banks and businesses in Saudi Arabia.",
+      "titleEGP": "Tafqit for Egyptian Pound | Number to Words Converter",
+      "descriptionEGP": "The most accurate tool for Tafqit of Egyptian Pound amounts. Convert numbers to proper Arabic text for invoices and checks in Egypt.",
+      "titleKWD": "Tafqit for Kuwaiti Dinar | Number to Words Converter",
+      "descriptionKWD": "Convert numbers to words for Kuwaiti Dinar (3 decimals) with high precision. Professional Tafqit tool for financial transactions in Kuwait."
     },
     "dateConverter": {
       "title": "Date Converter | Financial Formula",
